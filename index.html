@@ -67,7 +67,8 @@
   </nav>
 
   <!-- HERO -->
-  <header class="relative w-full h-[75vh] flex items-end">
+  <!-- Ajuste ÚNICO: compensação da navbar fixa com padding-top -->
+  <header class="relative w-full min-h-[75vh] pt-[88px] flex items-end">
     <div class="absolute inset-0 z-0">
       <img src="https://images.unsplash.com/photo-1595590424283-b8f17842773f?q=80&w=1470&auto=format&fit=crop"
            class="w-full h-full object-cover object-center opacity-60"
@@ -120,31 +121,25 @@
         </h2>
 
         <div class="relative">
-          <!-- fades laterais -->
           <div class="pointer-events-none absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-ativBlack to-transparent z-30"></div>
           <div class="pointer-events-none absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-ativBlack to-transparent z-30"></div>
 
-          <!-- carrossel com peek -->
           <div class="flex gap-4 overflow-x-auto hide-scroll pb-8 snap-x snap-mandatory scroll-smooth pr-14 -mr-4 sm:-mr-6 md:pr-0 md:mr-0">
 
-            <!-- CARD: ROT -->
+            <!-- ROT -->
             <div class="card group relative flex-none w-[78vw] sm:w-[280px] h-[380px] bg-ativDarkGray rounded-lg overflow-hidden cursor-pointer snap-start
                         transition-all duration-300 hover:scale-105 hover:z-30 hover:shadow-2xl hover:shadow-ativGold/20 border border-transparent hover:border-ativGold/30">
-
               <span class="absolute top-3 left-3 z-20 bg-black/60 border border-white/10 text-[10px] px-2 py-1 rounded uppercase tracking-widest text-gray-200">
                 Em breve
               </span>
 
-              <!-- overlay click -->
               <a href="https://upf.ativbrasil.com.br/" target="_blank" class="absolute inset-0 z-0" aria-label="Abrir curso ROT"></a>
 
               <img src="https://treinamentos.ativbrasil.com.br/ROT1.png"
                    class="w-full h-full object-cover opacity-75 group-hover:opacity-55 transition-opacity duration-500"
                    alt="Ronda Ostensiva Tática" />
 
-              <!-- base sempre visível -->
               <div class="absolute inset-0 z-10 card-base-gradient"></div>
-              <!-- reforço no hover (desktop) -->
               <div class="absolute inset-0 z-10 card-hover-overlay"></div>
 
               <div class="absolute inset-0 z-20 p-5 flex flex-col justify-end">
@@ -152,16 +147,13 @@
                   Ronda Ostensiva Tática <br><span class="text-ativGold">ROT</span>
                 </h3>
 
-                <!-- ESSENCIAL FIXO (mobile + desktop) -->
                 <div class="mt-3">
                   <div class="flex flex-col gap-1 text-[11px] font-bold text-gray-300 uppercase tracking-wide">
                     <span class="text-ativGold flex items-center gap-1"><i data-lucide="calendar" class="w-3 h-3"></i> Em breve</span>
                     <span class="flex items-center gap-1"><i data-lucide="map-pin" class="w-3 h-3"></i> Indaiatuba/SP</span>
                   </div>
 
-                  <p class="text-xs text-gray-400 line-clamp-2 mt-2">
-                    Doutrinas e técnicas de patrulhamento tático.
-                  </p>
+                  <p class="text-xs text-gray-400 line-clamp-2 mt-2">Doutrinas e técnicas de patrulhamento tático.</p>
 
                   <div class="mt-4">
                     <a href="https://upf.ativbrasil.com.br/" target="_blank"
@@ -171,19 +163,15 @@
                   </div>
                 </div>
 
-                <!-- EXTRA (desktop hover): mais texto, se quiser no futuro -->
                 <div class="hidden md:block mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p class="text-[11px] text-gray-300/80">
-                    No desktop, você pode usar este espaço para bullets/carga horária sem poluir o mobile.
-                  </p>
+                  <p class="text-[11px] text-gray-300/80">No desktop, este espaço pode trazer bullets/carga horária.</p>
                 </div>
               </div>
             </div>
 
-            <!-- CARD: IAC -->
+            <!-- IAC -->
             <div class="card group relative flex-none w-[78vw] sm:w-[280px] h-[380px] bg-ativDarkGray rounded-lg overflow-hidden cursor-pointer snap-start
                         transition-all duration-300 hover:scale-105 hover:z-30 hover:shadow-2xl hover:shadow-ativGold/20 border border-transparent hover:border-ativGold/30">
-
               <span class="absolute top-3 left-3 z-20 bg-black/60 border border-white/10 text-[10px] px-2 py-1 rounded uppercase tracking-widest text-gray-200">
                 Em breve
               </span>
@@ -221,17 +209,14 @@
                 </div>
 
                 <div class="hidden md:block mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p class="text-[11px] text-gray-300/80">
-                    Espaço opcional para reforços (desktop).
-                  </p>
+                  <p class="text-[11px] text-gray-300/80">Espaço opcional para reforços (desktop).</p>
                 </div>
               </div>
             </div>
 
-            <!-- CARD: PSV -->
+            <!-- PSV -->
             <div class="card group relative flex-none w-[78vw] sm:w-[280px] h-[380px] bg-ativDarkGray rounded-lg overflow-hidden cursor-pointer snap-start
                         transition-all duration-300 hover:scale-105 hover:z-30 hover:shadow-2xl hover:shadow-ativGold/20 border border-transparent hover:border-ativGold/30">
-
               <span class="absolute top-3 left-3 z-20 bg-black/60 border border-white/10 text-[10px] px-2 py-1 rounded uppercase tracking-widest text-gray-200">
                 Em breve
               </span>
@@ -269,17 +254,14 @@
                 </div>
 
                 <div class="hidden md:block mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p class="text-[11px] text-gray-300/80">
-                    Espaço opcional para reforços (desktop).
-                  </p>
+                  <p class="text-[11px] text-gray-300/80">Espaço opcional para reforços (desktop).</p>
                 </div>
               </div>
             </div>
 
-            <!-- CARD: CEG -->
+            <!-- CEG -->
             <div class="card group relative flex-none w-[78vw] sm:w-[280px] h-[380px] bg-ativDarkGray rounded-lg overflow-hidden cursor-pointer snap-start
                         transition-all duration-300 hover:scale-105 hover:z-30 hover:shadow-2xl hover:shadow-ativGold/20 border border-transparent hover:border-ativGold/30">
-
               <span class="absolute top-3 left-3 z-20 bg-black/60 border border-white/10 text-[10px] px-2 py-1 rounded uppercase tracking-widest text-gray-200">
                 Em breve
               </span>
@@ -317,9 +299,7 @@
                 </div>
 
                 <div class="hidden md:block mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p class="text-[11px] text-gray-300/80">
-                    Espaço opcional para reforços (desktop).
-                  </p>
+                  <p class="text-[11px] text-gray-300/80">Espaço opcional para reforços (desktop).</p>
                 </div>
               </div>
             </div>
@@ -340,10 +320,9 @@
 
           <div class="flex gap-4 overflow-x-auto hide-scroll pb-8 snap-x snap-mandatory scroll-smooth pr-14 -mr-4 sm:-mr-6 md:pr-0 md:mr-0">
 
-            <!-- CARD: ITV -->
+            <!-- ITV -->
             <div class="card group relative flex-none w-[78vw] sm:w-[280px] h-[380px] bg-ativDarkGray rounded-lg overflow-hidden cursor-pointer snap-start
                         transition-all duration-300 hover:scale-105 hover:z-30 hover:shadow-2xl hover:shadow-ativGold/20 border border-transparent hover:border-ativGold/30">
-
               <span class="absolute top-3 left-3 z-20 bg-black/60 border border-white/10 text-[10px] px-2 py-1 rounded uppercase tracking-widest text-gray-200">
                 Em breve
               </span>
@@ -381,9 +360,7 @@
                 </div>
 
                 <div class="hidden md:block mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p class="text-[11px] text-gray-300/80">
-                    Espaço opcional para reforços (desktop).
-                  </p>
+                  <p class="text-[11px] text-gray-300/80">Espaço opcional para reforços (desktop).</p>
                 </div>
               </div>
             </div>
@@ -413,13 +390,4 @@
     const nav = document.getElementById("navbar");
     window.addEventListener("scroll", () => {
       if (window.scrollY > 50) {
-        nav.classList.add("bg-black", "shadow-lg");
-        nav.classList.remove("bg-gradient-to-b");
-      } else {
-        nav.classList.remove("bg-black", "shadow-lg");
-        nav.classList.add("bg-gradient-to-b");
-      }
-    });
-  </script>
-</body>
-</html>
+        nav.clas
