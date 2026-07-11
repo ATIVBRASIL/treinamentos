@@ -249,23 +249,84 @@ nav{
 }
 .catalog-bridge a{color:var(--brand)}
 
-/* ---------- disciplinas ---------- */
-.disc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px}
-@media(max-width:880px){.disc-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.disc-grid{grid-template-columns:1fr}}
-.disc{
-  border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);
-  padding:16px 18px;display:flex;align-items:center;gap:14px;
-  transition:border-color .2s ease;
+/* ---------- pasta do gestor / evidências ---------- */
+.pasta-grid{
+  display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center;margin-top:44px;
 }
-.disc:hover{border-color:var(--brand)}
-.disc .code{
-  font-family:var(--font-mono);font-size:12px;font-weight:600;letter-spacing:.06em;
-  color:var(--brand);background:var(--brand-dim);border:1px solid rgba(232,93,31,.35);
-  border-radius:6px;padding:6px 9px;min-width:52px;text-align:center;flex-shrink:0;
+@media(max-width:880px){.pasta-grid{grid-template-columns:1fr;gap:36px}}
+.pasta-copy .lead{max-width:520px}
+.pasta-points{list-style:none;display:flex;flex-direction:column;gap:12px;margin:28px 0 0}
+.pasta-points li{
+  display:flex;gap:12px;align-items:flex-start;color:var(--muted);font-size:15.5px;line-height:1.45;
 }
-.disc .nm{font-size:14.5px;color:var(--text);line-height:1.35}
-.disc-note{margin-top:22px;font-family:var(--font-mono);font-size:12px;color:var(--dim);letter-spacing:.05em}
+.pasta-points li::before{
+  content:"";width:7px;height:7px;border-radius:50%;background:var(--brand);margin-top:7px;flex-shrink:0;
+}
+.pasta-seal{
+  margin-top:26px;font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;
+  color:var(--dim);text-transform:uppercase;
+}
+.pasta-seal b{color:var(--brand);font-weight:600}
+.pasta-visual{
+  position:relative;min-height:420px;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 20%,rgba(232,93,31,.1),transparent 55%),
+    linear-gradient(160deg,var(--panel-2),var(--panel));
+  border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;
+  padding:36px 28px 28px;
+}
+.pasta-visual::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(var(--line-soft) 1px,transparent 1px),linear-gradient(90deg,var(--line-soft) 1px,transparent 1px);
+  background-size:28px 28px;opacity:.35;
+}
+.pasta-folder{
+  position:relative;z-index:1;max-width:420px;margin:0 auto;
+}
+.pasta-tab{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--brand);color:#0c0f12;
+  font-family:var(--font-display);font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;
+  padding:8px 16px 10px;border-radius:10px 10px 0 0;margin-left:18px;
+}
+.pasta-body{
+  background:linear-gradient(180deg,#1a2028,#12161b);
+  border:1px solid var(--line);border-top-color:rgba(232,93,31,.45);
+  border-radius:0 var(--radius) var(--radius) var(--radius);
+  padding:18px 16px 16px;box-shadow:0 24px 48px rgba(0,0,0,.35);
+}
+.pasta-docs{display:flex;flex-direction:column;gap:10px}
+.pasta-doc{
+  display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;
+  background:var(--ink);border:1px solid var(--line);border-radius:10px;padding:12px 14px;
+  transform:translateY(8px);opacity:0;
+  transition:transform .55s ease,opacity .55s ease,border-color .2s ease;
+}
+.pasta-visual.on .pasta-doc{transform:translateY(0);opacity:1}
+.pasta-visual.on .pasta-doc:nth-child(1){transition-delay:.05s}
+.pasta-visual.on .pasta-doc:nth-child(2){transition-delay:.12s}
+.pasta-visual.on .pasta-doc:nth-child(3){transition-delay:.19s}
+.pasta-visual.on .pasta-doc:nth-child(4){transition-delay:.26s}
+.pasta-visual.on .pasta-doc:nth-child(5){transition-delay:.33s}
+.pasta-doc:hover{border-color:rgba(232,93,31,.45)}
+.pasta-doc .ico{
+  width:34px;height:34px;border-radius:8px;display:grid;place-items:center;
+  background:var(--brand-dim);border:1px solid rgba(232,93,31,.3);
+  color:var(--brand);font-family:var(--font-mono);font-size:11px;font-weight:600;
+}
+.pasta-doc .meta{min-width:0}
+.pasta-doc .meta strong{
+  display:block;font-family:var(--font-display);font-size:16px;font-weight:600;
+  text-transform:uppercase;letter-spacing:.04em;color:var(--text);line-height:1.15;
+}
+.pasta-doc .meta span{font-family:var(--font-mono);font-size:11px;color:var(--dim);letter-spacing:.04em}
+.pasta-doc .mark{font-family:var(--font-mono);font-size:11px;color:var(--ok);letter-spacing:.06em}
+.pasta-foot{
+  margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);
+  font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+.pasta-foot b{color:var(--brand);font-weight:600}
 
 /* ---------- diferencial ---------- */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
@@ -355,7 +416,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
       <a href="#contexto">Por que agora</a>
       <a href="#programas">Programas</a>
       <a href="#catalogo">Pronta entrega</a>
-      <a href="#disciplinas">Disciplinas</a>
+      <a href="#evidencias">Evidências</a>
       <a href="#instrutor">Instrutor</a>
       <a href="#faq">Dúvidas</a>
     </div>
@@ -588,29 +649,64 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
   </div>
 </section>
 
-<!-- ============ DISCIPLINAS ============ -->
-<section id="disciplinas">
+<!-- ============ EVIDÊNCIAS / PASTA DO GESTOR ============ -->
+<section id="evidencias">
   <div class="wrap">
-    <div class="eyebrow reveal">Credenciamento oficial</div>
-    <h2 class="reveal">13 disciplinas autorizadas pela Polícia Federal</h2>
-    <p class="lead reveal">Credenciamento nº 89/2026, válido até 21/01/2031. Cada treinamento é ministrado dentro do escopo oficial — e é isso que dá validade documental ao certificado da sua equipe.</p>
+    <div class="eyebrow reveal">Entregável do treinamento</div>
+    <h2 class="reveal">Pasta completa para o gestor</h2>
+    <p class="lead reveal">Não basta treinar. É preciso comprovar — para o cliente da empresa de segurança e para a Polícia Federal — que o treinamento complementar de fato aconteceu.</p>
 
-    <div class="disc-grid">
-      <div class="disc reveal"><span class="code">VIG</span><span class="nm">Vigilância Patrimonial</span></div>
-      <div class="disc reveal"><span class="code">EAR</span><span class="nm">Escolta Armada</span></div>
-      <div class="disc reveal"><span class="code">TVA</span><span class="nm">Transporte de Valores</span></div>
-      <div class="disc reveal"><span class="code">ENL·I</span><span class="nm">Equipamentos Não Letais I</span></div>
-      <div class="disc reveal"><span class="code">ENL·II</span><span class="nm">Equipamentos Não Letais II</span></div>
-      <div class="disc reveal"><span class="code">GEC</span><span class="nm">Gerenciamento de Crise</span></div>
-      <div class="disc reveal"><span class="code">GEP</span><span class="nm">Gerenciamento de Público</span></div>
-      <div class="disc reveal"><span class="code">GMU</span><span class="nm">Gestão de Multidões</span></div>
-      <div class="disc reveal"><span class="code">RSE</span><span class="nm">Resolução de Situações de Emergência</span></div>
-      <div class="disc reveal"><span class="code">RHT</span><span class="nm">Relações Humanas no Trabalho</span></div>
-      <div class="disc reveal"><span class="code">DHU</span><span class="nm">Direitos Humanos</span></div>
-      <div class="disc reveal"><span class="code">NCR</span><span class="nm">Noções de Criminalística e Entrevista Prévia</span></div>
-      <div class="disc reveal"><span class="code">SNS</span><span class="nm">Sistema Nacional de Segurança Pública e Crime Organizado</span></div>
+    <div class="pasta-grid">
+      <div class="pasta-copy reveal">
+        <ul class="pasta-points">
+          <li>Certificados individuais com lastro do credenciamento PF</li>
+          <li>Grade / conteúdo programático do encontro</li>
+          <li>Lista de presença assinada da turma</li>
+          <li>Avaliação da turma e registro de eficácia</li>
+          <li>Fotos e vídeos do treinamento in-company</li>
+        </ul>
+        <p class="pasta-seal">Credenciamento PF <b>nº 89/2026</b> · válido até <b>21/01/2031</b><br>// Aperfeiçoamento complementar — não substitui formação de escola credenciada</p>
+      </div>
+
+      <div class="pasta-visual reveal" id="pasta-visual">
+        <div class="pasta-folder">
+          <div class="pasta-tab">Dossiê ATIV</div>
+          <div class="pasta-body">
+            <div class="pasta-docs">
+              <div class="pasta-doc">
+                <span class="ico">01</span>
+                <div class="meta"><strong>Certificado</strong><span>Individual · por participante</span></div>
+                <span class="mark">OK</span>
+              </div>
+              <div class="pasta-doc">
+                <span class="ico">02</span>
+                <div class="meta"><strong>Grade</strong><span>Conteúdo programático</span></div>
+                <span class="mark">OK</span>
+              </div>
+              <div class="pasta-doc">
+                <span class="ico">03</span>
+                <div class="meta"><strong>Lista de presença</strong><span>Assinatura da turma</span></div>
+                <span class="mark">OK</span>
+              </div>
+              <div class="pasta-doc">
+                <span class="ico">04</span>
+                <div class="meta"><strong>Avaliação</strong><span>Turma + eficácia</span></div>
+                <span class="mark">OK</span>
+              </div>
+              <div class="pasta-doc">
+                <span class="ico">05</span>
+                <div class="meta"><strong>Fotos / vídeos</strong><span>Registro do encontro</span></div>
+                <span class="mark">OK</span>
+              </div>
+            </div>
+            <div class="pasta-foot">
+              <span>Treinamento complementar</span>
+              <span>PF <b>89/2026</b></span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <p class="disc-note reveal">// Treinamentos complementares e de aperfeiçoamento. Formação inicial de vigilantes é realizada por escolas credenciadas parceiras.</p>
   </div>
 </section>
 
