@@ -10,6 +10,10 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://treinamentos.ativbrasil.com.br">
 <meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://treinamentos.ativbrasil.com.br/images/logo-ativ.png">
+<link rel="icon" href="images/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="images/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -21,6 +25,7 @@
   "description": "Treinamentos corporativos in-company para empresas de segurança privada, ministrados por instrutor credenciado pela Polícia Federal.",
   "areaServed": ["Indaiatuba", "Campinas", "Sorocaba", "Jundiaí", "Salto", "São Paulo"],
   "url": "https://treinamentos.ativbrasil.com.br",
+  "logo": "https://treinamentos.ativbrasil.com.br/images/logo-ativ.png",
   "founder": { "@type": "Person", "name": "Alex Andreoli Dantas" }
 }
 </script>
@@ -113,7 +118,9 @@ nav{
   backdrop-filter:blur(12px);border-bottom:1px solid var(--line-soft);
 }
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
-.logo{display:flex;align-items:baseline;gap:10px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-img{width:40px;height:40px;flex-shrink:0;border-radius:6px}
+.logo-wordmark{display:flex;align-items:baseline;gap:10px}
 .logo-mark{
   font-family:var(--font-display);font-weight:700;font-size:28px;letter-spacing:.02em;color:var(--text);
 }
@@ -124,6 +131,10 @@ nav{
 .nav-links a:hover{color:var(--brand-hi)}
 .nav-cta{font-size:15px;padding:11px 20px}
 @media(max-width:880px){.nav-links{display:none}}
+@media(max-width:480px){
+  .logo-sub{display:none}
+  .logo-img{width:36px;height:36px}
+}
 
 /* ---------- hero ---------- */
 .hero{padding:88px 0 72px;border-top:none;position:relative}
@@ -398,7 +409,9 @@ select{color:var(--muted)}
 .contact-side .v b{color:var(--text);font-weight:600}
 
 footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);font-size:14px}
-.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.foot-brand{display:flex;align-items:center;gap:14px}
+.foot-brand img{width:48px;height:48px;border-radius:8px;flex-shrink:0}
 .foot .mono{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em}
 </style>
 </head>
@@ -409,8 +422,11 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
 <nav>
   <div class="wrap nav-inner">
     <a class="logo" href="#top">
-      <span class="logo-mark">ATIV<span>.</span></span>
-      <span class="logo-sub">Treinamentos</span>
+      <img class="logo-img" src="images/logo-ativ-nav.png" alt="ATIV Brasil" width="40" height="40" decoding="async">
+      <span class="logo-wordmark">
+        <span class="logo-mark">ATIV<span>.</span></span>
+        <span class="logo-sub">Treinamentos</span>
+      </span>
     </a>
     <div class="nav-links">
       <a href="#contexto">Por que agora</a>
@@ -882,9 +898,12 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
 
 <footer>
   <div class="wrap foot">
-    <div>
-      <div style="font-family:var(--font-display);font-size:22px;font-weight:700;text-transform:uppercase;color:var(--text)">ATIV<span style="color:var(--brand)">.</span> Treinamentos</div>
-      <div style="margin-top:6px">Capacitação corporativa em segurança privada · Indaiatuba/SP</div>
+    <div class="foot-brand">
+      <img src="images/logo-ativ-nav.png" alt="ATIV Brasil" width="48" height="48" loading="lazy" decoding="async">
+      <div>
+        <div style="font-family:var(--font-display);font-size:22px;font-weight:700;text-transform:uppercase;color:var(--text)">ATIV<span style="color:var(--brand)">.</span> Treinamentos</div>
+        <div style="margin-top:6px">Capacitação corporativa em segurança privada · Indaiatuba/SP</div>
+      </div>
     </div>
     <div class="mono" style="text-align:right">
       CREDENCIAMENTO PF Nº 89/2026 · VÁLIDO ATÉ 21/01/2031<br>
