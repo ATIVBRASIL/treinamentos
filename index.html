@@ -899,13 +899,12 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
    ===================================================================== */
 const CONFIG = {
   // Seu número com código do país, só dígitos. Ex.: "5519999999999"
-  WHATSAPP: "5519XXXXXXXXX",
+  WHATSAPP: "5519974010028",
 
-  // Captura de leads no Supabase (rode a migration leads_treinamentos.sql antes).
-  // Deixe SUPABASE_URL vazio para usar apenas o fallback via WhatsApp.
-  SUPABASE_URL: "",            // ex.: "https://xxxx.supabase.co"
-  SUPABASE_ANON_KEY: "",       // anon key (com RLS insert-only, é seguro expor)
-  SUPABASE_TABLE: "leads_treinamentos"
+  // CRM SaaS: mesma tabela leads_landing (origem distinta). Anon key = insert-only via RLS.
+  SUPABASE_URL: "https://dbbzehyummpjyedxmsme.supabase.co",
+  SUPABASE_ANON_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRiYnplaHl1bW1wanllZHhtc21lIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg1Njc4MTMsImV4cCI6MjA4NDE0MzgxM30.sFH5-IG1ZmUh5OpXZrsg0aogm-Qt2CyF6eyrCaGAOlQ",
+  SUPABASE_TABLE: "leads_landing"
 };
 /* ===================================================================== */
 
@@ -972,6 +971,12 @@ form.addEventListener("submit", async e => {
 
   if (CONFIG.SUPABASE_URL && CONFIG.SUPABASE_ANON_KEY) {
     try {
+      const desafioParts = [
+        `E-mail: ${data.email}`,
+        `Interesse: ${data.interesse}`,
+      ];
+      if (data.treinamento) desafioParts.push(`Treinamento: ${data.treinamento}`);
+
       const res = await fetch(`${CONFIG.SUPABASE_URL}/rest/v1/${CONFIG.SUPABASE_TABLE}`, {
         method: "POST",
         headers: {
@@ -981,22 +986,23 @@ form.addEventListener("submit", async e => {
           "Prefer": "return=minimal"
         },
         body: JSON.stringify({
-          nome: data.nome, empresa: data.empresa, email: data.email,
-          whatsapp: data.whatsapp, efetivo: data.efetivo, interesse: data.interesse,
-          treinamento: data.treinamento || null,
-          origem: "landing_treinamentos"
+          nome: data.nome,
+          empresa: data.empresa,
+          telefone: data.whatsapp,
+          num_colaboradores: data.efetivo,
+          desafio: desafioParts.join("\n"),
+          origem: "landing-treinamentos"
         })
       });
       if (!res.ok) throw new Error("supabase " + res.status);
       msgEl.textContent = "// Recebido. Retorno em até 24h úteis.";
       msgEl.className = "form-msg ok";
       form.reset();
+      btn.disabled = false;
       btn.textContent = "Solicitação enviada ✓";
       return;
     } catch (err) {
       console.error(err); // cai no fallback abaixo
-    } finally {
-      btn.disabled = false;
     }
   }
 
