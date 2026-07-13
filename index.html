@@ -206,6 +206,9 @@ nav{
 /* ---------- lei / contexto ---------- */
 .cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
 @media(max-width:880px){.cards-3{grid-template-columns:1fr}}
+.contexto-bridge{
+  margin:40px 0 0;max-width:720px;font-size:17px;line-height:1.55;color:var(--muted);
+}
 .card{
   border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--panel);
   padding:30px 28px;transition:border-color .2s ease,transform .2s ease;
@@ -237,6 +240,9 @@ nav{
 .plan li{display:flex;gap:11px;font-size:15px;color:var(--text)}
 .plan li::before{content:"→";color:var(--ok);font-family:var(--font-mono);flex-shrink:0}
 .plan .btn{width:100%}
+.plans-bridge{
+  margin:36px 0 0;max-width:760px;font-size:15.5px;line-height:1.55;color:var(--muted);
+}
 
 /* ---------- catálogo pronta entrega ---------- */
 .courses{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
@@ -279,7 +285,10 @@ nav{
 }
 @media(max-width:880px){.pasta-grid{grid-template-columns:1fr;gap:36px}}
 .pasta-copy .lead{max-width:520px}
-.pasta-points{list-style:none;display:flex;flex-direction:column;gap:12px;margin:28px 0 0}
+.pasta-scene{
+  margin:12px 0 0;max-width:720px;font-size:17px;line-height:1.55;color:var(--text);
+}
+.pasta-points{list-style:none;display:flex;flex-direction:column;gap:12px;margin:0}
 .pasta-points li{
   display:flex;gap:12px;align-items:flex-start;color:var(--muted);font-size:15.5px;line-height:1.45;
 }
@@ -505,18 +514,18 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
 <section id="contexto">
   <div class="wrap">
     <div class="eyebrow reveal">Por que agora</div>
-    <h2 class="reveal">A Lei 14.967/24 mudou a régua.<br>O novo marco elevou a atenção sobre qualificação, regularidade e controle operacional.</h2>
-    <p class="lead reveal">O novo Estatuto da Segurança Privada elevou as exigências de capacitação e ampliou a responsabilidade de quem contrata. Treinamento deixou de ser diferencial: virou condição de permanência no mercado.</p>
+    <h2 class="reveal">A Lei 14.967/24 mudou a régua.<br>Treinamento deixou de ser diferencial — virou condição de permanência.</h2>
+    <p class="lead reveal">O Estatuto elevou as exigências de capacitação e ampliou a responsabilidade de quem contrata. Na prática: quem não comprova, não passa na auditoria — e não renova o contrato.</p>
 
     <div class="cards-3">
       <div class="card reveal">
         <div class="k">Fiscalização</div>
-        <h3>A fiscalização exige organização e rastreabilidade</h3>
+        <h3>Para o auditor, o que não está documentado não aconteceu</h3>
         <p>A regulamentação do Estatuto intensificou a fiscalização sobre empresas de segurança. Capacitação sem evidência documental é capacitação que não existe para o auditor.</p>
       </div>
       <div class="card reveal">
         <div class="k">Responsabilidade</div>
-        <h3>Seu contratante quer reduzir exposição</h3>
+        <h3>Seu contratante também responde — e vai exigir prova</h3>
         <p>Contratantes respondem pela regularidade das empresas que contratam. Grandes clientes já exigem prova de treinamento continuado antes de assinar ou renovar contratos.</p>
       </div>
       <div class="card reveal">
@@ -525,6 +534,8 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
         <p>Um único incidente mal conduzido gera processo, indenização e quebra de contrato. Equipe preparada técnica e emocionalmente é o seguro mais barato que existe.</p>
       </div>
     </div>
+
+    <p class="contexto-bridge reveal">Sim, a evidência virou obrigação — e nós a entregamos completa. Mas certificado comprova o treinamento; não sustenta a ocorrência. O que sustenta é a conduta de quem está no posto.</p>
   </div>
 </section>
 
@@ -532,8 +543,8 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
 <section id="programas">
   <div class="wrap">
     <div class="eyebrow reveal">Formatos de treinamento</div>
-    <h2 class="reveal">Formatos desenhados para operações reais</h2>
-    <p class="lead reveal">Três formatos claros de contratação. O conteúdo sai do catálogo de pronta entrega logo abaixo — ou é desenhado sob medida no diagnóstico com o gestor. Em todos os casos, além do treinamento, a empresa recebe o pacote de evidências que protege o contrato em auditoria e renovação.</p>
+    <h2 class="reveal">Três formatos. Um critério:<br>o tamanho do problema que você precisa resolver.</h2>
+    <p class="lead reveal">Uma dor pontual pede o Workshop. Elevar o padrão da equipe inteira pede o Programa. Operação com 50+ colaboradores e auditoria anual pede a Parceria. Em todos, o treinamento sai com as evidências documentadas para auditoria e renovação.</p>
 
     <div class="plans">
       <div class="plan reveal">
@@ -555,13 +566,13 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
         <h3>Programa de Aperfeiçoamento</h3>
         <p class="who">Para operações que precisam elevar o padrão da equipe inteira — técnica, conduta e controle emocional.</p>
         <ul>
+          <li>Follow-up de eficácia após 60 dias — voltamos para verificar se a conduta mudou no posto</li>
           <li>Diagnóstico operacional inicial da equipe</li>
           <li>4 a 6 encontros presenciais ou híbridos (4–8 semanas)</li>
           <li>Trilha combinando disciplinas técnicas e comportamentais</li>
           <li>Dossiê completo de evidências de capacitação</li>
-          <li>Follow-up de eficácia após 60 dias</li>
         </ul>
-        <a href="#contato" class="btn btn-primary">Solicitar proposta</a>
+        <a href="#contato" class="btn btn-primary">Quero este programa</a>
       </div>
 
       <div class="plan reveal">
@@ -578,6 +589,8 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
         <a href="#contato" class="btn btn-ghost">Falar com o instrutor</a>
       </div>
     </div>
+
+    <p class="plans-bridge reveal">A evidência cresce com o formato: relatório de turma no Workshop, dossiê completo no Programa, registro digital auditável na Parceria — integrado à plataforma ATIV.</p>
   </div>
 </section>
 
@@ -586,25 +599,11 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
   <div class="wrap">
     <div class="eyebrow reveal">Pronta entrega</div>
     <h2 class="reveal">O fator humano,<br>pronto para agendar</h2>
-    <p class="lead reveal">Técnica se aprende em qualquer escola credenciada. O que diferencia uma operação é a <b style="color:var(--text)">mentalidade, crenças e o comportamento</b> de quem está no posto: percepção, decisão, controle emocional e conduta. Cada treinamento abaixo treina exatamente isso — e pode ser entregue como Workshop Intensivo de 1 dia ou compor um Programa de Aperfeiçoamento.</p>
+    <p class="lead reveal">Técnica se aprende em qualquer escola credenciada. O que diferencia uma operação é a <b style="color:var(--text)">mentalidade</b> de quem está no posto: percepção, decisão, controle emocional e conduta. Cada programa abaixo forma exatamente isso — como Workshop de 1 dia ou dentro de um Programa de Aperfeiçoamento.</p>
 
     <div class="courses">
       <div class="course reveal">
-        <div class="course-photo"><img src="images/cursos/iac.jpg" alt="Inteligência de Análise Comportamental" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
-        <div class="course-body">
-          <div class="course-head"><h3>Inteligência de Análise Comportamental</h3><span class="code">IAC</span></div>
-          <p class="pain">// Para enxergar a ocorrência antes de ela acontecer</p>
-          <ul>
-            <li>Leitura de linguagem corporal e comportamento fora do padrão</li>
-            <li>Atenção situacional em portaria, evento e perímetro</li>
-            <li>Protocolo de comunicação e registro de suspeita</li>
-          </ul>
-          <a href="#contato" class="btn btn-ghost" data-course="IAC — Inteligência de Análise Comportamental">Solicitar este treinamento</a>
-        </div>
-      </div>
-
-      <div class="course reveal">
-        <div class="course-photo"><img src="images/cursos/ceg.jpg" alt="Comunicação, Controle Emocional e Gestão de Conflitos" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
+        <div class="course-photo"><img src="images/cursos/ceg.jpg" alt="Comunicação e Gestão de Conflitos" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
         <div class="course-body">
           <div class="course-head"><h3>Comunicação e Gestão de Conflitos</h3><span class="code">CEG</span></div>
           <p class="pain">// Para evitar o incidente verbal que termina em processo</p>
@@ -613,35 +612,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
             <li>Domínio emocional sob provocação e pressão</li>
             <li>Condução de abordagem que protege o vigilante e o contrato</li>
           </ul>
-          <a href="#contato" class="btn btn-ghost" data-course="CEG — Comunicação, Controle Emocional e Gestão de Conflitos">Solicitar este treinamento</a>
-        </div>
-      </div>
-
-      <div class="course reveal">
-        <div class="course-photo"><img src="images/cursos/lts.jpg" alt="Liderança Tática de Supervisores" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
-        <div class="course-body">
-          <div class="course-head"><h3>Liderança Tática de Supervisores</h3><span class="code">LTS</span></div>
-          <p class="pain">// Para o supervisor que apaga incêndio, mas não sustenta padrão</p>
-          <ul>
-            <li>Tomada de decisão sob pressão para chefes de posto</li>
-            <li>Rotina de supervisão que mantém o padrão treinado no posto</li>
-            <li>Feedback, correção de conduta e gestão da equipe</li>
-          </ul>
-          <a href="#contato" class="btn btn-ghost" data-course="LTS — Liderança Tática de Supervisores">Solicitar este treinamento</a>
-        </div>
-      </div>
-
-      <div class="course reveal">
-        <div class="course-photo"><img src="images/cursos/bmv.jpg" alt="Blindagem Mental do Vigilante" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
-        <div class="course-body">
-          <div class="course-head"><h3>Blindagem Mental do Vigilante</h3><span class="code">BMV</span></div>
-          <p class="pain">// Para a mente que trabalha 12 horas entre a monotonia e a crise</p>
-          <ul>
-            <li>Controle de estresse, foco e prontidão em turnos longos</li>
-            <li>Técnicas de autorregulação emocional aplicadas ao posto</li>
-            <li>Ética e postura profissional: respeito sem uso de força</li>
-          </ul>
-          <a href="#contato" class="btn btn-ghost" data-course="BMV — Blindagem Mental do Vigilante">Solicitar este treinamento</a>
+          <a href="#contato" class="btn btn-ghost" data-course="CEG — Comunicação e Gestão de Conflitos">Solicitar este treinamento</a>
         </div>
       </div>
 
@@ -660,6 +631,34 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
       </div>
 
       <div class="course reveal">
+        <div class="course-photo"><img src="images/cursos/bmv.jpg" alt="Blindagem Mental do Vigilante" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
+        <div class="course-body">
+          <div class="course-head"><h3>Blindagem Mental do Vigilante</h3><span class="code">BMV</span></div>
+          <p class="pain">// Para a mente que trabalha 12 horas entre a monotonia e a crise</p>
+          <ul>
+            <li>Controle de estresse, foco e prontidão em turnos longos</li>
+            <li>Técnicas de autorregulação emocional aplicadas ao posto</li>
+            <li>Ética e postura profissional: respeito sem uso de força</li>
+          </ul>
+          <a href="#contato" class="btn btn-ghost" data-course="BMV — Blindagem Mental do Vigilante">Solicitar este treinamento</a>
+        </div>
+      </div>
+
+      <div class="course reveal">
+        <div class="course-photo"><img src="images/cursos/iac.jpg" alt="Inteligência de Análise Comportamental" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
+        <div class="course-body">
+          <div class="course-head"><h3>Inteligência de Análise Comportamental</h3><span class="code">IAC</span></div>
+          <p class="pain">// Para enxergar a ocorrência antes de ela acontecer</p>
+          <ul>
+            <li>Leitura de linguagem corporal e comportamento fora do padrão</li>
+            <li>Atenção situacional em portaria, evento e perímetro</li>
+            <li>Protocolo de comunicação e registro de suspeita</li>
+          </ul>
+          <a href="#contato" class="btn btn-ghost" data-course="IAC — Inteligência de Análise Comportamental">Solicitar este treinamento</a>
+        </div>
+      </div>
+
+      <div class="course reveal">
         <div class="course-photo"><img src="images/cursos/rot.jpg" alt="Ronda Ostensiva Tática" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
         <div class="course-body">
           <div class="course-head"><h3>Ronda Ostensiva Tática</h3><span class="code">ROT</span></div>
@@ -672,10 +671,24 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
           <a href="#contato" class="btn btn-ghost" data-course="ROT — Ronda Ostensiva Tática">Solicitar este treinamento</a>
         </div>
       </div>
+
+      <div class="course reveal">
+        <div class="course-photo"><img src="images/cursos/lts.jpg" alt="Liderança Tática de Supervisores" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
+        <div class="course-body">
+          <div class="course-head"><h3>Liderança Tática de Supervisores</h3><span class="code">LTS</span></div>
+          <p class="pain">// Para o supervisor que apaga incêndio, mas não sustenta padrão</p>
+          <ul>
+            <li>Tomada de decisão sob pressão para chefes de posto</li>
+            <li>Rotina de supervisão que mantém o padrão treinado no posto</li>
+            <li>Feedback, correção de conduta e gestão da equipe</li>
+          </ul>
+          <a href="#contato" class="btn btn-ghost" data-course="LTS — Liderança Tática de Supervisores">Solicitar este treinamento</a>
+        </div>
+      </div>
     </div>
 
     <div class="catalog-bridge reveal">
-      <span>A dor da sua operação não está aqui? É exatamente para isso que existe o treinamento sob medida — ele nasce no <a href="#contato">diagnóstico gratuito com o gestor</a>.</span>
+      <span>A dor da sua operação não está aqui? Melhor ainda — o treinamento sob medida nasce exatamente do <a href="#contato">diagnóstico gratuito com o gestor</a>. Você descreve a ocorrência; nós desenhamos a resposta.</span>
     </div>
   </div>
 </section>
@@ -684,8 +697,9 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
 <section id="evidencias">
   <div class="wrap">
     <div class="eyebrow reveal">Entregável do treinamento</div>
-    <h2 class="reveal">Pasta completa para o gestor</h2>
-    <p class="lead reveal">Não basta treinar. É preciso comprovar — para o cliente da empresa de segurança e para a Polícia Federal — que o treinamento complementar de fato aconteceu.</p>
+    <h2 class="reveal">O dossiê que encerra a conversa com o auditor.</h2>
+    <p class="lead reveal">Não basta treinar. É preciso comprovar — para o contratante e para a Polícia Federal — que a capacitação de fato aconteceu.</p>
+    <p class="pasta-scene reveal">No dia em que o auditor pedir, na renovação do contrato ou na notificação pós-ocorrência: você abre o dossiê e a resposta já está pronta.</p>
 
     <div class="pasta-grid">
       <div class="pasta-copy reveal">
@@ -693,7 +707,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
           <li>Certificados individuais com identificação do treinamento, conteúdo, carga horária e responsável técnico</li>
           <li>Grade / conteúdo programático do encontro</li>
           <li>Lista de presença assinada da turma</li>
-          <li>Avaliação da turma e registro de eficácia</li>
+          <li>Avaliação da turma e registro de eficácia — a prova de que o treinamento mudou conduta, não só cumpriu carga horária</li>
           <li>Fotos e vídeos do treinamento in-company</li>
         </ul>
         <p class="pasta-seal">Credenciamento PF <b>nº 89/2026</b> · válido até <b>21/01/2031</b><br>// Aperfeiçoamento complementar — não substitui formação de escola credenciada</p>
@@ -749,7 +763,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
         <div class="eyebrow reveal">O instrutor</div>
         <h2 class="reveal">Quem treinou na rua,<br>treina diferente.</h2>
         <p class="lead reveal" style="margin-bottom:28px">Alex Andreoli Dantas passou 26 anos na Polícia Militar de São Paulo — 18 deles na Força Tática, em patrulhamento e operações de alto risco. Antes disso, serviu na Força Aérea Brasileira. O que ele ensina em sala foi validado onde erro não tem replay.</p>
-        <p class="lead reveal">A diferença está no que vem junto: formação em Filosofia, análise comportamental (IBC) e hipnoterapia aplicada à performance. O resultado é um treinamento que prepara a técnica <b style="color:var(--text)">e</b> a cabeça do profissional — decisão sob pressão, controle emocional, conduta ética.</p>
+        <p class="lead reveal">A diferença está no que vem junto: pós-graduação em Filosofia, análise comportamental e preparação mental de alta performance. O resultado é um treinamento que prepara a técnica <b style="color:var(--text)">e</b> a cabeça do profissional — decisão sob pressão, controle emocional, conduta ética.</p>
       </div>
       <div class="pillars reveal">
         <div class="pillar">
@@ -762,7 +776,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
         </div>
         <div class="pillar">
           <span class="idx">C</span>
-          <div><h3>Evidência documental</h3><p>Certificados, listas de presença, avaliações e relatórios de eficácia. Tudo pronto para auditoria e renovação de contrato.</p></div>
+          <div><h3>Credenciado pela PF em 13 disciplinas</h3><p>Credenciamento nº 89/2026, válido até 2031. Amplitude para desenhar a trilha completa da sua operação com um único instrutor responsável.</p></div>
         </div>
         <div class="pillar">
           <span class="idx">D</span>
@@ -889,12 +903,12 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
         </select>
         <select name="treinamento" id="sel-treinamento">
           <option value="">Treinamento de pronta entrega (opcional)</option>
-          <option>IAC — Inteligência de Análise Comportamental</option>
-          <option>CEG — Comunicação, Controle Emocional e Gestão de Conflitos</option>
-          <option>LTS — Liderança Tática de Supervisores</option>
-          <option>BMV — Blindagem Mental do Vigilante</option>
+          <option>CEG — Comunicação e Gestão de Conflitos</option>
           <option>UPF — Uso Progressivo da Força: Decisão sob Pressão</option>
+          <option>BMV — Blindagem Mental do Vigilante</option>
+          <option>IAC — Inteligência de Análise Comportamental</option>
           <option>ROT — Ronda Ostensiva Tática</option>
+          <option>LTS — Liderança Tática de Supervisores</option>
           <option>Sob medida — definir no diagnóstico</option>
         </select>
         <button type="submit" class="btn btn-primary" id="submit-btn">Solicitar diagnóstico gratuito</button>
