@@ -140,11 +140,18 @@ nav{
 .hero{padding:88px 0 72px;border-top:none;position:relative}
 .hero-grid{display:grid;grid-template-columns:7fr 5fr;gap:56px;align-items:center}
 @media(max-width:940px){.hero-grid{grid-template-columns:1fr}}
-.hero h1{font-size:clamp(48px,6.4vw,84px)}
+.hero h1{font-size:clamp(40px,6.4vw,84px);max-width:18ch}
 .hero h1 em{font-style:normal;color:var(--brand)}
-.hero .lead{margin:22px 0 32px;font-size:19px}
+.hero .lead{margin:22px 0 16px;font-size:19px}
+.hero-support{
+  margin:0 0 28px;max-width:560px;font-size:15.5px;line-height:1.5;
+  font-style:italic;color:var(--muted);opacity:.75;
+}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
-.hero-note{margin-top:18px;font-family:var(--font-mono);font-size:12px;color:var(--dim);letter-spacing:.06em}
+.hero-note{margin-top:14px;font-family:var(--font-mono);font-size:12px;color:var(--dim);letter-spacing:.06em}
+@media(max-width:480px){
+  .hero h1{font-size:clamp(34px,9.2vw,42px);max-width:none;line-height:1.05}
+}
 .hero-badge{
   display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);
   background:var(--panel);border-radius:8px;padding:9px 16px;margin-bottom:26px;
@@ -423,7 +430,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
 </head>
 <body>
 
-<div class="topbar">LEI 14.967/24 EM VIGOR — EMPRESAS DE SEGURANÇA DEVEM COMPROVAR CAPACITAÇÃO CONTINUADA DAS EQUIPES</div>
+<div class="topbar">NOVO MARCO DA SEGURANÇA PRIVADA — LEI 14.967/24 · CREDENCIAMENTO PF Nº 89/2026</div>
 
 <nav>
   <div class="wrap nav-inner">
@@ -452,13 +459,14 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
     <div class="hero-grid">
       <div>
         <div class="hero-badge reveal"><span class="dot"></span> Credenciamento PF nº 89/2026 · Válido até 2031</div>
-        <h1 class="reveal">Sua equipe treinada.<br>Sua operação <em>blindada</em>.<br>Seu contrato protegido.</h1>
-        <p class="lead reveal">Treinamentos in-company que alinham mentalidade, percepção e conduta do efetivo — técnicas práticas, aplicáveis no posto, com evidências de capacitação. Exatamente o que a Lei 14.967/24 e os seus contratantes vão exigir.</p>
+        <h1 class="reveal">Sua equipe sabe o que fazer.<br>Então por que não faz quando mais <em>importa?</em></h1>
+        <p class="lead reveal">Porque técnica sem mentalidade não muda comportamento. A ATIV forma o profissional por trás do procedimento — percepção, discernimento e conduta à altura do seu nome.</p>
+        <p class="hero-support reveal">O padrão da sua operação é o que a sua equipe faz quando ninguém está olhando. Nós formamos isso — e entregamos as evidências que comprovam.</p>
         <div class="hero-ctas reveal">
-          <a class="btn btn-wa" href="#" data-wa data-msg="Olá, Dantas. Vi a página da ATIV Treinamentos e quero uma proposta de treinamento in-company para minha equipe.">Falar no WhatsApp</a>
-          <a class="btn btn-ghost" href="#programas">Ver treinamentos</a>
+          <a class="btn btn-wa" href="#" data-wa data-msg="Olá, Dantas. Vi a página da ATIV Treinamentos e quero elevar o padrão da minha equipe com treinamento in-company.">Quero elevar o padrão da minha equipe</a>
+          <a class="btn btn-ghost" href="#programas">Ver os treinamentos</a>
         </div>
-        <p class="hero-note">// Atendimento in-company · Indaiatuba, Campinas, Sorocaba, Jundiaí e região</p>
+        <p class="hero-note">Proposta em até 24h · Treinamento in-company, no seu posto, na sua realidade</p>
       </div>
 
       <aside class="dossier reveal">
@@ -497,18 +505,18 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
 <section id="contexto">
   <div class="wrap">
     <div class="eyebrow reveal">Por que agora</div>
-    <h2 class="reveal">A Lei 14.967/24 mudou a régua.<br>Quem não comprova treinamento, perde contrato.</h2>
+    <h2 class="reveal">A Lei 14.967/24 mudou a régua.<br>O novo marco elevou a atenção sobre qualificação, regularidade e controle operacional.</h2>
     <p class="lead reveal">O novo Estatuto da Segurança Privada elevou as exigências de capacitação e ampliou a responsabilidade de quem contrata. Treinamento deixou de ser diferencial: virou condição de permanência no mercado.</p>
 
     <div class="cards-3">
       <div class="card reveal">
         <div class="k">Fiscalização</div>
-        <h3>A Polícia Federal está cobrando</h3>
+        <h3>A fiscalização exige organização e rastreabilidade</h3>
         <p>A regulamentação do Estatuto intensificou a fiscalização sobre empresas de segurança. Capacitação sem evidência documental é capacitação que não existe para o auditor.</p>
       </div>
       <div class="card reveal">
         <div class="k">Responsabilidade</div>
-        <h3>Seu cliente também responde</h3>
+        <h3>Seu contratante quer reduzir exposição</h3>
         <p>Contratantes respondem pela regularidade das empresas que contratam. Grandes clientes já exigem prova de treinamento continuado antes de assinar ou renovar contratos.</p>
       </div>
       <div class="card reveal">
@@ -682,7 +690,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
     <div class="pasta-grid">
       <div class="pasta-copy reveal">
         <ul class="pasta-points">
-          <li>Certificados individuais com lastro do credenciamento PF</li>
+          <li>Certificados individuais com identificação do treinamento, conteúdo, carga horária e responsável técnico</li>
           <li>Grade / conteúdo programático do encontro</li>
           <li>Lista de presença assinada da turma</li>
           <li>Avaliação da turma e registro de eficácia</li>
@@ -842,7 +850,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
       </details>
       <details>
         <summary>O que a minha empresa recebe além do treinamento?</summary>
-        <div class="a">O dossiê de evidências: certificados individuais, lista de presença, conteúdo programático, avaliação da turma e relatório de eficácia. É esse conjunto que vale em auditoria da PF, em processo trabalhista e na mesa de renovação com o seu contratante.</div>
+        <div class="a">O dossiê de evidências: certificados individuais, lista de presença, conteúdo programático, avaliação da turma e relatório de eficácia. É esse conjunto que ajuda a demonstrar o conteúdo realizado, a participação da turma e as ações de acompanhamento.</div>
       </details>
       <details>
         <summary>Vocês treinam supervisores e líderes, ou só o efetivo operacional?</summary>
