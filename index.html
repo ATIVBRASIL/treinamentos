@@ -274,8 +274,8 @@ nav{
   text-align:center;opacity:.7;
 }
 
-/* ---------- catálogo pronta entrega ---------- */
-.courses{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+/* ---------- catálogo de treinamentos ---------- */
+.courses{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
 @media(max-width:940px){.courses{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.courses{grid-template-columns:1fr}}
 .course{
@@ -290,13 +290,13 @@ nav{
   transition:transform 400ms var(--ease-out);
 }
 @media (hover:hover) and (pointer:fine){
-  .course:hover{border-color:var(--accent,#e85d1f);transform:translateY(-4px)}
+  .course:hover{border-color:var(--accent);transform:translateY(-4px)}
   .course:hover .course-photo img{transform:scale(1.04)}
 }
 .course-body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1}
 .course-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px}
 .course h3{font-size:23px;line-height:1.08}
-.course .code{
+.course .code,.hexis-banner .code{
   font-family:var(--font-mono);font-size:12px;font-weight:600;letter-spacing:.06em;
   color:var(--brand);background:var(--brand-dim);border:1px solid rgba(232,93,31,.35);
   border-radius:6px;padding:6px 9px;flex-shrink:0;
@@ -314,6 +314,31 @@ nav{
   padding:20px 24px;color:var(--muted);font-size:15.5px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;
 }
 .catalog-bridge a{color:var(--brand)}
+
+/* ---------- catálogo v2: patamares, descritor, hexis ---------- */
+.patamar{margin:56px 0 20px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.lead + .patamar{margin-top:44px}
+.patamar .patamar-num{font-family:var(--font-mono);font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);border:1px solid var(--accent);
+  padding:4px 10px;border-radius:3px}
+.patamar h3{margin:0;font-size:1.25rem}
+.patamar p{margin:0;opacity:.65;font-size:.9rem;flex-basis:100%;color:var(--muted);text-transform:none;letter-spacing:0;font-family:var(--font-body);font-weight:400}
+
+.course-head h3 .descritor{display:block;font-size:.78rem;font-weight:400;
+  letter-spacing:.02em;opacity:.7;margin-top:4px;text-transform:none;font-family:var(--font-body);line-height:1.35}
+
+.courses-single{grid-template-columns:minmax(0,1fr)}
+@media(min-width:900px){.courses-single .course{max-width:66%}}
+
+.course-photo.ph-missing{visibility:hidden;height:0;min-height:0;display:none}
+
+.hexis-banner{margin-top:40px;border:1px solid var(--accent);border-radius:var(--radius-lg);
+  padding:28px 32px;display:flex;gap:24px;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;background:linear-gradient(120deg,rgba(232,93,31,.08),transparent 60%)}
+.hexis-banner h3{margin:8px 0 6px;font-size:clamp(22px,2.4vw,28px)}
+.hexis-banner p{margin:0;max-width:62ch;opacity:.85;color:var(--muted);font-size:15.5px}
+.hexis-banner .btn{flex-shrink:0}
+@media(max-width:640px){.hexis-banner{padding:22px 20px}.hexis-banner .btn{width:100%}}
 
 /* ---------- pasta do gestor / evidências ---------- */
 .pasta-grid{
@@ -546,7 +571,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
     <div class="nav-links">
       <a href="#contexto">Por que agora</a>
       <a href="#programas">Treinamentos</a>
-      <a href="#catalogo">Pronta entrega</a>
+      <a href="#catalogo">Catálogo</a>
       <a href="#evidencias">Evidências</a>
       <a href="#instrutor">Instrutor</a>
       <a href="#faq">Dúvidas</a>
@@ -686,102 +711,217 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
   </div>
 </section>
 
-<!-- ============ CATÁLOGO PRONTA ENTREGA ============ -->
+<!-- ==================== CATÁLOGO DE TREINAMENTOS (v2) ==================== -->
 <section id="catalogo">
   <div class="wrap">
-    <div class="eyebrow reveal">Pronta entrega</div>
-    <h2 class="reveal">O fator humano,<br>pronto para agendar</h2>
-    <p class="lead reveal">Técnica se aprende em qualquer escola credenciada. O que diferencia uma operação é a <b style="color:var(--text)">mentalidade</b> de quem está no posto: percepção, decisão, controle emocional e conduta. Cada programa abaixo forma exatamente isso — como Workshop de 1 dia ou dentro de um Programa de Aperfeiçoamento.</p>
+    <div class="eyebrow reveal">Catálogo de treinamentos</div>
+    <h2 class="reveal">Cursos que formam conduta.<br>Títulos que o profissional carrega.</h2>
+    <p class="lead reveal">
+      Técnica se aprende em escola credenciada. A ATIV forma o que sustenta a técnica:
+      percepção, decisão, palavra e conduta. Cada curso confere um título que o
+      profissional carrega com orgulho e um registro que a sua empresa comprova em
+      auditoria. O catálogo segue a escada que a Lei 14.967/24 criou: vigilante,
+      vigilante supervisor e gestor.
+    </p>
+
+    <!-- ========== PATAMAR 1 ========== -->
+    <div class="patamar reveal">
+      <span class="patamar-num">Patamar 1</span>
+      <h3>O Vigilante</h3>
+      <p>O homem no posto. Seis títulos, seis riscos que custam contrato.</p>
+    </div>
 
     <div class="courses reveal-group">
-      <div class="course reveal">
-        <div class="course-photo"><img src="images/cursos/ceg.jpg" alt="Treinamento CEG — Comunicação e Gestão de Conflitos" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
+      <article class="course reveal">
+        <div class="course-photo"><img src="images/cursos/sentinela.jpg" alt="Curso SENTINELA, vigilância preventiva e análise comportamental para vigilantes" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
         <div class="course-body">
-          <div class="course-head"><h3>Comunicação e Gestão de Conflitos</h3><span class="code">CEG</span></div>
-          <p class="pain">// Para evitar o incidente verbal que termina em processo</p>
+          <div class="course-head">
+            <h3>SENTINELA<span class="descritor">Vigilância Preventiva e Análise Comportamental</span></h3>
+            <span class="code">VIG · NCT</span>
+          </div>
+          <p class="pain">// A ocorrência que não aconteceu</p>
           <ul>
-            <li>Desescalonamento verbal em situações de tensão</li>
-            <li>Domínio emocional sob provocação e pressão</li>
-            <li>Condução de abordagem que protege o vigilante e o contrato</li>
+            <li>Leitura de linha de base: o normal do posto e o desvio que anuncia a ocorrência</li>
+            <li>Ronda com leitura de ambiente: fim do "sem alteração" automático</li>
+            <li>Protocolo de comunicação e registro de suspeita que vira indicador de prevenção</li>
           </ul>
-          <a href="#contato" class="btn btn-ghost" data-course="CEG — Comunicação e Gestão de Conflitos">Solicitar este treinamento</a>
+          <a class="btn btn-ghost" href="#contato" data-course="SENTINELA">Solicitar este treinamento</a>
         </div>
-      </div>
+      </article>
 
-      <div class="course reveal">
-        <div class="course-photo"><img src="images/cursos/upf.jpg" alt="Treinamento UPF — Uso Progressivo da Força: Decisão sob Pressão" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
+      <article class="course reveal">
+        <div class="course-photo"><img src="images/cursos/desarme.jpg" alt="Curso DESARME, desescalada verbal e gestão de conflitos na segurança privada" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
         <div class="course-body">
-          <div class="course-head"><h3>Uso Progressivo da Força: Decisão sob Pressão</h3><span class="code">UPF</span></div>
-          <p class="pain">// Para a fração de segundo entre agir e se exceder</p>
+          <div class="course-head">
+            <h3>DESARME<span class="descritor">Desescalada Verbal e Gestão de Conflitos</span></h3>
+            <span class="code">GEP · RHT · DHU</span>
+          </div>
+          <p class="pain">// A palavra sob câmera</p>
           <ul>
-            <li>Proporcionalidade, julgamento e amparo legal da ação</li>
-            <li>Critérios de decisão em cenários reais do posto</li>
-            <li>Simulações de escalada com avaliação individual</li>
+            <li>Desescalada verbal na realidade de hoje: todo conflito tem celular filmando</li>
+            <li>A pausa treinada antes da palavra: domínio emocional sob provocação</li>
+            <li>Condução de abordagem que protege o profissional, a marca e o contrato</li>
           </ul>
-          <a href="#contato" class="btn btn-ghost" data-course="UPF — Uso Progressivo da Força: Decisão sob Pressão">Solicitar este treinamento</a>
+          <a class="btn btn-ghost" href="#contato" data-course="DESARME">Solicitar este treinamento</a>
         </div>
-      </div>
+      </article>
 
-      <div class="course reveal">
-        <div class="course-photo"><img src="images/cursos/bmv.jpg" alt="Treinamento BMV — Blindagem Mental do Vigilante" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
+      <article class="course reveal">
+        <div class="course-photo"><img src="images/cursos/upf.jpg" alt="Curso UPF, uso progressivo da força e meios não letais, decisão sob pressão" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
         <div class="course-body">
-          <div class="course-head"><h3>Blindagem Mental do Vigilante</h3><span class="code">BMV</span></div>
-          <p class="pain">// Para a mente que trabalha 12 horas entre a monotonia e a crise</p>
+          <div class="course-head">
+            <h3>UPF<span class="descritor">Uso Progressivo da Força e Meios Não Letais</span></h3>
+            <span class="code">ENL I · ENL II · DHU</span>
+          </div>
+          <p class="pain">// O meio segundo. Teste das 5 Condições</p>
           <ul>
-            <li>Controle de estresse, foco e prontidão em turnos longos</li>
-            <li>Técnicas de autorregulação emocional aplicadas ao posto</li>
-            <li>Ética e postura profissional: respeito sem uso de força</li>
+            <li>Proporcionalidade e amparo legal: decidir em segundos e sustentar a decisão depois</li>
+            <li>Teste das 5 Condições aplicado a cenários reais do posto, com avaliação individual</li>
+            <li>Emprego de equipamentos não letais com critério, técnica e registro</li>
           </ul>
-          <a href="#contato" class="btn btn-ghost" data-course="BMV — Blindagem Mental do Vigilante">Solicitar este treinamento</a>
+          <a class="btn btn-ghost" href="#contato" data-course="UPF">Solicitar este treinamento</a>
         </div>
-      </div>
+      </article>
 
-      <div class="course reveal">
-        <div class="course-photo"><img src="images/cursos/iac.jpg" alt="Treinamento IAC — Inteligência de Análise Comportamental" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
+      <article class="course reveal">
+        <div class="course-photo"><img src="images/cursos/blindagem.jpg" alt="Curso BLINDAGEM, preparo mental do vigilante para turnos longos" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
         <div class="course-body">
-          <div class="course-head"><h3>Inteligência de Análise Comportamental</h3><span class="code">IAC</span></div>
-          <p class="pain">// Para enxergar a ocorrência antes de ela acontecer</p>
+          <div class="course-head">
+            <h3>BLINDAGEM<span class="descritor">Preparo Mental do Vigilante</span></h3>
+            <span class="code">RHT · RSE</span>
+          </div>
+          <p class="pain">// As 12 horas</p>
           <ul>
-            <li>Leitura de linguagem corporal e comportamento fora do padrão</li>
-            <li>Atenção situacional em portaria, evento e perímetro</li>
-            <li>Protocolo de comunicação e registro de suspeita</li>
+            <li>Prontidão entre a monotonia e a crise: atenção que descansa sem desligar</li>
+            <li>Autorregulação emocional dentro do turno, não fora dele</li>
+            <li>Evidência de capacitação que apoia a gestão de riscos psicossociais (NR-1)</li>
           </ul>
-          <a href="#contato" class="btn btn-ghost" data-course="IAC — Inteligência de Análise Comportamental">Solicitar este treinamento</a>
+          <a class="btn btn-ghost" href="#contato" data-course="BLINDAGEM">Solicitar este treinamento</a>
         </div>
-      </div>
+      </article>
 
-      <div class="course reveal">
-        <div class="course-photo"><img src="images/cursos/rot.jpg" alt="Treinamento ROT — Ronda Ostensiva Tática" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
+      <article class="course reveal">
+        <div class="course-photo"><img src="images/cursos/integridade.jpg" alt="Curso INTEGRIDADE, conduta sem supervisão e correção de desvios" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
         <div class="course-body">
-          <div class="course-head"><h3>Ronda Ostensiva Tática</h3><span class="code">ROT</span></div>
-          <p class="pain">// Para a ronda que cumpre horário, mas não lê o ambiente</p>
+          <div class="course-head">
+            <h3>INTEGRIDADE<span class="descritor">Conduta sem Supervisão e Correção de Desvios</span></h3>
+            <span class="code">SSP · DHU · RHT</span>
+          </div>
+          <p class="pain">// O posto sem testemunha</p>
           <ul>
-            <li>Patrulhamento como leitura de comportamento e ambiente</li>
-            <li>Identificação de atitude suspeita e pontos vulneráveis</li>
-            <li>Presença ostensiva que previne em vez de reagir</li>
+            <li>Conduta idêntica com e sem supervisão: o padrão que não depende de câmera</li>
+            <li>Adesão a regulamento e doutrina com autoprestação de contas</li>
+            <li>Desvio tratado como ação corretiva registrada, nunca escondida</li>
           </ul>
-          <a href="#contato" class="btn btn-ghost" data-course="ROT — Ronda Ostensiva Tática">Solicitar este treinamento</a>
+          <a class="btn btn-ghost" href="#contato" data-course="INTEGRIDADE">Solicitar este treinamento</a>
         </div>
-      </div>
+      </article>
 
-      <div class="course reveal">
-        <div class="course-photo"><img src="images/cursos/lts.jpg" alt="Treinamento LTS — Liderança Tática de Supervisores" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
+      <article class="course reveal">
+        <div class="course-photo"><img src="images/cursos/primeira-resposta.jpg" alt="Curso PRIMEIRA RESPOSTA, emergências e gerenciamento de crise no posto" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
         <div class="course-body">
-          <div class="course-head"><h3>Liderança Tática de Supervisores</h3><span class="code">LTS</span></div>
-          <p class="pain">// Para o supervisor que apaga incêndio, mas não sustenta padrão</p>
+          <div class="course-head">
+            <h3>PRIMEIRA RESPOSTA<span class="descritor">Emergências e Gerenciamento de Crise no Posto</span></h3>
+            <span class="code">RSE · GEC</span>
+          </div>
+          <p class="pain">// Os minutos antes do socorro chegar</p>
           <ul>
-            <li>Tomada de decisão sob pressão para chefes de posto</li>
-            <li>Rotina de supervisão que mantém o padrão treinado no posto</li>
-            <li>Feedback, correção de conduta e gestão da equipe</li>
+            <li>O papel do vigilante nos primeiros minutos: preservar vida, área e informação</li>
+            <li>Protocolos de emergência e comunicação de crise no contexto do posto</li>
+            <li>Simulados avaliados com registro individual de desempenho</li>
           </ul>
-          <a href="#contato" class="btn btn-ghost" data-course="LTS — Liderança Tática de Supervisores">Solicitar este treinamento</a>
+          <a class="btn btn-ghost" href="#contato" data-course="PRIMEIRA RESPOSTA">Solicitar este treinamento</a>
         </div>
-      </div>
+      </article>
     </div>
 
-    <div class="catalog-bridge reveal">
-      <span>A dor da sua operação não está aqui? Melhor ainda — o treinamento sob medida nasce exatamente do <a href="#contato">diagnóstico gratuito com o gestor</a>. Você descreve a ocorrência; nós desenhamos a resposta.</span>
+    <!-- ========== PATAMAR 2 ========== -->
+    <div class="patamar reveal">
+      <span class="patamar-num">Patamar 2</span>
+      <h3>O Vigilante Supervisor</h3>
+      <p>A figura que a Lei 14.967/24 criou. Quem sustenta o padrão quando ninguém cobra.</p>
     </div>
+
+    <div class="courses reveal-group">
+      <article class="course reveal">
+        <div class="course-photo"><img src="images/cursos/guardiao.jpg" alt="Curso GUARDIÃO, liderança de supervisores e sustentação de padrão" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
+        <div class="course-body">
+          <div class="course-head">
+            <h3>GUARDIÃO<span class="descritor">Liderança de Supervisores e Sustentação de Padrão</span></h3>
+            <span class="code">RHT · GEC · VIG</span>
+          </div>
+          <p class="pain">// Quem sustenta o padrão quando ninguém cobra</p>
+          <ul>
+            <li>Supervisão formadora: repetição corrigida em vez de incêndio apagado</li>
+            <li>Ronda de correção: um ajuste e um reforço por turno, registrados</li>
+            <li>Ritual de virada de turno que mantém vivo o padrão treinado</li>
+          </ul>
+          <a class="btn btn-ghost" href="#contato" data-course="GUARDIÃO">Solicitar este treinamento</a>
+        </div>
+      </article>
+
+      <article class="course reveal">
+        <div class="course-photo"><img src="images/cursos/evidencia.jpg" alt="Curso EVIDÊNCIA, registro de ocorrências e preservação de prova" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
+        <div class="course-body">
+          <div class="course-head">
+            <h3>EVIDÊNCIA<span class="descritor">Registro de Ocorrências e Preservação de Prova</span></h3>
+            <span class="code">NCT</span>
+          </div>
+          <p class="pain">// O relatório que sustenta o posto</p>
+          <ul>
+            <li>Registro que descreve fato, não opinião: cronologia, precisão, completude</li>
+            <li>Preservação de local, imagem e informação até a chegada da autoridade</li>
+            <li>O livro de ocorrências que compõe a defesa da empresa em auditoria e em juízo</li>
+          </ul>
+          <a class="btn btn-ghost" href="#contato" data-course="EVIDÊNCIA">Solicitar este treinamento</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- ========== PATAMAR 3 ========== -->
+    <div class="patamar reveal">
+      <span class="patamar-num">Patamar 3</span>
+      <h3>O Gestor</h3>
+      <p>Da conformidade ao contrato: a evidência como argumento comercial.</p>
+    </div>
+
+    <div class="courses courses-single reveal-group">
+      <article class="course reveal">
+        <div class="course-photo"><img src="images/cursos/operacao-auditavel.jpg" alt="Curso OPERAÇÃO AUDITÁVEL, gestão de evidências e conformidade com a Lei 14.967/24" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
+        <div class="course-body">
+          <div class="course-head">
+            <h3>OPERAÇÃO AUDITÁVEL<span class="descritor">Gestão de Evidências e Conformidade (Lei 14.967/24)</span></h3>
+            <span class="code">Executivo</span>
+          </div>
+          <p class="pain">// Da conformidade ao contrato</p>
+          <ul>
+            <li>Leitura da própria operação na Escala de Maturidade Operacional</li>
+            <li>O dossiê de conduta formada como argumento de renovação e concorrência</li>
+            <li>Treinamento executivo para gestores e diretoria, de natureza corporativa (fora do rol de disciplinas de vigilante)</li>
+          </ul>
+          <a class="btn btn-ghost" href="#contato" data-course="OPERAÇÃO AUDITÁVEL">Solicitar este treinamento</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- ========== HEXIS 90 ========== -->
+    <div class="hexis-banner reveal">
+      <div>
+        <span class="code">HEXIS 90 · Transversal</span>
+        <h3>Programa de Sustentação Comportamental</h3>
+        <p>Hábito não se palestra. Treina-se por 90 dias: rituais diários de 5 minutos
+        conduzidos pelo supervisor formado, verificação quinzenal e registro contínuo de
+        evidências. Disponível como extensão de qualquer curso do catálogo.</p>
+      </div>
+      <a class="btn btn-ghost" href="#contato" data-course="HEXIS 90">Quero sustentar o padrão</a>
+    </div>
+
+    <p class="catalog-bridge reveal">
+      Verticais sob consulta: Eventos e Multidões (GMU · GEP) · Transporte de Valores e
+      Escolta Armada (TVA · EAR). A dor da sua operação não está aqui? Melhor ainda: o
+      treinamento sob medida nasce exatamente do <a href="#contato">diagnóstico gratuito
+      com o gestor</a>. Você descreve a ocorrência; nós desenhamos a resposta.
+    </p>
   </div>
 </section>
 
@@ -931,7 +1071,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
       </div>
       <div class="evid" id="evid-mock">
         <div class="hd">Registro de capacitação — exemplo</div>
-        <div><span class="ok stamp">✓</span> CEG · Gestão de Conflitos — 12/2026</div>
+        <div><span class="ok stamp">✓</span> DESARME · Gestão de Conflitos — 12/2026</div>
         <div><span class="ok stamp">✓</span> UPF · Uso Progressivo da Força — 12/2026</div>
         <div><span class="ok stamp">✓</span> Certificados emitidos: 23/23</div>
         <div><span class="ok stamp">✓</span> Avaliação de eficácia: registrada</div>
@@ -1008,14 +1148,18 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
           <option>Ainda não sei — quero o diagnóstico</option>
         </select>
         <select name="treinamento" id="sel-treinamento">
-          <option value="">Treinamento de pronta entrega (opcional)</option>
-          <option>CEG — Comunicação e Gestão de Conflitos</option>
-          <option>UPF — Uso Progressivo da Força: Decisão sob Pressão</option>
-          <option>BMV — Blindagem Mental do Vigilante</option>
-          <option>IAC — Inteligência de Análise Comportamental</option>
-          <option>ROT — Ronda Ostensiva Tática</option>
-          <option>LTS — Liderança Tática de Supervisores</option>
-          <option>Sob medida — definir no diagnóstico</option>
+          <option value="">Treinamento de interesse (opcional)</option>
+          <option value="SENTINELA">SENTINELA — Vigilância Preventiva e Análise Comportamental</option>
+          <option value="DESARME">DESARME — Desescalada Verbal e Gestão de Conflitos</option>
+          <option value="UPF">UPF — Uso Progressivo da Força e Meios Não Letais</option>
+          <option value="BLINDAGEM">BLINDAGEM — Preparo Mental do Vigilante</option>
+          <option value="INTEGRIDADE">INTEGRIDADE — Conduta sem Supervisão e Correção de Desvios</option>
+          <option value="PRIMEIRA RESPOSTA">PRIMEIRA RESPOSTA — Emergências e Crise no Posto</option>
+          <option value="GUARDIÃO">GUARDIÃO — Liderança de Supervisores</option>
+          <option value="EVIDÊNCIA">EVIDÊNCIA — Registro de Ocorrências e Preservação de Prova</option>
+          <option value="OPERAÇÃO AUDITÁVEL">OPERAÇÃO AUDITÁVEL — Gestão executiva (Lei 14.967/24)</option>
+          <option value="HEXIS 90">HEXIS 90 — Programa de Sustentação Comportamental</option>
+          <option value="SOB MEDIDA">Sob medida — definir no diagnóstico</option>
         </select>
         <button type="submit" class="btn btn-primary" id="submit-btn">Quero o diagnóstico gratuito</button>
         <div class="form-msg" id="form-msg"></div>
@@ -1074,12 +1218,12 @@ document.querySelectorAll("[data-wa]").forEach(a => {
   });
 });
 
-// Cards do catálogo: pré-selecionam o treinamento no formulário
+// Cards do catálogo: pré-selecionam o treinamento no formulário (value = data-course)
 document.querySelectorAll("[data-course]").forEach(a => {
   a.addEventListener("click", () => {
     const sel = document.getElementById("sel-treinamento");
     if (!sel) return;
-    [...sel.options].forEach(o => { if (o.text === a.dataset.course) sel.value = o.text; });
+    sel.value = a.dataset.course;
     sel.style.borderColor = "var(--brand)";
     setTimeout(() => sel.style.borderColor = "", 1800);
   });
