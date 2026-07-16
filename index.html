@@ -345,75 +345,16 @@ html[data-theme="light"] .theme-icon-sun{display:none}
 .plan li::before{content:"→";color:var(--ok);font-family:var(--font-mono);flex-shrink:0}
 .plan .btn{width:100%;margin-top:auto}
 .plans-bridge{
-  margin:36px auto 0;max-width:70ch;font-size:14px;line-height:1.55;color:var(--muted);
-  text-align:center;opacity:.7;
+  margin:36px auto 0;max-width:70ch;font-size:15px;line-height:1.55;color:var(--muted);
+  text-align:center;opacity:.85;
 }
-
-/* ---------- catálogo de treinamentos ---------- */
-.courses{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
-@media(max-width:940px){.courses{grid-template-columns:1fr 1fr}}
-@media(max-width:640px){.courses{grid-template-columns:1fr}}
-.course{
-  border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--panel);
-  overflow:hidden;display:flex;flex-direction:column;
-  transition:transform var(--dur-fast) var(--ease-out),border-color var(--dur-fast) var(--ease-out);
+#programas + #evidencias{border-top-color:transparent}
+#evidencias{
+  background:linear-gradient(180deg,rgba(0,0,0,.12),transparent 28%);
 }
-.course-photo{aspect-ratio:16/10;background:var(--panel-2);position:relative;display:none;overflow:hidden}
-.course-photo.has-img{display:block}
-.course-photo img{
-  width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.05);
-  transition:transform 400ms var(--ease-out);
+html[data-theme="light"] #evidencias{
+  background:linear-gradient(180deg,rgba(18,22,27,.04),transparent 28%);
 }
-@media (hover:hover) and (pointer:fine){
-  .course:hover{border-color:var(--accent);transform:translateY(-4px)}
-  .course:hover .course-photo img{transform:scale(1.04)}
-}
-.course-body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1}
-.course-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px}
-.course h3{font-size:23px;line-height:1.08}
-.course .code,.hexis-banner .code{
-  font-family:var(--font-mono);font-size:12px;font-weight:600;letter-spacing:.06em;
-  color:var(--brand);background:var(--brand-dim);border:1px solid var(--brand-border);
-  border-radius:6px;padding:6px 9px;flex-shrink:0;
-}
-.course .pain{
-  font-family:var(--font-mono);font-size:12px;color:var(--dim);letter-spacing:.03em;
-  margin-bottom:16px;min-height:36px;
-}
-.course ul{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:22px;flex:1}
-.course li{display:flex;gap:10px;font-size:14.5px;color:var(--muted)}
-.course li::before{content:"→";color:var(--ok);font-family:var(--font-mono);flex-shrink:0}
-.course .btn{width:100%;font-size:15px;padding:12px 18px;margin-top:auto}
-.catalog-bridge{
-  margin-top:28px;border:1px dashed var(--line);border-radius:var(--radius);
-  padding:20px 24px;color:var(--muted);font-size:15.5px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;
-}
-.catalog-bridge a{color:var(--brand)}
-
-/* ---------- catálogo v2: patamares, descritor, hexis ---------- */
-.patamar{margin:56px 0 20px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
-.lead + .patamar{margin-top:44px}
-.patamar .patamar-num{font-family:var(--font-mono);font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--accent);border:1px solid var(--accent);
-  padding:4px 10px;border-radius:3px}
-.patamar h3{margin:0;font-size:1.25rem}
-.patamar p{margin:0;opacity:.65;font-size:.9rem;flex-basis:100%;color:var(--muted);text-transform:none;letter-spacing:0;font-family:var(--font-body);font-weight:400}
-
-.course-head h3 .descritor{display:block;font-size:.78rem;font-weight:400;
-  letter-spacing:.02em;opacity:.7;margin-top:4px;text-transform:none;font-family:var(--font-body);line-height:1.35}
-
-.courses-single{grid-template-columns:minmax(0,1fr)}
-@media(min-width:900px){.courses-single .course{max-width:66%}}
-
-.course-photo.ph-missing{visibility:hidden;height:0;min-height:0;display:none}
-
-.hexis-banner{margin-top:40px;border:1px solid var(--accent);border-radius:var(--radius-lg);
-  padding:28px 32px;display:flex;gap:24px;align-items:center;justify-content:space-between;
-  flex-wrap:wrap;background:linear-gradient(120deg,var(--brand-wash),transparent 60%)}
-.hexis-banner h3{margin:8px 0 6px;font-size:clamp(22px,2.4vw,28px)}
-.hexis-banner p{margin:0;max-width:62ch;opacity:.85;color:var(--muted);font-size:15.5px}
-.hexis-banner .btn{flex-shrink:0}
-@media(max-width:640px){.hexis-banner{padding:22px 20px}.hexis-banner .btn{width:100%}}
 
 /* ---------- pasta do gestor / evidências ---------- */
 .pasta-grid{
@@ -635,18 +576,9 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
   .stats{margin-top:40px}
   .stat{padding:18px 16px}
   .stat .num{font-size:38px}
-  .cards-3,.plans,.courses,.steps,.pasta-grid,.contact-grid{margin-top:28px}
+  .cards-3,.plans,.steps,.pasta-grid,.contact-grid{margin-top:28px}
   .card,.plan{padding:22px 18px}
   .plan .who{min-height:0;margin-bottom:16px}
-  .course-body{padding:18px 16px 20px}
-  .course-head{flex-wrap:wrap;gap:8px}
-  .course .code,.hexis-banner .code{font-size:11px;padding:5px 8px}
-  .course .pain{min-height:0;margin-bottom:12px}
-  .patamar{margin:36px 0 14px}
-  .lead + .patamar{margin-top:28px}
-  .patamar h3{font-size:1.1rem}
-  .catalog-bridge{padding:16px 16px;font-size:14.5px}
-  .hexis-banner{margin-top:28px;padding:20px 16px;gap:16px}
   .pasta-visual{padding:24px 14px 18px;min-height:0}
   .pasta-tab{margin-left:10px;font-size:13px;padding:7px 12px 9px}
   .pillar{padding:20px 16px;gap:14px}
@@ -697,8 +629,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
     </a>
     <div class="nav-links">
       <a href="#contexto">Por que agora</a>
-      <a href="#programas">Treinamentos</a>
-      <a href="#catalogo">Catálogo</a>
+      <a href="#programas">Formatos</a>
       <a href="#evidencias">Evidências</a>
       <a href="#instrutor">Instrutor</a>
       <a href="#faq">Dúvidas</a>
@@ -728,7 +659,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
         <p class="hero-support reveal">O padrão da sua operação é o que a sua equipe faz quando ninguém está olhando. Nós formamos isso — e entregamos as evidências que comprovam.</p>
         <div class="hero-ctas reveal">
           <a class="btn btn-wa" href="#contato">Quero elevar o padrão da minha equipe</a>
-          <a class="btn btn-ghost" href="#programas">Ver os treinamentos</a>
+          <a class="btn btn-ghost" href="#programas">Ver os formatos</a>
         </div>
         <p class="hero-note">Retorno em 24h · Proposta em até 48h úteis · Treinamento in-company, no seu posto, na sua realidade</p>
       </div>
@@ -811,7 +742,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
           <li>Material didático e certificados individuais</li>
           <li>Relatório de avaliação da turma para o RH/compliance</li>
         </ul>
-        <a href="#contato" class="btn btn-ghost">Agendar diagnóstico gratuito</a>
+        <a href="#contato" class="btn btn-ghost" data-interesse="Workshop Intensivo (1 dia)">Agendar diagnóstico gratuito</a>
       </div>
 
       <div class="plan hot reveal">
@@ -826,7 +757,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
           <li>Trilha combinando disciplinas técnicas e comportamentais</li>
           <li>Dossiê completo de evidências de capacitação</li>
         </ul>
-        <a href="#contato" class="btn btn-primary">Agendar diagnóstico gratuito</a>
+        <a href="#contato" class="btn btn-primary" data-interesse="Programa de Aperfeiçoamento">Agendar diagnóstico gratuito</a>
       </div>
 
       <div class="plan reveal">
@@ -840,232 +771,18 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
           <li>Relatórios gerenciais periódicos para a diretoria</li>
           <li>Integração com a plataforma ATIV (evidências digitais)</li>
         </ul>
-        <a href="#contato" class="btn btn-ghost">Falar com o instrutor</a>
+        <a href="#contato" class="btn btn-ghost" data-interesse="Parceria anual de capacitação">Falar com o instrutor</a>
       </div>
     </div>
 
-    <p class="plans-bridge reveal">A evidência cresce com o formato: relatório de turma no Workshop, dossiê completo no Programa, registro digital auditável na Parceria — integrado à plataforma ATIV.</p>
-  </div>
-</section>
-
-<!-- ==================== CATÁLOGO DE TREINAMENTOS (v2) ==================== -->
-<section id="catalogo">
-  <div class="wrap">
-    <div class="eyebrow reveal">Catálogo de treinamentos</div>
-    <h2 class="reveal">Cursos que formam conduta.<br>Títulos que o profissional carrega.</h2>
-    <p class="lead reveal">
-      Técnica se aprende em escola credenciada. A ATIV forma o que sustenta a técnica:
-      percepção, decisão, palavra e conduta. Cada curso confere um título que o
-      profissional carrega com orgulho e um registro que a sua empresa comprova em
-      auditoria. O catálogo segue a escada que a Lei 14.967/24 criou: vigilante,
-      vigilante supervisor e gestor.
-    </p>
-
-    <!-- ========== PATAMAR 1 ========== -->
-    <div class="patamar reveal">
-      <span class="patamar-num">Patamar 1</span>
-      <h3>O Vigilante</h3>
-      <p>O homem no posto. Seis títulos, seis riscos que custam contrato.</p>
-    </div>
-
-    <div class="courses reveal-group">
-      <article class="course reveal">
-        <div class="course-photo"><img src="images/cursos/sentinela.jpg" alt="Curso SENTINELA, vigilância preventiva e análise comportamental para vigilantes" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
-        <div class="course-body">
-          <div class="course-head">
-            <h3>SENTINELA<span class="descritor">Vigilância Preventiva e Análise Comportamental</span></h3>
-            <span class="code">VIG · NCT</span>
-          </div>
-          <p class="pain">// A ocorrência que não aconteceu</p>
-          <ul>
-            <li>Leitura de linha de base: o normal do posto e o desvio que anuncia a ocorrência</li>
-            <li>Ronda com leitura de ambiente: fim do "sem alteração" automático</li>
-            <li>Protocolo de comunicação e registro de suspeita que vira indicador de prevenção</li>
-          </ul>
-          <a class="btn btn-ghost" href="#contato" data-course="SENTINELA">Solicitar este treinamento</a>
-        </div>
-      </article>
-
-      <article class="course reveal">
-        <div class="course-photo"><img src="images/cursos/desarme.jpg" alt="Curso DESARME, desescalada verbal e gestão de conflitos na segurança privada" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
-        <div class="course-body">
-          <div class="course-head">
-            <h3>DESARME<span class="descritor">Desescalada Verbal e Gestão de Conflitos</span></h3>
-            <span class="code">GEP · RHT · DHU</span>
-          </div>
-          <p class="pain">// A palavra sob câmera</p>
-          <ul>
-            <li>Desescalada verbal na realidade de hoje: todo conflito tem celular filmando</li>
-            <li>A pausa treinada antes da palavra: domínio emocional sob provocação</li>
-            <li>Condução de abordagem que protege o profissional, a marca e o contrato</li>
-          </ul>
-          <a class="btn btn-ghost" href="#contato" data-course="DESARME">Solicitar este treinamento</a>
-        </div>
-      </article>
-
-      <article class="course reveal">
-        <div class="course-photo"><img src="images/cursos/upf.jpg" alt="Curso UPF, uso progressivo da força e meios não letais, decisão sob pressão" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
-        <div class="course-body">
-          <div class="course-head">
-            <h3>UPF<span class="descritor">Uso Progressivo da Força e Meios Não Letais</span></h3>
-            <span class="code">ENL I · ENL II · DHU</span>
-          </div>
-          <p class="pain">// O meio segundo. Teste das 5 Condições</p>
-          <ul>
-            <li>Proporcionalidade e amparo legal: decidir em segundos e sustentar a decisão depois</li>
-            <li>Teste das 5 Condições aplicado a cenários reais do posto, com avaliação individual</li>
-            <li>Emprego de equipamentos não letais com critério, técnica e registro</li>
-          </ul>
-          <a class="btn btn-ghost" href="#contato" data-course="UPF">Solicitar este treinamento</a>
-        </div>
-      </article>
-
-      <article class="course reveal">
-        <div class="course-photo"><img src="images/cursos/blindagem.jpg" alt="Curso BLINDAGEM, preparo mental do vigilante para turnos longos" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
-        <div class="course-body">
-          <div class="course-head">
-            <h3>BLINDAGEM<span class="descritor">Preparo Mental do Vigilante</span></h3>
-            <span class="code">RHT · RSE</span>
-          </div>
-          <p class="pain">// As 12 horas</p>
-          <ul>
-            <li>Prontidão entre a monotonia e a crise: atenção que descansa sem desligar</li>
-            <li>Autorregulação emocional dentro do turno, não fora dele</li>
-            <li>Evidência de capacitação que apoia a gestão de riscos psicossociais (NR-1)</li>
-          </ul>
-          <a class="btn btn-ghost" href="#contato" data-course="BLINDAGEM">Solicitar este treinamento</a>
-        </div>
-      </article>
-
-      <article class="course reveal">
-        <div class="course-photo"><img src="images/cursos/integridade.jpg" alt="Curso INTEGRIDADE, conduta sem supervisão e correção de desvios" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
-        <div class="course-body">
-          <div class="course-head">
-            <h3>INTEGRIDADE<span class="descritor">Conduta sem Supervisão e Correção de Desvios</span></h3>
-            <span class="code">SSP · DHU · RHT</span>
-          </div>
-          <p class="pain">// O posto sem testemunha</p>
-          <ul>
-            <li>Conduta idêntica com e sem supervisão: o padrão que não depende de câmera</li>
-            <li>Adesão a regulamento e doutrina com autoprestação de contas</li>
-            <li>Desvio tratado como ação corretiva registrada, nunca escondida</li>
-          </ul>
-          <a class="btn btn-ghost" href="#contato" data-course="INTEGRIDADE">Solicitar este treinamento</a>
-        </div>
-      </article>
-
-      <article class="course reveal">
-        <div class="course-photo"><img src="images/cursos/primeira-resposta.jpg" alt="Curso PRIMEIRA RESPOSTA, emergências e gerenciamento de crise no posto" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
-        <div class="course-body">
-          <div class="course-head">
-            <h3>PRIMEIRA RESPOSTA<span class="descritor">Emergências e Gerenciamento de Crise no Posto</span></h3>
-            <span class="code">RSE · GEC</span>
-          </div>
-          <p class="pain">// Os minutos antes do socorro chegar</p>
-          <ul>
-            <li>O papel do vigilante nos primeiros minutos: preservar vida, área e informação</li>
-            <li>Protocolos de emergência e comunicação de crise no contexto do posto</li>
-            <li>Simulados avaliados com registro individual de desempenho</li>
-          </ul>
-          <a class="btn btn-ghost" href="#contato" data-course="PRIMEIRA RESPOSTA">Solicitar este treinamento</a>
-        </div>
-      </article>
-    </div>
-
-    <!-- ========== PATAMAR 2 ========== -->
-    <div class="patamar reveal">
-      <span class="patamar-num">Patamar 2</span>
-      <h3>O Vigilante Supervisor</h3>
-      <p>A figura que a Lei 14.967/24 criou. Quem sustenta o padrão quando ninguém cobra.</p>
-    </div>
-
-    <div class="courses reveal-group">
-      <article class="course reveal">
-        <div class="course-photo"><img src="images/cursos/guardiao.jpg" alt="Curso GUARDIÃO, liderança de supervisores e sustentação de padrão" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
-        <div class="course-body">
-          <div class="course-head">
-            <h3>GUARDIÃO<span class="descritor">Liderança de Supervisores e Sustentação de Padrão</span></h3>
-            <span class="code">RHT · GEC · VIG</span>
-          </div>
-          <p class="pain">// Quem sustenta o padrão quando ninguém cobra</p>
-          <ul>
-            <li>Supervisão formadora: repetição corrigida em vez de incêndio apagado</li>
-            <li>Ronda de correção: um ajuste e um reforço por turno, registrados</li>
-            <li>Ritual de virada de turno que mantém vivo o padrão treinado</li>
-          </ul>
-          <a class="btn btn-ghost" href="#contato" data-course="GUARDIÃO">Solicitar este treinamento</a>
-        </div>
-      </article>
-
-      <article class="course reveal">
-        <div class="course-photo"><img src="images/cursos/evidencia.jpg" alt="Curso EVIDÊNCIA, registro de ocorrências e preservação de prova" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
-        <div class="course-body">
-          <div class="course-head">
-            <h3>EVIDÊNCIA<span class="descritor">Registro de Ocorrências e Preservação de Prova</span></h3>
-            <span class="code">NCT</span>
-          </div>
-          <p class="pain">// O relatório que sustenta o posto</p>
-          <ul>
-            <li>Registro que descreve fato, não opinião: cronologia, precisão, completude</li>
-            <li>Preservação de local, imagem e informação até a chegada da autoridade</li>
-            <li>O livro de ocorrências que compõe a defesa da empresa em auditoria e em juízo</li>
-          </ul>
-          <a class="btn btn-ghost" href="#contato" data-course="EVIDÊNCIA">Solicitar este treinamento</a>
-        </div>
-      </article>
-    </div>
-
-    <!-- ========== PATAMAR 3 ========== -->
-    <div class="patamar reveal">
-      <span class="patamar-num">Patamar 3</span>
-      <h3>O Gestor</h3>
-      <p>Da conformidade ao contrato: a evidência como argumento comercial.</p>
-    </div>
-
-    <div class="courses courses-single reveal-group">
-      <article class="course reveal">
-        <div class="course-photo"><img src="images/cursos/operacao-auditavel.jpg" alt="Curso OPERAÇÃO AUDITÁVEL, gestão de evidências e conformidade com a Lei 14.967/24" width="640" height="400" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-img')" onload="this.parentElement.classList.add('has-img')"></div>
-        <div class="course-body">
-          <div class="course-head">
-            <h3>OPERAÇÃO AUDITÁVEL<span class="descritor">Gestão de Evidências e Conformidade (Lei 14.967/24)</span></h3>
-            <span class="code">Executivo</span>
-          </div>
-          <p class="pain">// Da conformidade ao contrato</p>
-          <ul>
-            <li>Leitura da própria operação na Escala de Maturidade Operacional</li>
-            <li>O dossiê de conduta formada como argumento de renovação e concorrência</li>
-            <li>Treinamento executivo para gestores e diretoria, de natureza corporativa (fora do rol de disciplinas de vigilante)</li>
-          </ul>
-          <a class="btn btn-ghost" href="#contato" data-course="OPERAÇÃO AUDITÁVEL">Solicitar este treinamento</a>
-        </div>
-      </article>
-    </div>
-
-    <!-- ========== HEXIS 90 ========== -->
-    <div class="hexis-banner reveal">
-      <div>
-        <span class="code">HEXIS 90 · Transversal</span>
-        <h3>Programa de Sustentação Comportamental</h3>
-        <p>Hábito não se palestra. Treina-se por 90 dias: rituais diários de 5 minutos
-        conduzidos pelo supervisor formado, verificação quinzenal e registro contínuo de
-        evidências. Disponível como extensão de qualquer curso do catálogo.</p>
-      </div>
-      <a class="btn btn-ghost" href="#contato" data-course="HEXIS 90">Quero sustentar o padrão</a>
-    </div>
-
-    <p class="catalog-bridge reveal">
-      Verticais sob consulta: Eventos e Multidões (GMU · GEP) · Transporte de Valores e
-      Escolta Armada (TVA · EAR). A dor da sua operação não está aqui? Melhor ainda: o
-      treinamento sob medida nasce exatamente do <a href="#contato">diagnóstico gratuito
-      com o gestor</a>. Você descreve a ocorrência; nós desenhamos a resposta.
-    </p>
+    <p class="plans-bridge reveal">Em qualquer formato, o entregável sobe de patamar: relatório de turma no Workshop, dossiê completo no Programa, registro digital auditável na Parceria — integrado à plataforma ATIV.</p>
   </div>
 </section>
 
 <!-- ============ EVIDÊNCIAS / PASTA DO GESTOR ============ -->
 <section id="evidencias">
   <div class="wrap">
-    <div class="eyebrow reveal">Entregável do treinamento</div>
+    <div class="eyebrow reveal">Depois do formato, a prova</div>
     <h2 class="reveal">O dossiê que encerra a conversa com o auditor.</h2>
     <p class="lead reveal">Não basta treinar. É preciso comprovar — para o contratante e para a Polícia Federal — que a capacitação de fato aconteceu.</p>
     <p class="pasta-scene reveal">No dia em que o auditor pedir, na renovação do contrato ou na notificação pós-ocorrência: você abre o dossiê e a resposta já está pronta.</p>
@@ -1208,8 +925,8 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
       </div>
       <div class="evid" id="evid-mock">
         <div class="hd">Registro de capacitação — exemplo</div>
-        <div><span class="ok stamp">✓</span> DESARME · Gestão de Conflitos — 12/2026</div>
-        <div><span class="ok stamp">✓</span> UPF · Uso Progressivo da Força — 12/2026</div>
+        <div><span class="ok stamp">✓</span> Workshop · Gestão de Conflitos — 12/2026</div>
+        <div><span class="ok stamp">✓</span> Programa · Uso Progressivo da Força — 12/2026</div>
         <div><span class="ok stamp">✓</span> Certificados emitidos: 23/23</div>
         <div><span class="ok stamp">✓</span> Avaliação de eficácia: registrada</div>
         <div><span class="ok stamp">✓</span> Próxima reciclagem: alerta em 10/2027</div>
@@ -1277,26 +994,12 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
           <option>51 a 100 colaboradores</option>
           <option>Mais de 100 colaboradores</option>
         </select>
-        <select name="interesse" required>
-          <option value="">Interesse principal</option>
-          <option>Workshop Intensivo (1 dia)</option>
-          <option>Programa de Aperfeiçoamento</option>
-          <option>Parceria anual de capacitação</option>
-          <option>Ainda não sei — quero o diagnóstico</option>
-        </select>
-        <select name="treinamento" id="sel-treinamento">
-          <option value="">Treinamento de interesse (opcional)</option>
-          <option value="SENTINELA">SENTINELA — Vigilância Preventiva e Análise Comportamental</option>
-          <option value="DESARME">DESARME — Desescalada Verbal e Gestão de Conflitos</option>
-          <option value="UPF">UPF — Uso Progressivo da Força e Meios Não Letais</option>
-          <option value="BLINDAGEM">BLINDAGEM — Preparo Mental do Vigilante</option>
-          <option value="INTEGRIDADE">INTEGRIDADE — Conduta sem Supervisão e Correção de Desvios</option>
-          <option value="PRIMEIRA RESPOSTA">PRIMEIRA RESPOSTA — Emergências e Crise no Posto</option>
-          <option value="GUARDIÃO">GUARDIÃO — Liderança de Supervisores</option>
-          <option value="EVIDÊNCIA">EVIDÊNCIA — Registro de Ocorrências e Preservação de Prova</option>
-          <option value="OPERAÇÃO AUDITÁVEL">OPERAÇÃO AUDITÁVEL — Gestão executiva (Lei 14.967/24)</option>
-          <option value="HEXIS 90">HEXIS 90 — Programa de Sustentação Comportamental</option>
-          <option value="SOB MEDIDA">Sob medida — definir no diagnóstico</option>
+        <select name="interesse" id="sel-interesse" required>
+          <option value="">Formato de interesse</option>
+          <option value="Workshop Intensivo (1 dia)">Workshop Intensivo (1 dia)</option>
+          <option value="Programa de Aperfeiçoamento">Programa de Aperfeiçoamento</option>
+          <option value="Parceria anual de capacitação">Parceria anual de capacitação</option>
+          <option value="Ainda não sei — quero o diagnóstico">Ainda não sei — quero o diagnóstico</option>
         </select>
         <button type="submit" class="btn btn-primary" id="submit-btn">Quero o diagnóstico gratuito</button>
         <div class="form-msg" id="form-msg"></div>
@@ -1377,12 +1080,12 @@ document.querySelectorAll("[data-wa]").forEach(a => {
   });
 });
 
-// Cards do catálogo: pré-selecionam o treinamento no formulário (value = data-course)
-document.querySelectorAll("[data-course]").forEach(a => {
+// Cards de formato: pré-selecionam o interesse no formulário
+document.querySelectorAll("[data-interesse]").forEach(a => {
   a.addEventListener("click", () => {
-    const sel = document.getElementById("sel-treinamento");
+    const sel = document.getElementById("sel-interesse");
     if (!sel) return;
-    sel.value = a.dataset.course;
+    sel.value = a.dataset.interesse;
     sel.style.borderColor = "var(--brand)";
     setTimeout(() => sel.style.borderColor = "", 1800);
   });
@@ -1514,9 +1217,8 @@ form?.addEventListener("submit", async e => {
     try {
       const desafioParts = [
         `E-mail: ${data.email}`,
-        `Interesse: ${data.interesse}`,
+        `Formato: ${data.interesse}`,
       ];
-      if (data.treinamento) desafioParts.push(`Treinamento: ${data.treinamento}`);
 
       const res = await fetch(`${CONFIG.SUPABASE_URL}/rest/v1/${CONFIG.SUPABASE_TABLE}`, {
         method: "POST",
@@ -1549,8 +1251,7 @@ form?.addEventListener("submit", async e => {
   const txt =
     `*Solicitação de diagnóstico — ATIV Treinamentos*\n` +
     `Nome: ${data.nome}\nEmpresa: ${data.empresa}\nE-mail: ${data.email}\n` +
-    `WhatsApp: ${data.whatsapp}\nEfetivo: ${data.efetivo}\nInteresse: ${data.interesse}` +
-    (data.treinamento ? `\nTreinamento: ${data.treinamento}` : "");
+    `WhatsApp: ${data.whatsapp}\nEfetivo: ${data.efetivo}\nFormato: ${data.interesse}`;
   window.open(waUrl(txt), "_blank", "noopener");
   showSuccess();
 });
