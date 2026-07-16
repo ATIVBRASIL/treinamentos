@@ -139,7 +139,7 @@ body::before{
 }
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter,24px);position:relative;z-index:1}
 
 /* ---------- utilities ---------- */
 .eyebrow{
@@ -618,6 +618,57 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
 .foot-brand{display:flex;align-items:center;gap:14px}
 .foot-brand img{width:48px;height:48px;border-radius:8px;flex-shrink:0}
 .foot .mono{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em}
+
+/* ---------- mobile: enquadramento mais firme ---------- */
+@media(max-width:640px){
+  :root,html[data-theme="dark"],html[data-theme="light"]{--gutter:16px}
+  html,body{overflow-x:clip}
+  section{padding:64px 0}
+  .hero{padding:56px 0 48px}
+  .nav-inner{gap:12px;height:64px}
+  .nav-actions{gap:8px}
+  h2{font-size:clamp(30px,8.2vw,40px);margin:10px 0 12px}
+  .lead{font-size:16.5px}
+  .btn{font-size:15.5px;padding:13px 20px}
+  .hero-ctas{gap:10px}
+  .hero-ctas .btn{width:100%}
+  .stats{margin-top:40px}
+  .stat{padding:18px 16px}
+  .stat .num{font-size:38px}
+  .cards-3,.plans,.courses,.steps,.pasta-grid,.contact-grid{margin-top:28px}
+  .card,.plan{padding:22px 18px}
+  .plan .who{min-height:0;margin-bottom:16px}
+  .course-body{padding:18px 16px 20px}
+  .course-head{flex-wrap:wrap;gap:8px}
+  .course .code,.hexis-banner .code{font-size:11px;padding:5px 8px}
+  .course .pain{min-height:0;margin-bottom:12px}
+  .patamar{margin:36px 0 14px}
+  .lead + .patamar{margin-top:28px}
+  .patamar h3{font-size:1.1rem}
+  .catalog-bridge{padding:16px 16px;font-size:14.5px}
+  .hexis-banner{margin-top:28px;padding:20px 16px;gap:16px}
+  .pasta-visual{padding:24px 14px 18px;min-height:0}
+  .pasta-tab{margin-left:10px;font-size:13px;padding:7px 12px 9px}
+  .pillar{padding:20px 16px;gap:14px}
+  .step{padding:22px 18px}
+  .integra{padding:22px 16px;gap:24px;margin-top:28px}
+  .integra h3{font-size:26px}
+  .evid{padding:16px}
+  .faq{margin-top:28px}
+  .faq-btn{padding:18px 16px;font-size:17px;gap:12px}
+  .faq .a{padding:0 16px 18px;font-size:15px}
+  .contexto-bridge{margin-top:28px;padding-left:16px;font-size:17px}
+  .plans-bridge{margin-top:24px}
+  footer{padding:32px 0}
+  .foot{gap:16px}
+  .foot .mono{text-align:left!important;font-size:11px}
+  .contact-side .k{min-width:88px}
+}
+@media(max-width:380px){
+  :root,html[data-theme="dark"],html[data-theme="light"]{--gutter:14px}
+  .nav-cta{font-size:12px;padding:8px 10px}
+  .logo-mark{font-size:24px}
+}
 
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{
