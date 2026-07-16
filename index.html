@@ -984,6 +984,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
     <div class="contact-grid">
       <form id="lead-form" novalidate>
         <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="text" name="cargo" placeholder="Cargo" required>
         <input type="text" name="empresa" placeholder="Empresa" required>
         <input type="email" name="email" placeholder="E-mail corporativo" required>
         <input type="tel" name="whatsapp" placeholder="WhatsApp (com DDD)" required>
@@ -1187,7 +1188,7 @@ form?.addEventListener("submit", async e => {
 
   const data = Object.fromEntries(new FormData(form).entries());
 
-  if (!data.nome || !data.empresa || !data.email || !data.whatsapp || !data.efetivo || !data.interesse) {
+  if (!data.nome || !data.cargo || !data.empresa || !data.email || !data.whatsapp || !data.efetivo || !data.interesse) {
     msgEl.innerHTML = "Preencha todos os campos obrigatórios.";
     msgEl.className = "form-msg err";
     return;
@@ -1230,6 +1231,7 @@ form?.addEventListener("submit", async e => {
         },
         body: JSON.stringify({
           nome: data.nome,
+          cargo: data.cargo,
           empresa: data.empresa,
           telefone: data.whatsapp,
           num_colaboradores: data.efetivo,
@@ -1250,7 +1252,7 @@ form?.addEventListener("submit", async e => {
   // Sem Supabase: abre WhatsApp e confirma
   const txt =
     `*Solicitação de diagnóstico — ATIV Treinamentos*\n` +
-    `Nome: ${data.nome}\nEmpresa: ${data.empresa}\nE-mail: ${data.email}\n` +
+    `Nome: ${data.nome}\nCargo: ${data.cargo}\nEmpresa: ${data.empresa}\nE-mail: ${data.email}\n` +
     `WhatsApp: ${data.whatsapp}\nEfetivo: ${data.efetivo}\nFormato: ${data.interesse}`;
   window.open(waUrl(txt), "_blank", "noopener");
   showSuccess();
