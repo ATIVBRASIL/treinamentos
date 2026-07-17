@@ -1,0 +1,30 @@
+---
+description: Padrão de encoding UTF-8 para todos os arquivos de texto/config
+alwaysApply: true
+---
+
+# Regra de Encoding — UTF-8 obrigatório
+
+Este projeto teve um incidente de produção causado por `.gitignore` gravado em
+UTF-16 LE via `Add-Content` do PowerShell sem encoding explícito, o que fez o
+Git ignorar silenciosamente as regras (arquivos sensíveis como `.env.local`
+ficaram sem proteção).
+
+## Regras obrigatórias para qualquer comando PowerShell que escreva/edite arquivos de texto:
+
+- NUNCA usar `Add-Content`, `Set-Content` ou `Out-File` sem `-Encoding utf8` explícito.
+- Comando correto: `Add-Content -Path <arquivo> -Value "<conteúdo>" -Encoding utf8`
+- Antes de editar `.gitignore`, `.env*`, arquivos `.json`, `.md`, `.ts`, `.tsx`,
+  `.js`, `.mdc` via terminal, sempre incluir `-Encoding utf8`.
+- Ao criar arquivos novos via `New-Item` + edição posterior, validar o encoding
+  resultante com:
+```powershell
+  Get-Content <arquivo> -Encoding Byte -TotalCount 4
+```
+  Bytes `EF BB BF` = UTF-8 com BOM (aceitável). Bytes `FF FE` = UTF-16 LE (proibido,
+  regravar).
+- Se preferir editar arquivos de config/proteção (`.gitignore`, `.env.local`) via
+  `str_replace` ou `create_file` do próprio Agent em vez de comandos PowerShell
+  brutos, é a opção mais segura — esses tools já usam UTF-8 por padrão.
+- Após qualquer edição de `.gitignore`, validar sempre com `git check-ignore -v <arquivo>`
+  antes de assumir que a proteção está ativa.
