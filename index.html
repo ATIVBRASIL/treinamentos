@@ -360,6 +360,20 @@ html[data-theme="light"] #evidencias{
 }
 @media(max-width:880px){.pasta-grid{grid-template-columns:1fr;gap:36px}}
 .pasta-copy .lead{max-width:520px}
+.pasta-copy h3{font-size:clamp(24px,2.6vw,30px);margin-bottom:14px}
+.pasta-copy .pasta-lede{margin-bottom:24px;color:var(--muted);font-size:16px;line-height:1.55}
+.pasta-kicker{
+  font-family:var(--font-mono);font-size:11.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--brand);margin-bottom:14px;
+}
+.pasta-copy .pasta-lede strong{color:var(--text);font-weight:600}
+.pasta-claim{
+  margin-top:26px;padding:16px 18px;
+  border-left:3px solid var(--brand);border-radius:0 var(--radius) var(--radius) 0;
+  background:var(--brand-dim);
+  font-size:16.5px;line-height:1.5;color:var(--text);
+}
+.pasta-claim b{color:var(--brand);font-weight:600}
 .pasta-scene{
   margin:12px 0 0;max-width:720px;font-size:17px;line-height:1.55;color:var(--text);
 }
@@ -492,6 +506,7 @@ html[data-theme="light"] #evidencias{
 .cred-foot .verify::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 8px var(--ok)}
 .ethos-points{list-style:none;display:flex;flex-direction:column;gap:14px;margin:24px 0 0}
 .ethos-points li{display:flex;gap:12px;align-items:flex-start;color:var(--muted);font-size:15.5px;line-height:1.45}
+.ethos-points li > div{min-width:0;flex:1}
 .ethos-points li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--brand);margin-top:7px;flex-shrink:0}
 .ethos-points li b{color:var(--text);font-weight:600}
 .ethos-note{
@@ -757,18 +772,18 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
         <p>Pelo Código Civil, a empresa responde pelos atos do empregado. Mesmo sem culpa sua. Mesmo com procedimento escrito. Mesmo com o profissional formado por escola credenciada.</p>
       </div>
       <div class="card reveal">
-        <div class="k">Responsabilidade</div>
-        <h3>Seu contratante também responde. E vai exigir prova</h3>
-        <p>Contratantes respondem pela regularidade das empresas que contratam. Grandes clientes já exigem prova de treinamento continuado antes de assinar ou renovar contratos.</p>
+        <div class="k">Contrato</div>
+        <h3>Quem te contrata também responde. E já percebeu isso</h3>
+        <p>Contratantes respondem pela regularidade de quem contratam. Por isso a exigência mudou de lado: prova de capacitação continuada deixou de ser diferencial na proposta e virou condição para renovar.</p>
       </div>
       <div class="card reveal">
-        <div class="k">Risco operacional</div>
-        <h3>O excesso de um vigilante custa caro</h3>
-        <p>Um único incidente mal conduzido gera processo, indenização e quebra de contrato. Equipe preparada técnica e emocionalmente é o seguro mais barato que existe.</p>
+        <div class="k">Atrito diário</div>
+        <h3>O conflito mais comum não é agressão: é expectativa desalinhada</h3>
+        <p>O morador esperava um comportamento que o agente não foi treinado para dar. Acesso negado, entrega recusada, um tom que soou rude. Ninguém registra, e a insatisfação se acumula com o contratante antes de chegar a você.</p>
       </div>
     </div>
 
-    <p class="contexto-bridge reveal">Nós treinamos onde o incidente nasce: na decisão, antes da ação. E documentamos tudo. Porque se um dia perguntarem "o que a empresa fez para preparar esse profissional?", sua resposta já estará assinada e arquivada.</p>
+    <p class="contexto-bridge reveal">Nós treinamos onde o incidente nasce: na decisão, antes da ação. E documentamos tudo. Porque se um dia perguntarem "o que a empresa fez para preparar esse profissional?", sua resposta já estará assinada, datada e pronta para mostrar.</p>
   </div>
 </section>
 
@@ -832,14 +847,15 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
 <section id="evidencias">
   <div class="wrap">
     <div class="eyebrow reveal">Depois do formato, a prova</div>
-    <h2 class="reveal">Ninguém abre essa pasta<br>num dia bom.</h2>
-    <p class="lead reveal">Não basta treinar. É preciso comprovar. No dia da notificação, na renovação do contrato, na visita da fiscalização: a pergunta é sempre a mesma. O que a empresa fez para preparar esse profissional?</p>
-    <p class="pasta-scene reveal">A ocorrência aconteceu. O advogado da outra parte já perguntou. E a sua resposta não pode começar a ser montada agora.</p>
+    <h2 class="reveal">Ninguém pede comprovação<br>num dia bom.</h2>
+    <p class="lead reveal">Não basta treinar. É preciso comprovar. No dia da notificação, na renovação do contrato, na visita da fiscalização: quem pergunta quer ver, não ouvir.</p>
+    <p class="pasta-scene reveal">A maioria das empresas nunca vai abrir essa pasta por causa de um processo. Vai abrir na reunião de renovação, quando o contratante perguntar o que mudou desde o ano passado.</p>
 
     <div class="pasta-grid">
       <div class="pasta-copy reveal">
         <h3>Um habilita. O outro distingue.</h3>
-        <p>O certificado da escola credenciada diz que o profissional <strong>pode</strong> trabalhar. O certificado ATIV diz que ele <strong>foi além</strong>: treinou com quem viveu 18 anos de Força Tática, foi avaliado, e sustentou a conduta no posto 60 dias depois. Quando ninguém estava olhando.</p>
+        <p class="pasta-lede">O certificado da escola credenciada diz que o profissional <strong>pode</strong> trabalhar. O certificado ATIV diz que ele <strong>foi além</strong>: treinou discernimento, conduta e convivência, foi avaliado, e voltou a ser verificado 60 dias depois.</p>
+        <p class="pasta-kicker">A cada turma, você recebe</p>
         <ul class="pasta-points">
           <li>Certificados individuais com identificação do treinamento, conteúdo, carga horária e responsável técnico</li>
           <li>Grade / conteúdo programático do encontro</li>
@@ -847,42 +863,43 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
           <li>Avaliação da turma e registro de eficácia: a prova de que o treinamento mudou conduta, não só cumpriu carga horária</li>
           <li>Fotos e vídeos do treinamento in-company</li>
         </ul>
-        <p class="pasta-seal">Credenciamento PF <b>nº 89/2026</b> · válido até <b>21/01/2031</b><br>Certificado de capacitação corporativa ATIV. Independente dos certificados emitidos via sistema da Polícia Federal.</p>
+        <p class="pasta-claim">O concorrente responde essa pergunta com adjetivo. Você responde com <b>nome, data e carga horária</b>.</p>
+        <p class="pasta-seal">Credenciamento PF <b>nº 89/2026</b> · válido até <b>21/01/2031</b></p>
       </div>
 
       <div class="pasta-visual" id="pasta-visual">
         <div class="pasta-folder">
-          <div class="pasta-tab">Dossiê ATIV</div>
+          <div class="pasta-tab">Registro consolidado</div>
           <div class="pasta-body">
             <div class="pasta-docs">
               <div class="pasta-doc">
-                <span class="ico">01</span>
-                <div class="meta"><strong>Certificado</strong><span>Individual · por participante</span></div>
+                <span class="ico">16</span>
+                <div class="meta"><strong>Agentes formados</strong><span>Somente turmas confirmadas</span></div>
                 <span class="mark stamp">OK</span>
               </div>
               <div class="pasta-doc">
-                <span class="ico">02</span>
-                <div class="meta"><strong>Grade</strong><span>Conteúdo programático</span></div>
-                <span class="mark stamp">OK</span>
-              </div>
-              <div class="pasta-doc">
-                <span class="ico">03</span>
-                <div class="meta"><strong>Lista de presença</strong><span>Assinatura da turma</span></div>
-                <span class="mark stamp">OK</span>
-              </div>
-              <div class="pasta-doc">
-                <span class="ico">04</span>
-                <div class="meta"><strong>Avaliação</strong><span>Turma + eficácia</span></div>
+                <span class="ico">64</span>
+                <div class="meta"><strong>Horas de formação</strong><span>Discriminadas por agente</span></div>
                 <span class="mark stamp">OK</span>
               </div>
               <div class="pasta-doc">
                 <span class="ico">05</span>
-                <div class="meta"><strong>Fotos / vídeos</strong><span>Registro do encontro</span></div>
+                <div class="meta"><strong>Competências</strong><span>Nomeadas por formação</span></div>
+                <span class="mark stamp">OK</span>
+              </div>
+              <div class="pasta-doc">
+                <span class="ico">02</span>
+                <div class="meta"><strong>Turmas programadas</strong><span>Próximas datas já marcadas</span></div>
+                <span class="mark stamp">AGO</span>
+              </div>
+              <div class="pasta-doc">
+                <span class="ico">↗</span>
+                <div class="meta"><strong>Verificação pública</strong><span>Link aberto, sem login</span></div>
                 <span class="mark stamp">OK</span>
               </div>
             </div>
             <div class="pasta-foot">
-              <span>Capacitação de elite · Instrutor credenciado PF <b>nº 89/2026</b></span>
+              <span>Atualiza a cada turma confirmada · <b>PDF e link público em um clique</b>, para renovação, proposta ou reunião de diretoria</span>
             </div>
           </div>
         </div>
@@ -895,8 +912,8 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
 <section id="ethos">
   <div class="wrap">
     <div class="eyebrow reveal">Formação Ethos</div>
-    <h2 class="reveal">A prova que o seu contratante confere sozinho.<br>Sem login, sem e-mail, sem depender de você.</h2>
-    <p class="lead reveal">Cada formação Ethos gera uma credencial pública verificável. O síndico, o gerente do hospital ou o comprador da indústria abre o link, digita o nome ou o código e vê o que aquela pessoa formou, quando, com quantas horas e em quais competências.</p>
+    <h2 class="reveal">Você não precisa estar na sala<br>para a prova funcionar.</h2>
+    <p class="lead reveal">Cada empresa tem uma página pública de formação. O contratante abre e vê quantos agentes formaram, em quê, com quantas horas e quais turmas já estão marcadas. Quem atesta é a ATIV. Por isso ele acredita.</p>
 
     <div class="ethos-grid">
       <div class="reveal">
@@ -904,7 +921,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
           <div class="cred-top"><span>Credencial pública</span><b>ATIV · Formação Ethos</b></div>
           <div class="cred-body">
             <div class="cred-name">Nome do Agente Formado</div>
-            <div class="cred-cpf">CPF ***.***.***-**  ·  verificação por nome ou código</div>
+            <div class="cred-cpf">CPF ***.***.***-**  ·  verificação por código ou CPF</div>
             <div class="cred-course">Virtudes do Guardião</div>
             <div class="cred-meta">Carga horária 4h · Turma concluída e confirmada<br>Patrocínio: sua empresa</div>
             <div class="cred-skills">
@@ -923,12 +940,12 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
       </div>
 
       <div class="reveal">
-        <h3 style="font-size:28px">Quando perguntarem o que sua equipe faz de valor, você manda um link.</h3>
+        <h3 style="font-size:clamp(24px,2.6vw,30px)">Prova que não depende da sua palavra.</h3>
         <ul class="ethos-points">
-          <li><b>Link permanente por empresa.</b> Atualiza sozinho a cada turma concluída. Serve para proposta comercial, licitação e renovação de contrato.</li>
-          <li><b>Só entra quem concluiu.</b> Turma programada aparece como programada. A credencial só vira válida depois que a ATIV confirma que a formação aconteceu.</li>
-          <li><b>Começa pelo efetivo de segurança e se estende.</b> Vigilante, ronda e supervisão são a base. Portaria, controle de acesso e apoio operacional do mesmo posto podem entrar na mesma turma.</li>
-          <li><b>O profissional carrega pela carreira.</b> A credencial é dele, verificável para sempre. Isso pesa na hora em que ele decide ficar.</li>
+          <li><div><b>Uma página por empresa, sempre atualizada.</b> Atualiza sozinha a cada turma confirmada. Serve para proposta, licitação e renovação, e sai em PDF quando você precisar anexar.</div></li>
+          <li><div><b>Só entra quem concluiu.</b> Turma programada aparece como programada. A credencial só passa a valer depois que a ATIV confirma que a formação aconteceu. Quem emite atesta.</div></li>
+          <li><div><b>A próxima turma também aparece.</b> O contratante não vê só o que foi feito. Vê que existe programa rodando, com data marcada. Um treinamento avulso não produz isso.</div></li>
+          <li><div><b>A credencial é do profissional.</b> Ele carrega pela carreira, verificável para sempre. Num setor onde todo mundo perde gente, isso pesa na hora em que ele decide ficar.</div></li>
         </ul>
         <div class="ethos-note">
           <b>Formação Ethos é capacitação complementar em competências comportamentais.</b> Não substitui os cursos de formação, extensão e reciclagem previstos na Portaria PF nº 16/2024, ministrados exclusivamente por escolas credenciadas pela Polícia Federal.
