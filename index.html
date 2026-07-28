@@ -148,6 +148,7 @@ img{display:block;max-width:100%}
 h1,h2,h3{font-family:var(--font-display);text-transform:uppercase;letter-spacing:.01em;line-height:1.02;font-weight:700}
 h2{font-size:clamp(34px,4.4vw,52px);margin:14px 0 14px}
 .lead{color:var(--muted);font-size:18px;max-width:640px}
+.lead b{color:var(--text);font-weight:600}
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:10px;
   font-family:var(--font-display);text-transform:uppercase;letter-spacing:.06em;
@@ -455,6 +456,50 @@ html[data-theme="light"] #evidencias{
 }
 .pasta-foot b{color:var(--brand);font-weight:600}
 
+/* ---------- credencial ethos ---------- */
+.ethos-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:44px}
+@media(max-width:880px){.ethos-grid{grid-template-columns:1fr;gap:32px}}
+.cred{
+  border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;
+  background:linear-gradient(160deg,var(--panel-2),var(--panel));box-shadow:var(--shadow);
+}
+.cred-top{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  padding:14px 18px;border-bottom:1px solid var(--line);
+  font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+}
+.cred-top b{color:var(--brand)}
+.cred-body{padding:22px 20px}
+.cred-name{font-family:var(--font-display);font-size:26px;font-weight:700;text-transform:uppercase;letter-spacing:.02em;line-height:1.05}
+.cred-cpf{font-family:var(--font-mono);font-size:12px;color:var(--dim);letter-spacing:.08em;margin-top:6px}
+.cred-course{
+  margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);
+  font-family:var(--font-display);font-size:19px;font-weight:600;text-transform:uppercase;letter-spacing:.03em;
+}
+.cred-meta{font-family:var(--font-mono);font-size:11.5px;color:var(--muted);letter-spacing:.04em;margin-top:6px;line-height:1.6}
+.cred-skills{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.cred-skills span{
+  font-family:var(--font-mono);font-size:10.5px;letter-spacing:.05em;color:var(--muted);
+  border:1px solid var(--line);border-radius:5px;padding:4px 8px;
+}
+.cred-foot{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  padding:14px 20px;border-top:1px solid var(--line);background:var(--ink);
+  font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+}
+.cred-foot .code{color:var(--brand);font-weight:600}
+.cred-foot .verify{color:var(--ok);display:inline-flex;align-items:center;gap:7px}
+.cred-foot .verify::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 8px var(--ok)}
+.ethos-points{list-style:none;display:flex;flex-direction:column;gap:14px;margin:24px 0 0}
+.ethos-points li{display:flex;gap:12px;align-items:flex-start;color:var(--muted);font-size:15.5px;line-height:1.45}
+.ethos-points li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--brand);margin-top:7px;flex-shrink:0}
+.ethos-points li b{color:var(--text);font-weight:600}
+.ethos-note{
+  margin-top:26px;padding:16px 18px;border:1px solid var(--line);border-radius:var(--radius);
+  background:var(--panel);font-size:14.5px;line-height:1.5;color:var(--muted);
+}
+.ethos-note b{color:var(--text);font-weight:600}
+
 /* ---------- diferencial ---------- */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 @media(max-width:880px){.split{grid-template-columns:1fr}}
@@ -534,6 +579,7 @@ select option{color:var(--text);background:var(--panel)}
 .form-msg{font-family:var(--font-mono);font-size:13px;letter-spacing:.04em;min-height:20px}
 .form-msg.err{color:var(--err)}
 .form-msg a{color:var(--brand);text-decoration:underline}
+.form-legal{font-family:var(--font-mono);font-size:11px;letter-spacing:.04em;color:var(--dim);line-height:1.6}
 .form-success{
   border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--panel);
   padding:36px 28px;text-align:center;
@@ -555,6 +601,10 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
 .foot-brand{display:flex;align-items:center;gap:14px}
 .foot-brand img{width:48px;height:48px;border-radius:8px;flex-shrink:0}
 .foot .mono{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em}
+.foot-disclaimer{
+  margin-top:28px;padding-top:20px;border-top:1px solid var(--line-soft);
+  font-size:13px;line-height:1.6;color:var(--dim);max-width:900px;
+}
 
 /* ---------- mobile: enquadramento mais firme ---------- */
 @media(max-width:640px){
@@ -572,11 +622,13 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
   .stats{margin-top:40px}
   .stat{padding:18px 16px}
   .stat .num{font-size:38px}
-  .cards-3,.plans,.steps,.pasta-grid,.contact-grid{margin-top:28px}
+  .cards-3,.plans,.steps,.pasta-grid,.contact-grid,.ethos-grid{margin-top:28px}
   .card,.plan{padding:22px 18px}
   .plan .who{min-height:0;margin-bottom:16px}
   .pasta-visual{padding:24px 14px 18px;min-height:0}
   .pasta-tab{margin-left:10px;font-size:13px;padding:7px 12px 9px}
+  .cred-body{padding:18px 16px}
+  .cred-name{font-size:22px}
   .pillar{padding:20px 16px;gap:14px}
   .step{padding:22px 18px}
   .integra{padding:22px 16px;gap:24px;margin-top:28px}
@@ -627,7 +679,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
       <a href="#contexto">Por que agora</a>
       <a href="#programas">Formatos</a>
       <a href="#evidencias">Evidências</a>
-      <a href="#instrutor">Instrutor</a>
+      <a href="#ethos">Credencial</a>
       <a href="#faq">Dúvidas</a>
     </div>
     <div class="nav-actions">
@@ -639,7 +691,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
           <path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5z"/>
         </svg>
       </button>
-      <a href="#contato" class="btn btn-primary nav-cta">Agendar diagnóstico gratuito</a>
+      <a href="#contato" class="btn btn-primary nav-cta">Quero o levantamento</a>
     </div>
   </div>
 </nav>
@@ -657,7 +709,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
           <a class="btn btn-wa" href="#contato">Quero elevar o padrão da minha equipe</a>
           <a class="btn btn-ghost" href="#programas">Ver os formatos</a>
         </div>
-        <p class="hero-note">Retorno em 24h · Proposta em até 48h úteis · Treinamento in-company, no seu posto, na sua realidade</p>
+        <p class="hero-note">Levantamento sem custo · Documento assinado em 48h úteis · Treinamento in-company, no seu posto</p>
       </div>
 
       <aside class="dossier reveal">
@@ -686,7 +738,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
       <div class="stat"><div class="num" data-count="26">26</div><div class="lbl">Anos de PMESP</div></div>
       <div class="stat"><div class="num" data-count="18">18</div><div class="lbl">Anos de Força Tática</div></div>
       <div class="stat"><div class="num" data-count="13">13</div><div class="lbl">Disciplinas credenciadas PF</div></div>
-      <div class="stat"><div class="num" data-count="18" data-prefix="+">+18</div><div class="lbl">Anos formando equipes</div></div>
+      <div class="stat"><div class="num">2031</div><div class="lbl">Credenciamento válido até</div></div>
     </div>
   </div>
 </header>
@@ -732,14 +784,15 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
       <div class="plan reveal">
         <div class="k">Ponto de entrada</div>
         <h3>Workshop Intensivo</h3>
-        <p class="who">Para empresas que precisam de resultado rápido em uma dor específica: abordagem, conflito, uso da força.</p>
+        <p class="who">Para quem precisa de resultado rápido em uma dor específica: controle de acesso, conflito na portaria, abordagem, uso da força.</p>
         <ul>
-          <li>1 dia completo, in-company, até 25 participantes</li>
+          <li>1 dia completo, in-company</li>
+          <li>Turma pode misturar segurança e facilities do mesmo posto</li>
           <li>Disciplina definida em conjunto com o gestor</li>
           <li>Material didático e certificados individuais</li>
           <li>Relatório de avaliação da turma para o RH/compliance</li>
         </ul>
-        <a href="#contato" class="btn btn-ghost" data-interesse="Workshop Intensivo (1 dia)">Agendar diagnóstico gratuito</a>
+        <a href="#contato" class="btn btn-ghost" data-interesse="Workshop Intensivo (1 dia)">Quero o levantamento</a>
       </div>
 
       <div class="plan hot reveal">
@@ -749,12 +802,12 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
         <p class="who">Para operações que precisam elevar o padrão do efetivo inteiro: doutrina, conduta e controle emocional.</p>
         <ul>
           <li>Follow-up de eficácia após 60 dias: voltamos para verificar se a conduta mudou no posto</li>
-          <li>Diagnóstico operacional inicial da equipe</li>
-          <li>4 a 6 encontros presenciais ou híbridos (4 a 8 semanas)</li>
+          <li>Levantamento de necessidades por posto e por função</li>
+          <li>4 a 6 encontros presenciais</li>
           <li>Trilha combinando disciplinas técnicas e comportamentais</li>
           <li>Dossiê completo de evidências de capacitação</li>
         </ul>
-        <a href="#contato" class="btn btn-primary" data-interesse="Programa de Aperfeiçoamento">Agendar diagnóstico gratuito</a>
+        <a href="#contato" class="btn btn-primary" data-interesse="Programa de Aperfeiçoamento">Quero o levantamento</a>
       </div>
 
       <div class="plan reveal">
@@ -839,6 +892,68 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
   </div>
 </section>
 
+<!-- ============ CREDENCIAL ETHOS ============ -->
+<section id="ethos">
+  <div class="wrap">
+    <div class="eyebrow reveal">Formação Ethos</div>
+    <h2 class="reveal">A prova que o seu contratante confere sozinho.<br>Sem login, sem e-mail, sem depender de você.</h2>
+    <p class="lead reveal">Cada formação Ethos gera uma credencial pública verificável. O síndico, o gerente do hospital ou o comprador da indústria abre o link, digita o nome ou o código e vê o que aquela pessoa formou, quando, com quantas horas e em quais competências.</p>
+
+    <div class="ethos-grid">
+      <div class="reveal">
+        <div class="cred">
+          <div class="cred-top"><span>Credencial pública</span><b>ATIV · Formação Ethos</b></div>
+          <div class="cred-body">
+            <div class="cred-name">Nome do Agente Formado</div>
+            <div class="cred-cpf">CPF ***.***.***-**  ·  verificação por nome ou código</div>
+            <div class="cred-course">Virtudes do Guardião</div>
+            <div class="cred-meta">Carga horária 4h · Turma concluída e confirmada<br>Patrocínio: sua empresa</div>
+            <div class="cred-skills">
+              <span>Comunicação assertiva</span>
+              <span>Escuta ativa</span>
+              <span>Atendimento e trato ao público</span>
+              <span>Gestão de conflitos</span>
+              <span>Controle emocional sob pressão</span>
+            </div>
+          </div>
+          <div class="cred-foot">
+            <span class="code">ETH-XXXX-XXXX</span>
+            <span class="verify">Credencial válida</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <h3 style="font-size:28px">Quando perguntarem o que sua equipe faz de valor, você manda um link.</h3>
+        <ul class="ethos-points">
+          <li><b>Link permanente por empresa.</b> Atualiza sozinho a cada turma concluída. Serve para proposta comercial, licitação e renovação de contrato.</li>
+          <li><b>Só entra quem concluiu.</b> Turma programada aparece como programada. A credencial só vira válida depois que a ATIV confirma que a formação aconteceu.</li>
+          <li><b>Começa pelo efetivo de segurança e se estende.</b> Vigilante, ronda e supervisão são a base. Portaria, controle de acesso e apoio operacional do mesmo posto podem entrar na mesma turma.</li>
+          <li><b>O profissional carrega pela carreira.</b> A credencial é dele, verificável para sempre. Isso pesa na hora em que ele decide ficar.</li>
+        </ul>
+        <div class="ethos-note">
+          <b>Formação Ethos é capacitação complementar em competências comportamentais.</b> Não substitui os cursos de formação, extensão e reciclagem previstos na Portaria PF nº 16/2024, ministrados exclusivamente por escolas credenciadas pela Polícia Federal.
+        </div>
+      </div>
+    </div>
+
+    <div class="integra reveal">
+      <div>
+        <h3>Treinamento que vira registro auditável, não papel na gaveta</h3>
+        <p>Cada treinamento ATIV já nasce registrado: histórico por colaborador, validade das reciclagens, certificados e avaliação de eficácia em formato digital. Para empresas que adotam a plataforma ATIV de gestão, esse registro fica vivo: alertas de vencimento, trilha por posto e evidências prontas para a auditoria da PF e para o contratante. Treinar e comprovar deixam de ser dois trabalhos.</p>
+      </div>
+      <div class="evid" id="evid-mock">
+        <div class="hd">Registro de capacitação (exemplo)</div>
+        <div><span class="ok stamp">✓</span> Workshop · Gestão de conflitos no posto</div>
+        <div><span class="ok stamp">✓</span> Programa · Virtudes do Guardião, 4h</div>
+        <div><span class="ok stamp">✓</span> Credenciais Ethos emitidas: 23/23</div>
+        <div><span class="ok stamp">✓</span> Avaliação de eficácia: registrada</div>
+        <div><span class="ok stamp">✓</span> Próxima reciclagem: alerta em 10/2027</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ INSTRUTOR / DIFERENCIAL ============ -->
 <section id="instrutor">
   <div class="wrap">
@@ -856,7 +971,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
         </div>
         <div class="pillar">
           <span class="idx">B</span>
-          <div><h3>Preparo comportamental</h3><p>Controle emocional, comunicação e desescalada de conflitos. É aqui que se evitam os incidentes que geram processos.</p></div>
+          <div><h3>Preparo para quem está desarmado</h3><p>Sem arma, a escada do uso progressivo da força começa e termina na palavra. Desescalada, comunicação e controle emocional deixam de ser complemento e viram a ferramenta principal.</p></div>
         </div>
         <div class="pillar">
           <span class="idx">C</span>
@@ -880,15 +995,15 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
     <div class="steps reveal-group">
       <div class="step reveal">
         <div class="n">01</div>
-        <h3>Diagnóstico</h3>
-        <p>Conversa de 30 minutos com o gestor para entender a operação, o efetivo e as dores prioritárias.</p>
-        <div class="t">Sem custo · Sem compromisso</div>
+        <h3>Levantamento</h3>
+        <p>Uma hora com o gestor. Estruturado, por posto e por função. Você fica com o documento — o LNT da sua operação.</p>
+        <div class="t">Sem custo · Documento em 48h úteis</div>
       </div>
       <div class="step reveal">
         <div class="n">02</div>
         <h3>Proposta</h3>
         <p>Escopo, carga horária, metodologia e investimento, desenhados para a sua realidade.</p>
-        <div class="t">Retorno em 24h úteis · Proposta em até 48h úteis</div>
+        <div class="t">Só depois do documento</div>
       </div>
       <div class="step reveal">
         <div class="n">03</div>
@@ -912,27 +1027,6 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
   </div>
 </section>
 
-<!-- ============ INTEGRAÇÃO ATIV ============ -->
-<section id="plataforma">
-  <div class="wrap">
-    <div class="eyebrow reveal">Depois do treinamento</div>
-    <div class="integra reveal">
-      <div>
-        <h3>Treinamento que vira registro auditável, não papel na gaveta</h3>
-        <p>Cada treinamento ATIV já nasce registrado: histórico por colaborador, validade das reciclagens, certificados e avaliação de eficácia em formato digital. Para empresas que adotam a plataforma ATIV de gestão, esse registro fica vivo: alertas de vencimento, trilha por posto e evidências prontas para a auditoria da PF e para o contratante. Treinar e comprovar deixam de ser dois trabalhos.</p>
-      </div>
-      <div class="evid" id="evid-mock">
-        <div class="hd">Registro de capacitação (exemplo)</div>
-        <div><span class="ok stamp">✓</span> Workshop · Gestão de Conflitos, 12/2026</div>
-        <div><span class="ok stamp">✓</span> Programa · Uso Progressivo da Força, 12/2026</div>
-        <div><span class="ok stamp">✓</span> Certificados emitidos: 23/23</div>
-        <div><span class="ok stamp">✓</span> Avaliação de eficácia: registrada</div>
-        <div><span class="ok stamp">✓</span> Próxima reciclagem: alerta em 10/2027</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ FAQ ============ -->
 <section id="faq">
   <div class="wrap">
@@ -940,6 +1034,10 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
     <h2 class="reveal">O que os gestores perguntam antes de contratar</h2>
 
     <div class="faq reveal" id="faq-list">
+      <div class="faq-item">
+        <button type="button" class="faq-btn" aria-expanded="false">O que é esse levantamento? É só uma reunião de vendas?<span class="ico" aria-hidden="true">+</span></button>
+        <div class="faq-panel"><div class="faq-panel-inner"><div class="a">É um Levantamento de Necessidades de Treinamento: a primeira fase do ciclo formativo previsto na ISO 10015 e a base do que a ISO 18788 chama de determinação de competência. Uma hora de conversa estruturada e você recebe, em 48h úteis, um documento assinado: quais competências estão em falta, em quais postos e funções, e em que ordem atacar. O documento é seu, feche ou não feche treinamento. Se a prioridade da sua operação naquele momento não for treinamento, isso vai estar escrito lá.</div></div></div>
+      </div>
       <div class="faq-item">
         <button type="button" class="faq-btn" aria-expanded="false">Esses treinamentos substituem o curso de formação de vigilante?<span class="ico" aria-hidden="true">+</span></button>
         <div class="faq-panel"><div class="faq-panel-inner"><div class="a">Não. E desconfie de quem prometer isso. A formação inicial e a reciclagem obrigatória são realizadas por escolas credenciadas. Os treinamentos ATIV são de aperfeiçoamento e capacitação complementar, dentro das 13 disciplinas do credenciamento PF nº 89/2026: é o que eleva o padrão da equipe e gera evidência de capacitação continuada exigida pela Lei 14.967/24.</div></div></div>
@@ -954,15 +1052,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
       </div>
       <div class="faq-item">
         <button type="button" class="faq-btn" aria-expanded="false">Como treinar a equipe sem desfalcar os postos?<span class="ico" aria-hidden="true">+</span></button>
-        <div class="faq-panel"><div class="faq-panel-inner"><div class="a">O formato in-company foi desenhado para isso: turmas divididas por turno e escala, encontros que respeitam o quadro de serviço e, quando necessário, sessões replicadas para cobrir as duas alas da 12x36. O plano de turmas sai definido no diagnóstico, junto com o gestor.</div></div></div>
-      </div>
-      <div class="faq-item">
-        <button type="button" class="faq-btn" aria-expanded="false">O treinamento acontece na nossa empresa?<span class="ico" aria-hidden="true">+</span></button>
-        <div class="faq-panel"><div class="faq-panel-inner"><div class="a">Sim. O modelo é in-company: o instrutor vai até a sua sede, posto ou local indicado, com material e logística inclusos. Isso reduz custo de deslocamento da equipe e permite treinar no contexto real da operação. Atendimento em Indaiatuba, Campinas, Sorocaba, Jundiaí, Salto e região. Outras praças sob consulta.</div></div></div>
-      </div>
-      <div class="faq-item">
-        <button type="button" class="faq-btn" aria-expanded="false">Quanto custa?<span class="ico" aria-hidden="true">+</span></button>
-        <div class="faq-panel"><div class="faq-panel-inner"><div class="a">O investimento depende de efetivo, disciplinas e formato (workshop único, programa ou parceria anual). Por isso o processo começa com um diagnóstico gratuito de 30 minutos. Retorno em 24h úteis · proposta em até 48h úteis, com escopo e valores fechados. Sem surpresa e sem custo escondido.</div></div></div>
+        <div class="faq-panel"><div class="faq-panel-inner"><div class="a">O formato in-company foi desenhado para isso: turmas divididas por turno e escala, encontros que respeitam o quadro de serviço e, quando necessário, sessões replicadas para cobrir as duas alas da 12x36. O plano de turmas sai definido no levantamento, junto com o gestor.</div></div></div>
       </div>
       <div class="faq-item">
         <button type="button" class="faq-btn" aria-expanded="false">O que a minha empresa recebe além do treinamento?<span class="ico" aria-hidden="true">+</span></button>
@@ -972,65 +1062,93 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
         <button type="button" class="faq-btn" aria-expanded="false">Vocês treinam supervisores e líderes, ou só o efetivo operacional?<span class="ico" aria-hidden="true">+</span></button>
         <div class="faq-panel"><div class="faq-panel-inner"><div class="a">Os dois. E recomendamos começar pela liderança. Supervisor despreparado desfaz em uma semana o que o treinamento construiu em um mês. Os treinamentos incluem trilhas específicas de liderança, tomada de decisão sob pressão e gestão de equipe para chefes de posto e supervisores.</div></div></div>
       </div>
+      <div class="faq-item">
+        <button type="button" class="faq-btn" aria-expanded="false">Vocês treinam porteiro, zelador e limpeza, ou só vigilante?<span class="ico" aria-hidden="true">+</span></button>
+        <div class="faq-panel"><div class="faq-panel-inner"><div class="a">Os dois. E é aí que está o ponto. O vigilante já tem formação obrigatória por escola credenciada. Porteiro, controlador de acesso, zelador, jardineiro e equipe de limpeza não têm exigência formativa nenhuma, e são justamente quem mais fala com morador, paciente e visitante. Turmas mistas do mesmo posto funcionam muito bem: o problema que eles enfrentam é o mesmo, mesmo com crachás diferentes.</div></div></div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-btn" aria-expanded="false">O treinamento acontece na nossa empresa?<span class="ico" aria-hidden="true">+</span></button>
+        <div class="faq-panel"><div class="faq-panel-inner"><div class="a">Sim. O modelo é in-company: o instrutor vai até a sua sede, posto ou local indicado, com material e logística inclusos. Isso reduz custo de deslocamento da equipe e permite treinar no contexto real da operação. Atendimento em Indaiatuba, Campinas, Sorocaba, Jundiaí, Salto e região. Outras praças sob consulta.</div></div></div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-btn" aria-expanded="false">Quanto custa?<span class="ico" aria-hidden="true">+</span></button>
+        <div class="faq-panel"><div class="faq-panel-inner"><div class="a">O investimento depende de efetivo, disciplinas e formato. Por isso nada de preço antes do levantamento — sem saber o que está faltando, qualquer número é chute. O levantamento é sem custo, o documento sai em 48h úteis e a proposta vem junto, com escopo e valores fechados. Sem surpresa e sem custo escondido.</div></div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ CONTATO ============ -->
+<!-- ============ CONTATO / LEVANTAMENTO ============ -->
 <section id="contato">
   <div class="wrap">
-    <div class="eyebrow reveal">Proposta</div>
-    <h2 class="reveal">Agende o diagnóstico gratuito<br>da sua operação</h2>
-    <p class="lead reveal">30 minutos de conversa direta com o instrutor. Você sai com uma leitura honesta do nível da sua equipe. Feche ou não feche o treinamento.</p>
+    <div class="eyebrow reveal">Levantamento</div>
+    <h2 class="reveal">Levantamento de Necessidades<br>de Treinamento. Sem custo.</h2>
+    <p class="lead reveal">Uma hora de conversa estruturada com o instrutor. Em 48h úteis você recebe o documento assinado: o que está faltando, em quais postos e funções, e em que ordem atacar. <b>O documento é seu, feche ou não feche o treinamento.</b></p>
 
     <div class="contact-grid">
       <form id="lead-form" novalidate>
-        <input type="text" name="nome" placeholder="Seu nome" required>
-        <input type="text" name="cargo" placeholder="Cargo" required>
-        <input type="text" name="empresa" placeholder="Empresa" required>
-        <input type="email" name="email" placeholder="E-mail corporativo" required>
-        <input type="tel" name="whatsapp" placeholder="WhatsApp (com DDD)" required>
+        <input type="text" name="nome" placeholder="Seu nome" required autocomplete="name">
+        <input type="text" name="cargo" placeholder="Cargo" required autocomplete="organization-title">
+        <input type="text" name="empresa" placeholder="Empresa" required autocomplete="organization">
+        <input type="email" name="email" placeholder="E-mail corporativo" required autocomplete="email">
+        <input type="tel" name="whatsapp" placeholder="WhatsApp (com DDD)" required autocomplete="tel">
         <select name="efetivo" required>
-          <option value="">Tamanho do efetivo de segurança</option>
+          <option value="">Tamanho total do efetivo (todas as funções)</option>
+          <option value="Até 20">Até 20</option>
           <option value="20 a 100">20 a 100</option>
           <option value="100 a 300">100 a 300</option>
           <option value="300 a 600">300 a 600</option>
           <option value="+600">+600</option>
+        </select>
+        <select name="composicao" id="sel-composicao" required>
+          <option value="">Composição predominante do efetivo</option>
+          <option value="Maioria vigilante (armado ou desarmado)">Maioria vigilante (armado ou desarmado)</option>
+          <option value="Maioria portaria e controle de acesso">Maioria portaria e controle de acesso</option>
+          <option value="Maioria limpeza, zeladoria e facilities">Maioria limpeza, zeladoria e facilities</option>
+          <option value="Equilibrado entre segurança e facilities">Equilibrado entre segurança e facilities</option>
+          <option value="Prefiro detalhar na conversa">Prefiro detalhar na conversa</option>
         </select>
         <select name="interesse" id="sel-interesse" required>
           <option value="">Formato de interesse</option>
           <option value="Workshop Intensivo (1 dia)">Workshop Intensivo (1 dia)</option>
           <option value="Programa de Aperfeiçoamento">Programa de Aperfeiçoamento</option>
           <option value="Parceria anual de capacitação">Parceria anual de capacitação</option>
-          <option value="Ainda não sei. Quero o diagnóstico">Ainda não sei. Quero o diagnóstico</option>
+          <option value="Ainda não sei. Quero o levantamento">Ainda não sei. Quero o levantamento</option>
         </select>
-        <button type="submit" class="btn btn-primary" id="submit-btn">Quero o diagnóstico gratuito</button>
+        <button type="submit" class="btn btn-primary" id="submit-btn">Quero meu levantamento</button>
         <div class="form-msg" id="form-msg"></div>
+        <p class="form-legal">Seus dados são usados apenas para o contato e a elaboração do levantamento. Sem lista, sem disparo em massa.</p>
       </form>
 
       <div class="contact-side">
-        <div class="item"><span class="k">WhatsApp</span><span class="v"><b>Resposta direta do instrutor.</b><br><a href="https://wa.me/5519974010028?text=Ol%C3%A1%2C%20quero%20agendar%20o%20diagn%C3%B3stico%20gratuito%20da%20minha%20opera%C3%A7%C3%A3o" target="_blank" rel="noopener" style="color:var(--brand)">Iniciar conversa agora →</a></span></div>
-        <div class="item"><span class="k">Prazo</span><span class="v"><b>Retorno em 24h úteis · Proposta em até 48h úteis</b></span></div>
+        <div class="item"><span class="k">WhatsApp</span><span class="v"><b>Resposta direta do instrutor.</b><br><a href="https://wa.me/5519974010028?text=Ol%C3%A1%2C%20quero%20o%20levantamento%20de%20necessidades%20de%20treinamento%20da%20minha%20opera%C3%A7%C3%A3o" target="_blank" rel="noopener" style="color:var(--brand)">Iniciar conversa agora →</a></span></div>
+        <div class="item"><span class="k">Prazo</span><span class="v"><b>Retorno em 24h úteis · Documento em até 48h úteis</b></span></div>
+        <div class="item"><span class="k">Quem participa</span><span class="v">Uma hora com quem conhece a operação: dono, gestor operacional ou supervisor. Quanto mais perto do posto, melhor o levantamento.</span></div>
         <div class="item"><span class="k">Região</span><span class="v">Indaiatuba · Campinas · Sorocaba · Jundiaí · Salto e região. Outras praças sob consulta.</span></div>
-        <div class="item"><span class="k">Garantia</span><span class="v">O diagnóstico é gratuito e a leitura é honesta: se o treinamento não fizer sentido para o seu momento, você vai ouvir isso de nós.</span></div>
+        <div class="item"><span class="k">Garantia</span><span class="v">A leitura é honesta: se a sua prioridade agora for reciclagem ou documentação em vez de treinamento, você vai ouvir isso — e vai estar escrito no documento.</span></div>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="wrap foot">
-    <div class="foot-brand">
-      <img src="images/logo-ativ-nav.png" alt="ATIV Brasil" width="48" height="48" loading="lazy" decoding="async">
-      <div>
-        <div style="font-family:var(--font-display);font-size:22px;font-weight:700;text-transform:uppercase;color:var(--text)">ATIV<span style="color:var(--brand)">.</span> Treinamentos</div>
-        <div style="margin-top:6px">Capacitação corporativa em segurança privada · Indaiatuba/SP</div>
+  <div class="wrap">
+    <div class="foot">
+      <div class="foot-brand">
+        <img src="images/logo-ativ-nav.png" alt="ATIV Brasil" width="48" height="48" loading="lazy" decoding="async">
+        <div>
+          <div style="font-family:var(--font-display);font-size:22px;font-weight:700;text-transform:uppercase;color:var(--text)">ATIV<span style="color:var(--brand)">.</span> Treinamentos</div>
+          <div style="margin-top:6px">Capacitação corporativa em segurança privada · Indaiatuba/SP</div>
+        </div>
+      </div>
+      <div class="mono" style="text-align:right">
+        CREDENCIAMENTO PF Nº 89/2026 · VÁLIDO ATÉ 21/01/2031<br>
+        LEI 14.967/24 · ISO 18788 · ISO 10015
       </div>
     </div>
-    <div class="mono" style="text-align:right">
-      CREDENCIAMENTO PF Nº 89/2026 · VÁLIDO ATÉ 21/01/2031<br>
-      LEI 14.967/24 · ISO 18788 · ISO 10015
-    </div>
+    <p class="foot-disclaimer">
+      A Formação Ethos e os treinamentos corporativos ATIV são capacitação complementar. Não substituem os cursos de formação, extensão e reciclagem de vigilantes previstos na Portaria PF nº 16/2024, ministrados exclusivamente por escolas credenciadas pela Polícia Federal.
+    </p>
   </div>
 </footer>
 
@@ -1051,7 +1169,7 @@ const CONFIG = {
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const waUrl = (text) =>
-  `https://wa.me/${CONFIG.WHATSAPP}?text=${encodeURIComponent(text || "Olá, quero agendar o diagnóstico gratuito da minha operação")}`;
+  `https://wa.me/${CONFIG.WHATSAPP}?text=${encodeURIComponent(text || "Olá, quero o levantamento de necessidades de treinamento da minha operação")}`;
 
 // Tema claro / escuro (pares de tokens em :root / [data-theme=light])
 const THEME_KEY = "ativ-theme";
@@ -1171,6 +1289,8 @@ document.querySelectorAll(".faq-item").forEach(item => {
 });
 
 // Formulário: Supabase → estados de conversão (sem alert)
+// CONTRATO DO PAYLOAD (não alterar nomes): nome, cargo, empresa, telefone,
+// num_colaboradores, desafio, origem. Campos novos do form entram em "desafio".
 const form = document.getElementById("lead-form");
 const msgEl = document.getElementById("form-msg");
 const btn = document.getElementById("submit-btn");
@@ -1181,7 +1301,7 @@ form?.addEventListener("submit", async e => {
 
   const data = Object.fromEntries(new FormData(form).entries());
 
-  if (!data.nome || !data.cargo || !data.empresa || !data.email || !data.whatsapp || !data.efetivo || !data.interesse) {
+  if (!data.nome || !data.cargo || !data.empresa || !data.email || !data.whatsapp || !data.efetivo || !data.composicao || !data.interesse) {
     msgEl.innerHTML = "Preencha todos os campos obrigatórios.";
     msgEl.className = "form-msg err";
     return;
@@ -1196,13 +1316,13 @@ form?.addEventListener("submit", async e => {
     msgEl.innerHTML = `Não foi possível enviar. Tente novamente ou <a href="${waUrl()}" target="_blank" rel="noopener">chame no WhatsApp</a>.`;
     msgEl.className = "form-msg err";
     btn.disabled = false;
-    btn.textContent = "Quero o diagnóstico gratuito";
+    btn.textContent = "Quero meu levantamento";
   };
 
   const showSuccess = () => {
     const box = document.createElement("div");
     box.className = "form-success";
-    box.innerHTML = `<div class="stamp-ok">✓ RECEBIDO</div><p>Recebido. Retorno em até 24h úteis.</p>`;
+    box.innerHTML = `<div class="stamp-ok">✓ RECEBIDO</div><p>Recebido. Retorno em até 24h úteis para agendar o levantamento.</p>`;
     form.replaceWith(box);
   };
 
@@ -1211,6 +1331,7 @@ form?.addEventListener("submit", async e => {
       const desafioParts = [
         `E-mail: ${data.email}`,
         `Formato: ${data.interesse}`,
+        `Composição do efetivo: ${data.composicao}`
       ];
 
       const res = await fetch(`${CONFIG.SUPABASE_URL}/rest/v1/${CONFIG.SUPABASE_TABLE}`, {
@@ -1243,9 +1364,9 @@ form?.addEventListener("submit", async e => {
 
   // Sem Supabase: abre WhatsApp e confirma
   const txt =
-    `*Solicitação de diagnóstico: ATIV Treinamentos*\n` +
+    `*Solicitação de levantamento: ATIV Treinamentos*\n` +
     `Nome: ${data.nome}\nCargo: ${data.cargo}\nEmpresa: ${data.empresa}\nE-mail: ${data.email}\n` +
-    `WhatsApp: ${data.whatsapp}\nEfetivo: ${data.efetivo}\nFormato: ${data.interesse}`;
+    `WhatsApp: ${data.whatsapp}\nEfetivo: ${data.efetivo}\nComposição: ${data.composicao}\nFormato: ${data.interesse}`;
   window.open(waUrl(txt), "_blank", "noopener");
   showSuccess();
 });
