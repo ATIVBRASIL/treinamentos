@@ -16,7 +16,7 @@
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Barlow+Condensed:wght@600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <noscript><style>.reveal{opacity:1;transform:none}.stamp{opacity:1;transform:none}</style></noscript>
 <script type="application/ld+json">
 {
@@ -61,7 +61,6 @@ html[data-theme="dark"]{
   --brand-dim:rgba(232,93,31,.12);
   --brand-border:rgba(232,93,31,.35);
   --brand-border-strong:rgba(232,93,31,.45);
-  --brand-wash:rgba(232,93,31,.08);
   --brand-focus:rgba(240,90,40,.18);
   --accent:#e85d1f;
   --on-brand:#0c0f12;
@@ -102,7 +101,6 @@ html[data-theme="light"]{
   --brand-dim:rgba(209,79,20,.12);
   --brand-border:rgba(209,79,20,.4);
   --brand-border-strong:rgba(209,79,20,.55);
-  --brand-wash:rgba(209,79,20,.08);
   --brand-focus:rgba(209,79,20,.2);
   --accent:#d14f14;
   --on-brand:#0c0f12;
@@ -185,7 +183,6 @@ section{padding:96px 0;border-top:1px solid var(--line-soft)}
 .reveal-group .reveal:nth-child(3){transition-delay:180ms}
 .reveal-group .reveal:nth-child(4){transition-delay:270ms}
 .reveal-group .reveal:nth-child(5){transition-delay:360ms}
-.reveal-group .reveal:nth-child(6){transition-delay:450ms}
 
 /* ---------- topbar ---------- */
 .topbar{
@@ -535,7 +532,6 @@ input:focus,select:focus,textarea:focus{
 select{color:var(--muted)}
 select option{color:var(--text);background:var(--panel)}
 .form-msg{font-family:var(--font-mono);font-size:13px;letter-spacing:.04em;min-height:20px}
-.form-msg.ok{color:var(--ok)}
 .form-msg.err{color:var(--err)}
 .form-msg a{color:var(--brand);text-decoration:underline}
 .form-success{
@@ -613,7 +609,6 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
   .stamp{opacity:1;transform:none}
 }
 </style>
-<!-- force-deploy-marker 2026-07-16T20:49:44.2506342-03:00 -->
 </head>
 <body>
 
@@ -1080,14 +1075,6 @@ themeToggle?.addEventListener("click", () => {
   applyTheme(current === "dark" ? "light" : "dark");
 });
 
-// Links de WhatsApp com mensagem pré-preenchida (legado data-wa)
-document.querySelectorAll("[data-wa]").forEach(a => {
-  a.addEventListener("click", e => {
-    e.preventDefault();
-    window.open(waUrl(a.dataset.msg), "_blank", "noopener");
-  });
-});
-
 // Cards de formato: pré-selecionam o interesse no formulário
 document.querySelectorAll("[data-interesse]").forEach(a => {
   a.addEventListener("click", () => {
@@ -1187,7 +1174,6 @@ document.querySelectorAll(".faq-item").forEach(item => {
 const form = document.getElementById("lead-form");
 const msgEl = document.getElementById("form-msg");
 const btn = document.getElementById("submit-btn");
-const contactFormCol = form?.parentElement;
 
 form?.addEventListener("submit", async e => {
   e.preventDefault();
@@ -1214,7 +1200,6 @@ form?.addEventListener("submit", async e => {
   };
 
   const showSuccess = () => {
-    if (!contactFormCol) return;
     const box = document.createElement("div");
     box.className = "form-success";
     box.innerHTML = `<div class="stamp-ok">✓ RECEBIDO</div><p>Recebido. Retorno em até 24h úteis.</p>`;
