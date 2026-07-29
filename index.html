@@ -1144,10 +1144,9 @@ const CONFIG = {
   // Seu número com código do país, só dígitos. Ex.: "5519999999999"
   WHATSAPP: "5519974010028",
 
-  // CRM SaaS: mesma tabela leads_landing (origem distinta). Anon key = insert-only via RLS.
+  // CRM SaaS: Edge Function submit-lead (insert + e-mail Resend). Mesma base da landing de segurança.
   SUPABASE_URL: "https://dbbzehyummpjyedxmsme.supabase.co",
-  SUPABASE_ANON_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRiYnplaHl1bW1wanllZHhtc21lIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg1Njc4MTMsImV4cCI6MjA4NDE0MzgxM30.sFH5-IG1ZmUh5OpXZrsg0aogm-Qt2CyF6eyrCaGAOlQ",
-  SUPABASE_TABLE: "leads_landing"
+  SUPABASE_ANON_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRiYnplaHl1bW1wanllZHhtc21lIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg1Njc4MTMsImV4cCI6MjA4NDE0MzgxM30.sFH5-IG1ZmUh5OpXZrsg0aogm-Qt2CyF6eyrCaGAOlQ"
 };
 /* ===================================================================== */
 
@@ -1272,9 +1271,9 @@ document.querySelectorAll(".faq-item").forEach(item => {
   });
 });
 
-// Formulário: Supabase → estados de conversão (sem alert)
-// CONTRATO DO PAYLOAD (não alterar nomes): nome, cargo, empresa, telefone,
-// num_colaboradores, desafio, origem. Campos novos do form entram em "desafio".
+// Formulário: Edge Function submit-lead (insert + e-mail) → estados de conversão
+// CONTRATO DO BODY: nome, cargo, empresa, telefone, num_colaboradores,
+// tipo_contrato, desafio, origem. Campos extras do form entram em "desafio".
 const form = document.getElementById("lead-form");
 const msgEl = document.getElementById("form-msg");
 const btn = document.getElementById("submit-btn");
@@ -1318,13 +1317,12 @@ form?.addEventListener("submit", async e => {
         `Composição do efetivo: ${data.composicao}`
       ];
 
-      const res = await fetch(`${CONFIG.SUPABASE_URL}/rest/v1/${CONFIG.SUPABASE_TABLE}`, {
+      const res = await fetch(`${CONFIG.SUPABASE_URL}/functions/v1/submit-lead`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           "apikey": CONFIG.SUPABASE_ANON_KEY,
-          "Authorization": `Bearer ${CONFIG.SUPABASE_ANON_KEY}`,
-          "Prefer": "return=minimal"
+          "Authorization": `Bearer ${CONFIG.SUPABASE_ANON_KEY}`
         },
         body: JSON.stringify({
           nome: data.nome,
@@ -1332,11 +1330,12 @@ form?.addEventListener("submit", async e => {
           empresa: data.empresa,
           telefone: data.whatsapp,
           num_colaboradores: data.efetivo,
+          tipo_contrato: data.interesse,
           desafio: desafioParts.join("\n"),
           origem: "landing-treinamentos"
         })
       });
-      if (!res.ok) throw new Error("supabase " + res.status);
+      if (!res.ok) throw new Error("submit-lead " + res.status);
       showSuccess();
       return;
     } catch (err) {
