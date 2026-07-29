@@ -232,7 +232,6 @@ html[data-theme="light"] .theme-icon-sun{display:none}
   .logo-sub{display:none}
   .logo-img{width:36px;height:36px}
   .nav-cta{font-size:13px;padding:9px 12px}
-  .theme-toggle{width:36px;height:36px}
 }
 
 /* ---------- hero ---------- */
@@ -633,11 +632,17 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
   .foot{gap:16px}
   .foot .mono{text-align:left!important;font-size:11px}
   .contact-side .k{min-width:88px}
+  input,select,textarea{font-size:16px}
+  .topbar{font-size:10.5px;letter-spacing:.06em;padding:8px 12px}
+  .dossier-photo{aspect-ratio:4/3.2}
+  .theme-toggle{width:42px;height:42px}
 }
 @media(max-width:380px){
   :root,html[data-theme="dark"],html[data-theme="light"]{--gutter:14px}
   .nav-cta{font-size:12px;padding:8px 10px}
   .logo-mark{font-size:24px}
+  .contact-side .item{flex-direction:column;gap:6px}
+  .contact-side .k{min-width:0}
 }
 
 @media (prefers-reduced-motion:reduce){
