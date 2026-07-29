@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ATIV Treinamentos | Capacitação Corporativa em Segurança Privada. Instrutor Credenciado PF</title>
-<meta name="description" content="Treinamentos in-company para empresas de segurança privada. Instrutor credenciado pela Polícia Federal (13 disciplinas), 26 anos de experiência operacional. Evidências de capacitação para a Lei 14.967/24. Campinas, Indaiatuba, Sorocaba e região.">
-<meta property="og:title" content="ATIV Treinamentos. Capacitação Corporativa em Segurança Privada">
-<meta property="og:description" content="Instrutor credenciado pela Polícia Federal. Treinamentos in-company com dossiê de evidências de capacitação continuada. Lei 14.967/24.">
+<title>Treinamento para Segurança Privada em Indaiatuba | ATIV</title>
+<meta name="description" content="Treinamento comportamental para segurança privada, no próprio posto e sem desfalcar a escala. Instrutor credenciado pela PF. Indaiatuba, Salto, Itu e região.">
+<meta property="og:title" content="ATIV Treinamentos. Formação comportamental para segurança privada">
+<meta property="og:description" content="Treinamento no próprio posto, sem tirar ninguém da escala. Instrutor credenciado pela Polícia Federal. Evidências de capacitação e credencial pública verificável.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://treinamentos.ativbrasil.com.br">
 <meta property="og:locale" content="pt_BR">
@@ -23,7 +23,7 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "ATIV Treinamentos",
-  "description": "Treinamentos corporativos in-company para empresas de segurança privada, ministrados por instrutor credenciado pela Polícia Federal.",
+  "description": "Treinamento comportamental para equipes de segurança privada, realizado no posto de serviço ou no local indicado pela empresa, ministrado por instrutor credenciado pela Polícia Federal.",
   "areaServed": ["Indaiatuba", "Salto", "Itu", "Cabreúva", "Itupeva", "Monte Mor", "Elias Fausto", "Capivari", "Hortolândia"],
   "url": "https://treinamentos.ativbrasil.com.br",
   "logo": "https://treinamentos.ativbrasil.com.br/images/logo-ativ.png",
@@ -55,7 +55,8 @@ html[data-theme="dark"]{
   --line-soft:#1b2128;
   --text:#e8e5de;
   --muted:#98a1aa;
-  --dim:#6b747d;
+  --dim:#7f8791;
+  --section-alt:rgba(255,255,255,.014);
   --brand:#e85d1f;
   --brand-hi:#ff7a33;
   --brand-dim:rgba(232,93,31,.12);
@@ -95,7 +96,8 @@ html[data-theme="light"]{
   --line-soft:#d8dee6;
   --text:#12161b;
   --muted:#4a5563;
-  --dim:#667085;
+  --dim:#5c6675;
+  --section-alt:rgba(18,22,27,.028);
   --brand:#d14f14;
   --brand-hi:#e85d1f;
   --brand-dim:rgba(209,79,20,.12);
@@ -136,6 +138,7 @@ body::before{
   -webkit-mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 0%,transparent 75%);
 }
 a{color:inherit;text-decoration:none}
+::selection{background:var(--brand);color:var(--on-brand)}
 img{display:block;max-width:100%}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter,24px);position:relative;z-index:1}
 
@@ -146,7 +149,7 @@ img{display:block;max-width:100%}
 }
 .eyebrow::before{content:"";width:26px;height:1px;background:var(--brand)}
 h1,h2,h3{font-family:var(--font-display);text-transform:uppercase;letter-spacing:.01em;line-height:1.02;font-weight:700}
-h2{font-size:clamp(34px,4.4vw,52px);margin:14px 0 14px}
+h2{font-size:clamp(34px,4.4vw,52px);margin:14px 0 14px;line-height:1.06}
 .lead{color:var(--muted);font-size:18px;max-width:640px}
 .lead b{color:var(--text);font-weight:600}
 .btn{
@@ -187,8 +190,9 @@ section{padding:96px 0;border-top:1px solid var(--line-soft)}
 
 /* ---------- topbar ---------- */
 .topbar{
-  background:var(--brand);color:var(--on-brand);font-family:var(--font-mono);
-  font-size:12px;letter-spacing:.08em;text-align:center;padding:8px 16px;font-weight:600;
+  background:var(--panel);color:var(--brand);font-family:var(--font-mono);
+  font-size:11.5px;letter-spacing:.12em;text-align:center;padding:9px 16px;font-weight:600;
+  border-bottom:1px solid var(--brand-border);
   position:relative;z-index:3;
 }
 
@@ -240,7 +244,7 @@ html[data-theme="light"] .theme-icon-sun{display:none}
 .hero .lead{margin:22px 0 16px;font-size:19px}
 .hero-support{
   margin:0 0 28px;max-width:560px;font-size:15.5px;line-height:1.5;
-  font-style:italic;color:var(--muted);opacity:.75;
+  font-style:italic;color:var(--muted);
 }
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
 .hero-note{margin-top:14px;font-family:var(--font-mono);font-size:12px;color:var(--dim);letter-spacing:.06em}
@@ -340,11 +344,11 @@ html[data-theme="light"] .theme-icon-sun{display:none}
 .plan .who{color:var(--muted);font-size:14.5px;margin-bottom:22px;min-height:44px}
 .plan ul{list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:28px}
 .plan li{display:flex;gap:11px;font-size:15px;color:var(--text)}
-.plan li::before{content:"→";color:var(--ok);font-family:var(--font-mono);flex-shrink:0}
+.plan li::before{content:"→";color:var(--brand);font-family:var(--font-mono);flex-shrink:0}
 .plan .btn{width:100%;margin-top:auto}
 .plans-bridge{
   margin:36px auto 0;max-width:70ch;font-size:15px;line-height:1.55;color:var(--muted);
-  text-align:center;opacity:.85;
+  text-align:center;
 }
 #programas + #evidencias{border-top-color:transparent}
 #evidencias{
@@ -353,6 +357,7 @@ html[data-theme="light"] .theme-icon-sun{display:none}
 html[data-theme="light"] #evidencias{
   background:linear-gradient(180deg,rgba(18,22,27,.04),transparent 28%);
 }
+#programas,#ethos,#processo,#contato{background:var(--section-alt)}
 
 /* ---------- pasta do gestor / evidências ---------- */
 .pasta-grid{
@@ -443,8 +448,7 @@ html[data-theme="light"] #evidencias{
   opacity:0;
   transform:scale(1.6) rotate(-6deg);
 }
-.pasta-visual.is-visible .stamp,
-.evid.is-visible .stamp{
+.pasta-visual.is-visible .stamp{
   animation:stamp-in 320ms var(--ease-out) forwards;
 }
 .pasta-visual.is-visible .pasta-doc:nth-child(1) .stamp{animation-delay:200ms}
@@ -452,12 +456,6 @@ html[data-theme="light"] #evidencias{
 .pasta-visual.is-visible .pasta-doc:nth-child(3) .stamp{animation-delay:760ms}
 .pasta-visual.is-visible .pasta-doc:nth-child(4) .stamp{animation-delay:1040ms}
 .pasta-visual.is-visible .pasta-doc:nth-child(5) .stamp{animation-delay:1320ms}
-.evid.is-visible .stamp:nth-of-type(1),
-.evid.is-visible > div:nth-child(2) .stamp{animation-delay:100ms}
-.evid.is-visible > div:nth-child(3) .stamp{animation-delay:250ms}
-.evid.is-visible > div:nth-child(4) .stamp{animation-delay:400ms}
-.evid.is-visible > div:nth-child(5) .stamp{animation-delay:550ms}
-.evid.is-visible > div:nth-child(6) .stamp{animation-delay:700ms}
 @keyframes stamp-in{
   from{opacity:0;transform:scale(1.6) rotate(-6deg)}
   60%{opacity:1;transform:scale(0.92) rotate(1deg)}
@@ -518,12 +516,6 @@ html[data-theme="light"] #evidencias{
 /* ---------- diferencial ---------- */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 @media(max-width:880px){.split{grid-template-columns:1fr}}
-.pillars{display:flex;flex-direction:column;gap:0;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;background:var(--panel)}
-.pillar{padding:26px 28px;border-bottom:1px solid var(--line);display:flex;gap:20px;flex:1}
-.pillar:last-child{border-bottom:none}
-.pillar .idx{font-family:var(--font-mono);color:var(--brand);font-size:13px;padding-top:4px}
-.pillar h3{font-size:22px;margin-bottom:6px}
-.pillar p{color:var(--muted);font-size:15px}
 
 /* ---------- processo ---------- */
 .steps{
@@ -540,19 +532,6 @@ html[data-theme="light"] #evidencias{
 .step h3{font-size:21px;margin:12px 0 8px}
 .step p{color:var(--muted);font-size:14.5px;flex:1}
 .step .t{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;color:var(--dim);text-transform:uppercase;margin-top:12px}
-
-/* ---------- integração ---------- */
-.integra{
-  border:1px solid var(--line);border-radius:var(--radius-lg);
-  background:linear-gradient(135deg,var(--panel-2),var(--panel));
-  padding:44px;display:grid;grid-template-columns:1.3fr 1fr;gap:44px;align-items:center;margin-top:44px;
-}
-@media(max-width:880px){.integra{grid-template-columns:1fr;padding:32px 26px}}
-.integra h3{font-size:32px;margin-bottom:12px}
-.integra p{color:var(--muted)}
-.evid{border:1px solid var(--line);border-radius:var(--radius);background:var(--ink);padding:22px;font-family:var(--font-mono);font-size:12.5px;line-height:2;color:var(--muted)}
-.evid .ok{color:var(--ok);display:inline-block}
-.evid .hd{color:var(--brand);letter-spacing:.1em;text-transform:uppercase;font-size:11px;margin-bottom:8px}
 
 /* ---------- FAQ ---------- */
 .faq{margin-top:44px;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;background:var(--panel)}
@@ -644,11 +623,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
   .pasta-tab{margin-left:10px;font-size:13px;padding:7px 12px 9px}
   .cred-body{padding:18px 16px}
   .cred-name{font-size:22px}
-  .pillar{padding:20px 16px;gap:14px}
   .step{padding:22px 18px}
-  .integra{padding:22px 16px;gap:24px;margin-top:28px}
-  .integra h3{font-size:26px}
-  .evid{padding:16px}
   .faq{margin-top:28px}
   .faq-btn{padding:18px 16px;font-size:17px;gap:12px}
   .faq .a{padding:0 16px 18px;font-size:15px}
@@ -721,7 +696,7 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
         <p class="lead reveal">Porque técnica sem mentalidade não muda comportamento. A ATIV forma o profissional por trás do procedimento: discernimento, conduta e convivência. Porque no posto, quem decide é ele. E quem responde é você.</p>
         <p class="hero-support reveal">O padrão da sua operação é o que a sua equipe faz quando ninguém está olhando. Nós formamos isso. E entregamos as evidências que comprovam.</p>
         <div class="hero-ctas reveal">
-          <a class="btn btn-wa" href="#contato">Quero elevar o padrão da minha equipe</a>
+          <a class="btn btn-primary" href="#contato">Quero elevar o padrão da minha equipe</a>
           <a class="btn btn-ghost" href="#programas">Ver os formatos</a>
         </div>
         <p class="hero-note">Levantamento sem custo · Documento assinado em 48h úteis · Treinamento in-company, no seu posto</p>
