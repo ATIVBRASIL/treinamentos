@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Barlow+Condensed:wght@600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<noscript><style>.reveal{opacity:1;transform:none}.stamp{opacity:1;transform:none}</style></noscript>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -360,7 +360,7 @@ html[data-theme="light"] #evidencias{
 
 /* ---------- pasta do gestor / evidências ---------- */
 .pasta-grid{
-  display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center;margin-top:44px;
+  display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:start;margin-top:44px;
 }
 @media(max-width:880px){.pasta-grid{grid-template-columns:1fr;gap:36px}}
 .pasta-copy .lead{max-width:520px}
@@ -394,11 +394,11 @@ html[data-theme="light"] #evidencias{
 }
 .pasta-seal b{color:var(--brand);font-weight:600}
 .pasta-visual{
-  position:relative;min-height:420px;
+  position:relative;
   background:
     radial-gradient(ellipse 80% 60% at 70% 20%,var(--brand-dim),transparent 55%),
     linear-gradient(160deg,var(--panel-2),var(--panel));
-  border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;
+  border:1px solid var(--line);border-radius:var(--radius-lg);
   padding:36px 28px 28px;
 }
 .pasta-visual::before{
@@ -407,7 +407,7 @@ html[data-theme="light"] #evidencias{
   background-size:28px 28px;opacity:.35;
 }
 .pasta-folder{
-  position:relative;z-index:1;max-width:420px;margin:0 auto;
+  position:relative;z-index:1;max-width:480px;margin:0 auto;
 }
 .pasta-tab{
   display:inline-flex;align-items:center;gap:8px;
@@ -421,55 +421,88 @@ html[data-theme="light"] #evidencias{
   border-radius:0 var(--radius) var(--radius) var(--radius);
   padding:18px 16px 16px;box-shadow:var(--shadow);
 }
-.pasta-docs{display:flex;flex-direction:column;gap:10px}
-.pasta-doc{
-  display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;
-  background:var(--ink);border:1px solid var(--line);border-radius:10px;padding:12px 14px;
-  transition:border-color var(--dur-fast) var(--ease-out);
+.painel-co{
+  font-family:var(--font-display);font-size:18px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.03em;color:var(--brand);line-height:1.15;
 }
-.pasta-doc:hover{border-color:var(--brand-border-strong)}
-.pasta-doc .ico{
-  width:34px;height:34px;border-radius:8px;display:grid;place-items:center;
-  background:var(--brand-dim);border:1px solid var(--brand-border);
-  color:var(--brand);font-family:var(--font-mono);font-size:11px;font-weight:600;
+.painel-co-sub{
+  font-size:12.5px;color:var(--dim);margin-top:5px;margin-bottom:14px;line-height:1.4;
 }
-.pasta-doc .meta{min-width:0}
-.pasta-doc .meta strong{
-  display:block;font-family:var(--font-display);font-size:16px;font-weight:600;
-  text-transform:uppercase;letter-spacing:.04em;color:var(--text);line-height:1.15;
+.painel-kpis{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.painel-kpi{
+  background:var(--ink);border:1px solid var(--line);border-radius:10px;padding:12px 12px 10px;
 }
-.pasta-doc .meta span{font-family:var(--font-mono);font-size:11px;color:var(--dim);letter-spacing:.04em}
-.pasta-doc .mark{
-  font-family:var(--font-mono);font-size:11px;color:var(--ok);letter-spacing:.06em;
-  display:inline-block;
+.painel-kpi .num{
+  font-family:var(--font-display);font-size:28px;font-weight:700;color:var(--text);line-height:1;letter-spacing:.02em;
 }
-.stamp{
-  opacity:0;
-  transform:scale(1.6) rotate(-6deg);
+.painel-kpi .lbl{
+  font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--dim);margin-top:5px;line-height:1.35;
 }
-.pasta-visual.is-visible .stamp{
-  animation:stamp-in 320ms var(--ease-out) forwards;
+.painel-kpi .sub{font-size:11px;color:var(--muted);margin-top:3px;line-height:1.3}
+.painel-dates{
+  font-family:var(--font-mono);font-size:10.5px;color:var(--dim);letter-spacing:.02em;
+  margin:12px 0 0;line-height:1.45;
 }
-.pasta-visual.is-visible .pasta-doc:nth-child(1) .stamp{animation-delay:200ms}
-.pasta-visual.is-visible .pasta-doc:nth-child(2) .stamp{animation-delay:480ms}
-.pasta-visual.is-visible .pasta-doc:nth-child(3) .stamp{animation-delay:760ms}
-.pasta-visual.is-visible .pasta-doc:nth-child(4) .stamp{animation-delay:1040ms}
-.pasta-visual.is-visible .pasta-doc:nth-child(5) .stamp{animation-delay:1320ms}
-@keyframes stamp-in{
-  from{opacity:0;transform:scale(1.6) rotate(-6deg)}
-  60%{opacity:1;transform:scale(0.92) rotate(1deg)}
-  to{opacity:1;transform:scale(1) rotate(0)}
-}
-.pasta-foot{
+.painel-peek{
+  display:flex;justify-content:space-between;align-items:baseline;gap:12px;
   margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);
-  font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);
-  line-height:1.55;
+  font-family:var(--font-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+  text-decoration:none;
 }
-.pasta-foot b{color:var(--brand);font-weight:600}
+.painel-peek span:first-child{color:var(--brand);font-weight:600}
+.painel-peek span:last-child{color:var(--dim);letter-spacing:.04em;text-transform:none}
+.painel-peek:hover span:first-child{color:var(--brand-hi)}
+.painel-ementa{
+  margin:10px 0 0;font-size:12.5px;line-height:1.45;color:var(--muted);
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;
+}
+.painel-mais{
+  display:inline-block;margin-top:8px;
+  font-family:var(--font-display);font-size:12px;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--brand);text-decoration:none;
+}
+.painel-mais:hover{color:var(--brand-hi)}
+.painel-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.painel-tags span{
+  font-family:var(--font-mono);font-size:10px;letter-spacing:.04em;color:var(--muted);
+  border:1px solid var(--line);border-radius:5px;padding:4px 7px;
+}
+.painel-foot{
+  margin:0;padding:12px 16px 0;
+  font-family:var(--font-mono);font-size:11px;letter-spacing:.04em;color:var(--dim);line-height:1.55;
+}
+.formacoes-card .painel-foot{
+  margin-top:4px;padding:12px 16px 14px;border-top:1px solid var(--line);
+}
+.painel-foot b{color:var(--brand);font-weight:600}
 
 /* ---------- credencial ethos ---------- */
-.ethos-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:44px}
+.ethos-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:44px}
 @media(max-width:880px){.ethos-grid{grid-template-columns:1fr;gap:32px}}
+.formacoes-card{
+  border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;
+  background:linear-gradient(160deg,var(--panel-2),var(--panel));box-shadow:var(--shadow);
+}
+.formacoes-head{
+  display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+  padding:14px 16px 12px;
+  font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+}
+.formacoes-title{color:var(--brand);font-weight:600}
+.formacoes-hint{color:var(--dim);letter-spacing:.04em;text-transform:none;font-size:10.5px}
+.formacoes-body{
+  margin:0 16px 4px;padding:16px 14px;
+  background:var(--ink);border:1px solid var(--line);border-radius:10px;
+}
+.formacoes-course{
+  display:block;font-family:var(--font-display);font-size:20px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.03em;color:var(--text);line-height:1.15;
+}
+.formacoes-meta{
+  display:block;font-family:var(--font-mono);font-size:11px;color:var(--muted);
+  letter-spacing:.02em;margin-top:6px;line-height:1.5;
+}
 .cred{
   border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;
   background:linear-gradient(160deg,var(--panel-2),var(--panel));box-shadow:var(--shadow);
@@ -619,7 +652,10 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
   .card,.plan{padding:22px 18px}
   .plan .who{min-height:0;margin-bottom:16px}
   .pasta-visual{padding:24px 14px 18px;min-height:0}
+  .pasta-folder{max-width:100%}
   .pasta-tab{margin-left:10px;font-size:13px;padding:7px 12px 9px}
+  .painel-co{font-size:16px}
+  .painel-kpi .num{font-size:24px}
   .cred-body{padding:18px 16px}
   .cred-name{font-size:22px}
   .step{padding:22px 18px}
@@ -653,7 +689,6 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
   }
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none}
-  .stamp{opacity:1;transform:none}
 }
 </style>
 </head>
@@ -844,44 +879,40 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
           <li>Avaliação da turma e registro de eficácia: a prova de que o treinamento mudou conduta, não só cumpriu carga horária</li>
           <li>Fotos e vídeos do treinamento in-company</li>
         </ul>
-        <p class="pasta-claim">O concorrente responde essa pergunta com adjetivo. Você responde com <b>nome, data e carga horária</b>.</p>
+        <p class="pasta-claim">O concorrente responde essa pergunta com adjetivo. Você responde com <b>nome, data e carga horária</b> — o contratante abre o painel público e vê.</p>
         <p class="pasta-seal">Credenciamento PF <b>nº 89/2026</b> · válido até <b>21/01/2031</b></p>
       </div>
 
-      <div class="pasta-visual" id="pasta-visual">
+      <div class="pasta-visual reveal">
         <div class="pasta-folder">
-          <div class="pasta-tab">Registro consolidado</div>
+          <div class="pasta-tab">Painel público</div>
           <div class="pasta-body">
-            <div class="pasta-docs">
-              <div class="pasta-doc">
-                <span class="ico">16</span>
-                <div class="meta"><strong>Agentes formados</strong><span>Somente turmas confirmadas</span></div>
-                <span class="mark stamp">OK</span>
+            <div class="painel-co">GATI Segurança e Vigilância Ltda</div>
+            <p class="painel-co-sub">Investimento em formação comportamental do efetivo</p>
+            <div class="painel-kpis">
+              <div class="painel-kpi">
+                <div class="num">33</div>
+                <div class="lbl">Agentes formados</div>
               </div>
-              <div class="pasta-doc">
-                <span class="ico">64</span>
-                <div class="meta"><strong>Horas de formação</strong><span>Discriminadas por agente</span></div>
-                <span class="mark stamp">OK</span>
+              <div class="painel-kpi">
+                <div class="num">132h</div>
+                <div class="lbl">De formação investida</div>
               </div>
-              <div class="pasta-doc">
-                <span class="ico">05</span>
-                <div class="meta"><strong>Competências</strong><span>Nomeadas por formação</span></div>
-                <span class="mark stamp">OK</span>
+              <div class="painel-kpi">
+                <div class="num">1</div>
+                <div class="lbl">Formação distinta</div>
               </div>
-              <div class="pasta-doc">
-                <span class="ico">02</span>
-                <div class="meta"><strong>Turmas programadas</strong><span>Próximas datas já marcadas</span></div>
-                <span class="mark stamp">AGO</span>
-              </div>
-              <div class="pasta-doc">
-                <span class="ico">↗</span>
-                <div class="meta"><strong>Verificação pública</strong><span>Link aberto, sem login</span></div>
-                <span class="mark stamp">OK</span>
+              <div class="painel-kpi">
+                <div class="num">6%</div>
+                <div class="lbl">Do efetivo atual</div>
+                <div class="sub">33 formados no quadro</div>
               </div>
             </div>
-            <div class="pasta-foot">
-              <span>Atualiza a cada turma confirmada · <b>PDF e link público em um clique</b>, para renovação, proposta ou reunião de diretoria</span>
-            </div>
+            <p class="painel-dates">Última turma concluída em 13/08/2026. Dados emitidos pela ATIV Conformidade em 31/08/2026.</p>
+            <a class="painel-peek" href="#ethos">
+              <span>Formações realizadas</span>
+              <span>detalhe do KPI acima</span>
+            </a>
           </div>
         </div>
       </div>
@@ -898,25 +929,26 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0;color:var(--dim);fon
 
     <div class="ethos-grid">
       <div class="reveal">
-        <div class="cred">
-          <div class="cred-top"><span>Credencial pública</span><b>ATIV · Formação Ethos</b></div>
-          <div class="cred-body">
-            <div class="cred-name">Nome do Agente Formado</div>
-            <div class="cred-cpf">CPF ***.***.***-**  ·  verificação por código ou CPF</div>
-            <div class="cred-course">Virtudes do Guardião</div>
-            <div class="cred-meta">Carga horária 4h · Turma concluída e confirmada<br>Patrocínio: sua empresa</div>
-            <div class="cred-skills">
+        <div class="formacoes-card">
+          <div class="formacoes-head">
+            <span class="formacoes-title">Formações realizadas</span>
+            <span class="formacoes-hint">detalhe do KPI acima</span>
+          </div>
+          <div class="formacoes-body">
+            <strong class="formacoes-course">Virtudes do Guardião</strong>
+            <span class="formacoes-meta">33 agentes · 4h por agente · 132h investidas · turma mais recente 10/08/2026 a 13/08/2026</span>
+            <p class="painel-ementa">O agente que atua em condomínios residenciais está constantemente exposto a decisões de baixa margem de erro e alta visibilidade: abordar um morador em conduta irregular, mediar um conflito entre vizinhos.</p>
+            <a class="painel-mais" href="https://conformidade.ativbrasil.com.br/ethos/empresa/gati-seguranca-e-vigilancia-ltda" target="_blank" rel="noopener noreferrer">Ver ementa completa</a>
+            <div class="painel-tags">
               <span>Comunicação assertiva</span>
               <span>Escuta ativa</span>
               <span>Atendimento e trato ao público</span>
               <span>Gestão de conflitos</span>
               <span>Controle emocional sob pressão</span>
+              <span>Postura e apresentação</span>
             </div>
           </div>
-          <div class="cred-foot">
-            <span class="code">ETH-XXXX-XXXX</span>
-            <span class="verify">Credencial válida</span>
-          </div>
+          <p class="painel-foot">Precisa confirmar um agente específico? <b>Consulte por CPF ou nome completo.</b></p>
         </div>
       </div>
 
@@ -1200,25 +1232,6 @@ const io = new IntersectionObserver((entries) => {
 document.querySelectorAll(".reveal").forEach(el => {
   if (reduceMotion) el.classList.add("is-visible");
   else io.observe(el);
-});
-
-// Carimbo do dossiê + checks do ecossistema
-const stampIO = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (!e.isIntersecting) return;
-    e.target.classList.add("is-visible");
-    stampIO.unobserve(e.target);
-  });
-}, { threshold: 0.4 });
-["pasta-visual"].forEach(id => {
-  const el = document.getElementById(id);
-  if (!el) return;
-  if (reduceMotion) {
-    el.classList.add("is-visible");
-    el.querySelectorAll(".stamp").forEach(s => { s.style.opacity = "1"; s.style.transform = "none"; });
-  } else {
-    stampIO.observe(el);
-  }
 });
 
 // Contadores do hero
