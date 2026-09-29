@@ -1,0 +1,13 @@
+{
+  "name": "ativ-treinamentos",
+  "private": true,
+  "version": "4.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-vercel.mjs",
+    "check": "node --check dist/script.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,8 +1,10 @@
 ﻿.vercel/
+.env*
 .env.local
 .env*.local
 node_modules/
 .next/
+public-site/
 
 # Debug artifacts from deploy/MCP loop (do not commit)
 _deploy*
