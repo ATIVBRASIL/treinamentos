@@ -1,0 +1,83 @@
+{
+  "root": "dist",
+  "widths": {
+    "360": {
+      "scrollWidth": 360,
+      "clientWidth": 360,
+      "h1": "Doutrina Operacional para empresas de segurança privada. O padrão da sua empresa vive nas pessoas.",
+      "heroCta": "Conversar sobre minha operação",
+      "heroHref": "#contato",
+      "mobileCta": "Conversar sobre minha operação",
+      "mobileHref": "#contato",
+      "flexibility": "O escopo e o prazo são definidos conforme a necessidade da sua empresa — de uma intervenção pontual a um acompanhamento continuado.",
+      "overflow": 0
+    },
+    "390": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "h1": "Doutrina Operacional para empresas de segurança privada. O padrão da sua empresa vive nas pessoas.",
+      "heroCta": "Conversar sobre minha operação",
+      "heroHref": "#contato",
+      "mobileCta": "Conversar sobre minha operação",
+      "mobileHref": "#contato",
+      "flexibility": "O escopo e o prazo são definidos conforme a necessidade da sua empresa — de uma intervenção pontual a um acompanhamento continuado.",
+      "overflow": 0
+    },
+    "768": {
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "h1": "Doutrina Operacional para empresas de segurança privada. O padrão da sua empresa vive nas pessoas.",
+      "heroCta": "Conversar sobre minha operação",
+      "heroHref": "#contato",
+      "mobileCta": "Conversar sobre minha operação",
+      "mobileHref": "#contato",
+      "flexibility": "O escopo e o prazo são definidos conforme a necessidade da sua empresa — de uma intervenção pontual a um acompanhamento continuado.",
+      "overflow": 0
+    },
+    "1024": {
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "h1": "Doutrina Operacional para empresas de segurança privada. O padrão da sua empresa vive nas pessoas.",
+      "heroCta": "Conversar sobre minha operação",
+      "heroHref": "#contato",
+      "mobileCta": "Conversar sobre minha operação",
+      "mobileHref": "#contato",
+      "flexibility": "O escopo e o prazo são definidos conforme a necessidade da sua empresa — de uma intervenção pontual a um acompanhamento continuado.",
+      "overflow": 0
+    },
+    "1366": {
+      "scrollWidth": 1366,
+      "clientWidth": 1366,
+      "h1": "Doutrina Operacional para empresas de segurança privada. O padrão da sua empresa vive nas pessoas.",
+      "heroCta": "Conversar sobre minha operação",
+      "heroHref": "#contato",
+      "mobileCta": "Conversar sobre minha operação",
+      "mobileHref": "#contato",
+      "flexibility": "O escopo e o prazo são definidos conforme a necessidade da sua empresa — de uma intervenção pontual a um acompanhamento continuado.",
+      "overflow": 0
+    },
+    "1920": {
+      "scrollWidth": 1920,
+      "clientWidth": 1920,
+      "h1": "Doutrina Operacional para empresas de segurança privada. O padrão da sua empresa vive nas pessoas.",
+      "heroCta": "Conversar sobre minha operação",
+      "heroHref": "#contato",
+      "mobileCta": "Conversar sobre minha operação",
+      "mobileHref": "#contato",
+      "flexibility": "O escopo e o prazo são definidos conforme a necessidade da sua empresa — de uma intervenção pontual a um acompanhamento continuado.",
+      "overflow": 0
+    }
+  },
+  "interactions": {
+    "menuOpen": true,
+    "menuClosed": true,
+    "heroHash": "#contato",
+    "revisaoHref": "https://wa.me/5519974010028?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20uma%20revis%C3%A3o%20pontual%20de%20refer%C3%AAncias%20ou%20procedimentos%20operacionais%20da%20minha%20empresa%20com%20a%20ATIV.",
+    "whatsappTarget": {
+      "target": "_blank",
+      "rel": "noopener noreferrer",
+      "text": "Solicitar conversa inicial"
+    },
+    "focusVisible": true
+  }
+}

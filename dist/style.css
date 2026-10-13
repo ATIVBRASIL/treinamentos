@@ -11,3 +11,12 @@
 .visual-caption{max-width:100%}
 .visual-caption small{line-height:1.65}
 @media(max-width:760px){.hero-visual{padding-top:32px}.hero-image-frame{aspect-ratio:1.4}.visual-caption{margin-left:0}}
+
+/* OS ATIV-SITE-BRAND-001: apoio de escopo personalizado, com tokens e componentes já existentes. */
+.hero-flexibility{max-width:520px;margin:18px 0 0;padding-left:16px;border-left:2px solid var(--gold);font-size:16px;line-height:1.55;color:#f3f1e8}
+.path-note{margin-top:36px;padding:28px 0 4px;border-top:1px solid #cfd3c8}
+.path-note h3{font-size:24px;line-height:1.3;margin-bottom:10px;letter-spacing:-.4px}
+.path-note p{margin:0;max-width:760px;color:#5c6457;font-size:16px;line-height:1.65}
+.doctrine-fronts{margin:0 0 4px;color:#d7decc;font-size:15px;line-height:1.6}
+.steps span{display:block;max-width:100%}
+@media(max-width:760px){.hero-flexibility{font-size:15px;margin-top:8px;line-height:1.45}.path-note{margin-top:8px;padding-top:22px}.path-note h3{font-size:22px}.mobile-contact{line-height:1.35}.mobile-contact.hero-visible{display:none}.hero{padding-top:24px}#inicio .eyebrow{margin-bottom:12px}.hero h1{margin-bottom:12px}.hero .intro{margin-bottom:6px;line-height:1.35}.hero-description{line-height:1.45}#inicio .actions{margin-top:10px;gap:14px}}

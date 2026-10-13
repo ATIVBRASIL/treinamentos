@@ -1,0 +1,83 @@
+{
+  "root": "dist",
+  "widths": {
+    "360": {
+      "scrollWidth": 360,
+      "clientWidth": 360,
+      "h1": "Doutrina Operacional para empresas de segurança privada. O padrão da sua empresa vive nas pessoas.",
+      "heroCta": "Quero fortalecer o padrão da minha empresa",
+      "heroHref": "#contato",
+      "mobileCta": "Conhecer o programa de Doutrina Operacional",
+      "mobileHref": "#contato",
+      "flexibility": null,
+      "overflow": 0
+    },
+    "390": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "h1": "Doutrina Operacional para empresas de segurança privada. O padrão da sua empresa vive nas pessoas.",
+      "heroCta": "Quero fortalecer o padrão da minha empresa",
+      "heroHref": "#contato",
+      "mobileCta": "Conhecer o programa de Doutrina Operacional",
+      "mobileHref": "#contato",
+      "flexibility": null,
+      "overflow": 0
+    },
+    "768": {
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "h1": "Doutrina Operacional para empresas de segurança privada. O padrão da sua empresa vive nas pessoas.",
+      "heroCta": "Quero fortalecer o padrão da minha empresa",
+      "heroHref": "#contato",
+      "mobileCta": "Conhecer o programa de Doutrina Operacional",
+      "mobileHref": "#contato",
+      "flexibility": null,
+      "overflow": 0
+    },
+    "1024": {
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "h1": "Doutrina Operacional para empresas de segurança privada. O padrão da sua empresa vive nas pessoas.",
+      "heroCta": "Quero fortalecer o padrão da minha empresa",
+      "heroHref": "#contato",
+      "mobileCta": "Conhecer o programa de Doutrina Operacional",
+      "mobileHref": "#contato",
+      "flexibility": null,
+      "overflow": 0
+    },
+    "1366": {
+      "scrollWidth": 1366,
+      "clientWidth": 1366,
+      "h1": "Doutrina Operacional para empresas de segurança privada. O padrão da sua empresa vive nas pessoas.",
+      "heroCta": "Quero fortalecer o padrão da minha empresa",
+      "heroHref": "#contato",
+      "mobileCta": "Conhecer o programa de Doutrina Operacional",
+      "mobileHref": "#contato",
+      "flexibility": null,
+      "overflow": 0
+    },
+    "1920": {
+      "scrollWidth": 1920,
+      "clientWidth": 1920,
+      "h1": "Doutrina Operacional para empresas de segurança privada. O padrão da sua empresa vive nas pessoas.",
+      "heroCta": "Quero fortalecer o padrão da minha empresa",
+      "heroHref": "#contato",
+      "mobileCta": "Conhecer o programa de Doutrina Operacional",
+      "mobileHref": "#contato",
+      "flexibility": null,
+      "overflow": 0
+    }
+  },
+  "interactions": {
+    "menuOpen": true,
+    "menuClosed": true,
+    "heroHash": "#contato",
+    "revisaoHref": "https://wa.me/5519974010028?text=Ol%C3%A1%2C%20quero%20conhecer%20o%20Programa%20de%20Doutrina%20Operacional%20da%20ATIV%20para%20a%20minha%20empresa.",
+    "whatsappTarget": {
+      "target": "_blank",
+      "rel": "noopener noreferrer",
+      "text": "Conversar pelo WhatsApp"
+    },
+    "focusVisible": true
+  }
+}
