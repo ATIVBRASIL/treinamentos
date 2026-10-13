@@ -1,0 +1,66 @@
+[
+  {
+    "width": 1366,
+    "beforeScroll": {
+      "complete": false,
+      "naturalWidth": 0,
+      "currentSrc": "",
+      "loading": "lazy"
+    },
+    "afterScroll": {
+      "complete": true,
+      "naturalWidth": 720,
+      "naturalHeight": 720,
+      "currentSrc": "/assets/alex-dantas.webp",
+      "loading": "lazy",
+      "box": {
+        "top": 228,
+        "width": 430,
+        "height": 472
+      },
+      "objectFit": "cover",
+      "objectPosition": "50% 0%",
+      "opacity": "1",
+      "visibility": "visible",
+      "display": "block",
+      "pixels": {
+        "min": 42,
+        "max": 212,
+        "spread": 169
+      }
+    },
+    "file": "quem-conduz-1366.png"
+  },
+  {
+    "width": 390,
+    "beforeScroll": {
+      "complete": true,
+      "naturalWidth": 720,
+      "currentSrc": "https://treinamentos-git-os-ativ-site-fo-fdf919-appestoicismos-projects.vercel.app/assets/alex-dantas.webp",
+      "loading": "lazy"
+    },
+    "afterScroll": {
+      "complete": true,
+      "naturalWidth": 720,
+      "naturalHeight": 720,
+      "currentSrc": "/assets/alex-dantas.webp",
+      "loading": "lazy",
+      "box": {
+        "top": 163,
+        "width": 342,
+        "height": 392
+      },
+      "objectFit": "cover",
+      "objectPosition": "50% 0%",
+      "opacity": "1",
+      "visibility": "visible",
+      "display": "block",
+      "pixels": {
+        "min": 42,
+        "max": 212,
+        "spread": 169
+      }
+    },
+    "file": "quem-conduz-390.png"
+  }
+]
