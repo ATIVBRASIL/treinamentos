@@ -1,0 +1,132 @@
+[
+  {
+    "width": 360,
+    "file": "transicao-360.png",
+    "overflow": 0,
+    "scrollWidth": 360,
+    "clientWidth": 360,
+    "h1": 1,
+    "ethos": 0,
+    "ethosHref": 0,
+    "aplicacao": true,
+    "navAplicacao": true,
+    "heroMark": "DOUTRINA OPERACIONAL\nLIDERANÇAS MULTIPLICADORAS\nGOVERNANÇA OPERACIONAL",
+    "menu": true,
+    "whatsapp": true,
+    "contato": true,
+    "middle": {
+      "height": 1230
+    }
+  },
+  {
+    "width": 390,
+    "file": "transicao-390.png",
+    "overflow": 0,
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "h1": 1,
+    "ethos": 0,
+    "ethosHref": 0,
+    "aplicacao": true,
+    "navAplicacao": true,
+    "heroMark": "DOUTRINA OPERACIONAL\nLIDERANÇAS MULTIPLICADORAS\nGOVERNANÇA OPERACIONAL",
+    "menu": true,
+    "whatsapp": true,
+    "contato": true,
+    "middle": {
+      "height": 1230
+    }
+  },
+  {
+    "width": 768,
+    "file": "transicao-768.png",
+    "overflow": 0,
+    "scrollWidth": 768,
+    "clientWidth": 768,
+    "h1": 1,
+    "ethos": 0,
+    "ethosHref": 0,
+    "aplicacao": true,
+    "navAplicacao": true,
+    "heroMark": "DOUTRINA OPERACIONAL\nLIDERANÇAS MULTIPLICADORAS\nGOVERNANÇA OPERACIONAL",
+    "menu": true,
+    "whatsapp": true,
+    "contato": true,
+    "middle": {
+      "height": 980
+    }
+  },
+  {
+    "width": 1024,
+    "file": "transicao-1024.png",
+    "overflow": 0,
+    "scrollWidth": 1024,
+    "clientWidth": 1024,
+    "h1": 1,
+    "ethos": 0,
+    "ethosHref": 0,
+    "aplicacao": true,
+    "navAplicacao": true,
+    "heroMark": "DOUTRINA OPERACIONAL\nLIDERANÇAS MULTIPLICADORAS\nGOVERNANÇA OPERACIONAL",
+    "menu": true,
+    "whatsapp": true,
+    "contato": true,
+    "middle": {
+      "height": 688
+    }
+  },
+  {
+    "width": 1366,
+    "file": "transicao-1366.png",
+    "overflow": 0,
+    "scrollWidth": 1366,
+    "clientWidth": 1366,
+    "h1": 1,
+    "ethos": 0,
+    "ethosHref": 0,
+    "aplicacao": true,
+    "navAplicacao": true,
+    "heroMark": "DOUTRINA OPERACIONAL\nLIDERANÇAS MULTIPLICADORAS\nGOVERNANÇA OPERACIONAL",
+    "menu": true,
+    "whatsapp": true,
+    "contato": true,
+    "middle": {
+      "height": 673
+    }
+  },
+  {
+    "width": 1920,
+    "file": "transicao-1920.png",
+    "overflow": 0,
+    "scrollWidth": 1920,
+    "clientWidth": 1920,
+    "h1": 1,
+    "ethos": 0,
+    "ethosHref": 0,
+    "aplicacao": true,
+    "navAplicacao": true,
+    "heroMark": "DOUTRINA OPERACIONAL\nLIDERANÇAS MULTIPLICADORAS\nGOVERNANÇA OPERACIONAL",
+    "menu": true,
+    "whatsapp": true,
+    "contato": true,
+    "middle": {
+      "height": 683
+    }
+  },
+  {
+    "page": "integracao",
+    "h1": 1,
+    "ethos": 0,
+    "href": "/#aplicacao",
+    "heading": [
+      "Começar pelo que precisa ser compreendido",
+      "Dar uma referência às lideranças operacionais",
+      "Conectar a identidade da empresa à realidade do cliente",
+      "Separar as três perguntas do acompanhamento",
+      "Transformar as dúvidas em aprendizagem",
+      "Transmitir o padrão e acompanhar a aplicação"
+    ],
+    "canonical": "https://treinamentos.ativbrasil.com.br/conteudos/integracao-operacional/",
+    "overflow": 0
+  }
+]

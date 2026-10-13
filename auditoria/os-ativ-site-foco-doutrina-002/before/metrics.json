@@ -1,0 +1,116 @@
+[
+  {
+    "width": 360,
+    "file": "transicao-360.png",
+    "overflow": 0,
+    "scrollWidth": 360,
+    "clientWidth": 360,
+    "h1": 1,
+    "ethos": 7,
+    "ethosHref": 1,
+    "aplicacao": false,
+    "navAplicacao": false,
+    "heroMark": "DOUTRINA OPERACIONAL\nLIDERANÇAS MULTIPLICADORAS\nFORMAÇÃO ETHOS",
+    "menu": true,
+    "whatsapp": true,
+    "contato": true,
+    "middle": {
+      "height": 1263
+    }
+  },
+  {
+    "width": 390,
+    "file": "transicao-390.png",
+    "overflow": 0,
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "h1": 1,
+    "ethos": 7,
+    "ethosHref": 1,
+    "aplicacao": false,
+    "navAplicacao": false,
+    "heroMark": "DOUTRINA OPERACIONAL\nLIDERANÇAS MULTIPLICADORAS\nFORMAÇÃO ETHOS",
+    "menu": true,
+    "whatsapp": true,
+    "contato": true,
+    "middle": {
+      "height": 1185
+    }
+  },
+  {
+    "width": 768,
+    "file": "transicao-768.png",
+    "overflow": 0,
+    "scrollWidth": 768,
+    "clientWidth": 768,
+    "h1": 1,
+    "ethos": 8,
+    "ethosHref": 1,
+    "aplicacao": false,
+    "navAplicacao": false,
+    "heroMark": "DOUTRINA OPERACIONAL\nLIDERANÇAS MULTIPLICADORAS\nFORMAÇÃO ETHOS",
+    "menu": true,
+    "whatsapp": true,
+    "contato": true,
+    "middle": {
+      "height": 815
+    }
+  },
+  {
+    "width": 1024,
+    "file": "transicao-1024.png",
+    "overflow": 0,
+    "scrollWidth": 1024,
+    "clientWidth": 1024,
+    "h1": 1,
+    "ethos": 8,
+    "ethosHref": 1,
+    "aplicacao": false,
+    "navAplicacao": false,
+    "heroMark": "DOUTRINA OPERACIONAL\nLIDERANÇAS MULTIPLICADORAS\nFORMAÇÃO ETHOS",
+    "menu": true,
+    "whatsapp": true,
+    "contato": true,
+    "middle": {
+      "height": 740
+    }
+  },
+  {
+    "width": 1366,
+    "file": "transicao-1366.png",
+    "overflow": 0,
+    "scrollWidth": 1366,
+    "clientWidth": 1366,
+    "h1": 1,
+    "ethos": 8,
+    "ethosHref": 1,
+    "aplicacao": false,
+    "navAplicacao": false,
+    "heroMark": "DOUTRINA OPERACIONAL\nLIDERANÇAS MULTIPLICADORAS\nFORMAÇÃO ETHOS",
+    "menu": true,
+    "whatsapp": true,
+    "contato": true,
+    "middle": {
+      "height": 714
+    }
+  },
+  {
+    "width": 1920,
+    "file": "transicao-1920.png",
+    "overflow": 0,
+    "scrollWidth": 1920,
+    "clientWidth": 1920,
+    "h1": 1,
+    "ethos": 8,
+    "ethosHref": 1,
+    "aplicacao": false,
+    "navAplicacao": false,
+    "heroMark": "DOUTRINA OPERACIONAL\nLIDERANÇAS MULTIPLICADORAS\nFORMAÇÃO ETHOS",
+    "menu": true,
+    "whatsapp": true,
+    "contato": true,
+    "middle": {
+      "height": 714
+    }
+  }
+]
