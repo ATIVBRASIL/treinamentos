@@ -45,6 +45,22 @@ Não há Analytics, Pixel, Hotjar nem outro rastreador no HTML ou no JavaScript.
 - Artigos em `/conteudos/` foram preservados e ainda narram o programa integrado. Vale uma revisão editorial posterior para não contradizer o escopo personalizado.
 - As marcas do rodapé e da faixa do hero continuam citando lideranças e Formação Ethos como identidade, sem apresentá-las como contrato obrigatório.
 
+## Fechamento do QA
+
+Revalidação em 13/10/2026, no commit `046a4e8`, sem merge e sem deploy.
+
+- `node --check dist/script.js`: sintaxe ok.
+- Build com `VERCEL_ENV=production`: `public-site` fica indexável e o `dist` permanece `noindex, nofollow`.
+- Preview do commit pronto e com `noindex`. A produção continua em `99ca9c4`.
+- Overflow horizontal 0 em 360, 390, 768, 1024, 1366 e 1920.
+- No mobile, a barra some com o CTA do hero visível, volta no meio da página e some de novo em `#contato`.
+- Menu abre e fecha com Escape. A opção `revisao` só prepara o link do WhatsApp.
+- Caderno em 1536×1024. Rotas da home, conteúdos, artigos, privacidade, logo e caderno respondem 200.
+- Uma ocorrência de “12 meses”, na pergunta da FAQ. A resposta começa com “Não.”
+- E-mail, WhatsApp e ausência de rastreadores preservados.
+
+Resultado: aprovado para merge e deploy. As pendências humanas abaixo não bloqueiam a home.
+
 ## Publicação
 
-Aguardando autorização para push, merge e deploy.
+Autorizado em 13/10/2026 para merge na `main` e deploy em produção.
