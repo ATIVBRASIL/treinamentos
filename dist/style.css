@@ -409,27 +409,78 @@ footer { padding: 36px 0 24px; }
   .mobile-contact.hidden, .mobile-contact.hero-visible { display: none; }
 }
 
-.problem-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: center; }
-.problem .problem-grid { grid-template-columns: 1fr; margin-top: 8px; }
-.problem-scene {
+.problem {
   position: relative;
-  min-height: 520px;
-  border: 1px solid rgba(198, 164, 106, 0.38);
-  background:
-    linear-gradient(180deg, rgba(11, 18, 14, 0.04) 20%, rgba(11, 18, 14, 0.48) 100%),
-    url("/assets/reuniao-operacional.webp") 84% center / cover no-repeat;
-  box-shadow: 0 18px 48px rgba(11, 18, 14, 0.12);
+  isolation: isolate;
+  overflow: hidden;
+  padding: 124px 0 108px;
+  color: #f7f4ee;
+  background-color: #071416;
+  background-image: url("/assets/reuniao-operacional.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+.problem::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(5, 18, 20, 0.9) 0%, rgba(7, 26, 28, 0.76) 42%, rgba(5, 16, 18, 0.9) 100%);
+}
+.problem-copy {
+  position: relative;
+  z-index: 1;
+}
+.problem .eyebrow { color: var(--gold-soft); }
+.problem .eyebrow span { background: var(--gold); }
+.problem h2,
+.problem .section-intro,
+.problem .problem-bridge { max-width: 44rem; }
+.problem h2 { color: #f7f4ee; }
+.problem .section-intro { margin-bottom: 28px; color: #e7eee6; }
+.problem .problem-bridge {
+  margin: 0 0 8px;
+  padding: 2px 0 2px 18px;
+  border-left: 2px solid var(--gold);
+  background: transparent;
+  color: #f3efe6;
+  font-size: 18px;
+  line-height: 1.6;
+}
+.problem .problem-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 8px;
+  margin-top: 52px;
+  padding: 6px 28px 10px;
+  border-top: 1px solid rgba(198, 164, 106, 0.62);
+  background: rgba(5, 16, 18, 0.42);
+}
+.problem .problem-grid article {
+  padding: 22px 20px 16px 0;
+  border-top: none;
+  background: transparent;
+}
+.problem .problem-grid article + article {
+  padding-left: 28px;
+  box-shadow: inset 1px 0 0 rgba(198, 164, 106, 0.38);
+}
+.problem .number { color: var(--gold-soft); }
+.problem .problem-grid h3 { color: #f7f4ee; }
+.problem .problem-grid p { color: #e8efe6; }
 .scene-caption {
   position: absolute;
-  right: 18px;
-  bottom: 16px;
+  right: 28px;
+  bottom: 20px;
+  z-index: 1;
+  margin: 0;
   padding: 5px 9px;
-  background: rgba(11, 18, 14, 0.66);
-  color: #f4f1ea;
+  background: rgba(5, 16, 18, 0.55);
+  color: #e7eee6;
   font-size: 10px;
   line-height: 1.3;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.14em;
   font-weight: 600;
 }
 .dimensions, .front-grid, .method-grid { display: grid; gap: 22px; }
@@ -468,9 +519,12 @@ footer { padding: 36px 0 24px; }
 .band-deep .method-line { color: #d9d3c4; }
 
 @media (max-width: 1100px) {
-  .problem-layout, .dimensions, .front-grid, .method-grid, .footer-editorial,
+  .dimensions, .front-grid, .method-grid, .footer-editorial,
   .problem .problem-grid { grid-template-columns: 1fr; }
-  .problem-scene { min-height: 280px; background-position: 73% center; }
+  .problem .problem-grid { gap: 0; padding: 4px 18px 8px; }
+  .problem .problem-grid article,
+  .problem .problem-grid article + article { padding-left: 0; box-shadow: none; }
+  .problem .problem-grid article + article { border-top: 1px solid rgba(198, 164, 106, 0.45); }
 }
 
 @media (max-width: 760px) {
@@ -514,7 +568,10 @@ footer { padding: 36px 0 24px; }
 }
 .leadership-story .guardian-statement strong { color: var(--gold-soft); font-weight: 700; }
 @media (max-width: 760px) {
-  .problem-bridge { margin: -8px 0 32px; padding: 16px 18px; font-size: 16px; }
+  .problem { padding: 76px 0 72px; background-position: center; }
+  .problem .problem-bridge { margin: 0 0 4px; padding: 2px 0 2px 16px; font-size: 16px; }
+  .problem .problem-grid { padding: 4px 16px 8px; }
+  .problem .scene-caption { right: 16px; bottom: 14px; }
   .leadership-story { padding: 26px 20px 20px; margin-top: 32px; }
   .leadership-story h3 { font-size: 25px; }
 }
