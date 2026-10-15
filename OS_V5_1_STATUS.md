@@ -29,3 +29,14 @@ Após aprovação de privacidade e escolha da solução, medir visitas totais, o
 
 ## Publicação
 **Não realizar merge, deploy ou alteração do domínio de produção sem autorização expressa.**
+
+
+## V5.2 — Lideranças multiplicadoras (15/10/2026)
+
+Por escolha editorial explícita do proprietário, a seção de transformação passa a destacar a narrativa **“Uma equipe pode obedecer a um líder excepcional. Mas continuará preparada quando ele sair?”**. A versão anterior sobre registro de ronda por QR Code foi retirada do site (não permanece como exemplo destacado). O fechamento incorpora **“O uniforme identifica a empresa. A conduta revela sua doutrina.”**
+
+A nova peça apresenta o multiplicador como líder que desenvolve compreensão da missão, discernimento, respeito às regras e capacidade de transmitir e acompanhar o padrão. A análise e validação de referências permanecem sob a governança da empresa. Não são prometidos resultados universais, nem vendidos módulos obrigatórios.
+
+Arquivos desta alteração: `dist/index.html`, `dist/style.css` e este registro.
+
+Observação: a fotografia de reunião operacional continua pendente; dados de prazo e experiência profissional não foram modificados. Publicação V5.2 explicitamente autorizada pelo proprietário, condicionada à checagem de commit e build.
