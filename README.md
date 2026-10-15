@@ -1,4 +1,27 @@
-# ATIV Treinamentos — V4
+# ATIV Treinamentos — V5.1 (revisão, sem publicação)
+
+**Produção atual:** V5, publicada mediante autorização do proprietário em 15/10/2026.  
+**Branch de consolidação:** `os/v5.1-consolidacao`. Não realizar merge nem deploy sem nova autorização.
+
+A V5 preserva a abertura centralizada e a navegação por blocos (problema, transformação, frentes, método, Caderno, condução, FAQ e conversa), em verde profundo e ouro. A V5.1 prepara melhorias pontuais: conexão entre headline e problema, exemplo ilustrativo da diferença entre registro e inspeção, reforço da missão humana, imagem Open Graph do Caderno e ajuste da CSP para permitir as fontes Inter/Manrope do Google Fonts.
+
+**Pendências de revisão:** fotografia original e licenciada da reunião operacional; confirmação do prazo pontual aproximado de um mês; confirmação do tempo de experiência do instrutor; testes no navegador no ambiente de prévia e aprovação editorial. O fato de a folha de estilos estar autorizada na CSP não prova que as fontes carregaram no navegador: a verificação deve ser feita em preview/produção com Network e Console.
+
+**Escopo comercial:** doutrina organizacional personalizada; partes e materiais dependem da proposta. Não há clientes/cases divulgáveis, certificações do programa, resultados garantidos ou pacote de contratação obrigatório. A capacitação é complementar, não substitui formação/reciclagem regulamentadas.
+
+## Arquitetura e arquivos
+- `dist/`: conteúdo-fonte editável; o HTML local contém `noindex`.
+- `scripts/build-vercel.mjs`: gera `public-site/` e somente libera indexação quando `VERCEL_ENV=production`.
+- `vercel.json`: build, redirecionamentos e cabeçalhos de segurança; Google Fonts estritamente autorizadas em `style-src` e `font-src`.
+- `dist/assets/reuniao-operacional.webp`: **arquivo ainda não integrado**. O componente da seção do problema mantém fallback sem imagem.
+- `OS_V5_1_STATUS.md`: verificações e pendências da versão.
+
+### Verificação técnica recomendada
+Executar `npm run check` e `npm run build`, verificar também a variante `VERCEL_ENV=production npm run build` em ambiente isolado e inspecionar os cabeçalhos reais do deployment. Os comandos não substituem testes visuais e funcionais em navegador (320, 360, 390, 768, 1024, 1366 e 1440px).
+
+---
+
+## Histórico — documentação da V4
 
 Atualização do V3 com o Programa de Doutrina Operacional como oferta única para empresas de segurança privada. Mantém o visual, as seções, a fotografia e o caderno personalizado.
 
