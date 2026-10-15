@@ -40,3 +40,12 @@ A nova peça apresenta o multiplicador como líder que desenvolve compreensão d
 Arquivos desta alteração: `dist/index.html`, `dist/style.css` e este registro.
 
 Observação: a fotografia de reunião operacional continua pendente; dados de prazo e experiência profissional não foram modificados. Publicação V5.2 explicitamente autorizada pelo proprietário, condicionada à checagem de commit e build.
+
+
+## V5.3 — fotografia de reunião operacional (15/10/2026)
+
+O proprietário aprovou expressamente a imagem conceitual de reunião operacional e autorizou sua integração ao site como fundo. O arquivo foi otimizado para WebP (1200 px de largura; aproximadamente 30 KB), salvo em `dist/assets/reuniao-operacional.webp`. A imagem está ativada pelo CSS no painel visual da seção `#abordagem`, sem depender de estilo inline sujeito à CSP. Enquadramento responsivo, overlay e identificação **IMAGEM ILUSTRATIVA** preservam a finalidade visual sem sugerir treinamento real da ATIV.
+
+Preservados: headline, CTA, textos, foto do instrutor, FAQ, links, SEO, WhatsApp e outras seções. Esta intervenção não significa que existam clientes ou treinamentos realizados retratados nessa imagem.
+
+Publicação em produção autorizada expressamente pelo proprietário, após validação técnica e verificação do deployment.

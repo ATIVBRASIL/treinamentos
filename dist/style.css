@@ -409,17 +409,28 @@ footer { padding: 36px 0 24px; }
   .mobile-contact.hidden, .mobile-contact.hero-visible { display: none; }
 }
 
-.problem-layout { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center; }
-.problem .problem-grid { grid-template-columns: repeat(3, 1fr); margin-top: 8px; }
-.problem-scene { display: none; }
-.problem[style*="--problem-scene"] .problem-layout { grid-template-columns: 1.2fr 0.8fr; }
-.problem[style*="--problem-scene"] .problem-grid { grid-template-columns: 1fr; }
-.problem[style*="--problem-scene"] .problem-scene {
-  display: block;
-  min-height: 460px;
+.problem-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: center; }
+.problem .problem-grid { grid-template-columns: 1fr; margin-top: 8px; }
+.problem-scene {
+  position: relative;
+  min-height: 520px;
+  border: 1px solid rgba(198, 164, 106, 0.38);
   background:
-    linear-gradient(180deg, rgba(11, 18, 14, 0.42), rgba(11, 18, 14, 0.68)),
-    var(--problem-scene) center / cover no-repeat;
+    linear-gradient(180deg, rgba(11, 18, 14, 0.04) 20%, rgba(11, 18, 14, 0.48) 100%),
+    url("/assets/reuniao-operacional.webp") 84% center / cover no-repeat;
+  box-shadow: 0 18px 48px rgba(11, 18, 14, 0.12);
+}
+.scene-caption {
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  padding: 5px 9px;
+  background: rgba(11, 18, 14, 0.66);
+  color: #f4f1ea;
+  font-size: 10px;
+  line-height: 1.3;
+  letter-spacing: 0.1em;
+  font-weight: 600;
 }
 .dimensions, .front-grid, .method-grid { display: grid; gap: 22px; }
 .dimensions { grid-template-columns: repeat(3, 1fr); margin-top: 12px; }
@@ -458,9 +469,8 @@ footer { padding: 36px 0 24px; }
 
 @media (max-width: 1100px) {
   .problem-layout, .dimensions, .front-grid, .method-grid, .footer-editorial,
-  .problem .problem-grid,
-  .problem[style*="--problem-scene"] .problem-layout { grid-template-columns: 1fr; }
-  .problem[style*="--problem-scene"] .problem-scene { min-height: 240px; }
+  .problem .problem-grid { grid-template-columns: 1fr; }
+  .problem-scene { min-height: 280px; background-position: 73% center; }
 }
 
 @media (max-width: 760px) {
