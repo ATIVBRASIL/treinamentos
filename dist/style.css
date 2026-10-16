@@ -1003,12 +1003,6 @@ footer { padding: 36px 0 24px; }
   aspect-ratio: 1.12;
   border-color: #d5c8ac;
 }
-.legacy-book .visual-caption {
-  margin-top: 18px;
-  border-left-color: #a78146;
-}
-.legacy-book .visual-caption span { color: var(--ink); }
-.legacy-book .visual-caption small { color: var(--muted-ink); }
 .legacy-overline {
   display: flex;
   align-items: center;
@@ -1051,15 +1045,6 @@ footer { padding: 36px 0 24px; }
   font-size: 15px;
   line-height: 1.64;
 }
-.legacy-contract-note {
-  margin: 12px 0 0;
-  padding: 17px 19px;
-  border-left: 2px solid #a78146;
-  background: #e8e3d8;
-  color: #344338;
-  font-size: 14px;
-  line-height: 1.6;
-}
 .legacy-beyond {
   display: grid;
   grid-template-columns: 0.65fr 1.35fr;
@@ -1089,13 +1074,6 @@ footer { padding: 36px 0 24px; }
   padding: 21px 23px 25px;
   border: 1px solid #d5ccbd;
   background: #eeeae1;
-}
-.legacy-capability-icon {
-  display: block;
-  margin-bottom: 16px;
-  color: #a17a3e;
-  font-size: 27px;
-  line-height: 1;
 }
 .legacy-capability h4 {
   margin: 0 0 11px;
@@ -1151,8 +1129,41 @@ footer { padding: 36px 0 24px; }
   .legacy-section .legacy-intro h2 { font-size: clamp(29px, 8vw, 36px); }
   .legacy-section .legacy-intro > p { font-size: 16px; }
   .legacy-documents { padding-top: 28px; gap: 32px; }
-  .legacy-book .visual-caption small { font-size: 13px; }
   .legacy-deliverable h3 { font-size: 21px; }
   .legacy-beyond { margin-top: 52px; }
   .legacy-outcome { gap: 10px; padding: 24px 22px; }
+}
+
+
+/* V5.13 — O QUE PERMANECE: leitura direta e numeração contínua de 01 a 04. */
+.legacy-capability .legacy-deliverable-number {
+  display: block;
+  margin-bottom: 13px;
+  font-size: 20px;
+  line-height: 1.25;
+}
+.legacy-capability h4 { min-height: 2.75em; }
+.legacy-scope-note {
+  max-width: 56rem;
+  margin: 20px 0 0;
+  color: var(--muted-ink);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.legacy-outcome-copy { min-width: 0; }
+.legacy-outcome .legacy-outcome-title {
+  margin-bottom: 8px;
+  color: #f2ede0;
+  font-size: clamp(21px, 2.3vw, 27px);
+  line-height: 1.3;
+}
+.legacy-outcome .legacy-outcome-description {
+  color: #c7d0c5;
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: 1.6;
+  text-wrap: initial;
+}
+@media (max-width: 760px) {
+  .legacy-capability h4 { min-height: 0; }
 }
