@@ -672,3 +672,45 @@ footer { padding: 36px 0 24px; }
   html { scroll-behavior: auto; }
   .button { transition: none; }
 }
+
+/* V5.10 — valor da experiência e frentes possíveis do Programa de Doutrina Operacional. */
+.program-fronts h2 {
+  max-width: 58rem;
+  margin-bottom: 24px;
+  font-size: clamp(30px, 3.3vw, 44px);
+  line-height: 1.2;
+  text-wrap: balance;
+}
+.program-fronts .section-intro {
+  max-width: 52rem;
+  margin: 0 0 42px;
+}
+.program-fronts .front-grid h3 {
+  line-height: 1.32;
+  text-wrap: balance;
+}
+.program-fronts .front-grid p { line-height: 1.7; }
+.program-fronts-scope {
+  max-width: 58rem;
+  margin: 34px 0 0;
+  padding: 22px 24px;
+  border-left: 2px solid #9a7642;
+  background: var(--paper-2);
+  color: var(--ink);
+}
+.program-fronts-scope p { margin: 0; }
+.program-fronts-scope p + p {
+  margin-top: 10px;
+  color: var(--muted-ink);
+}
+.program-fronts-scope-title {
+  font-family: var(--display);
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 600;
+}
+@media (max-width: 760px) {
+  .program-fronts h2 { font-size: clamp(29px, 8vw, 36px); }
+  .program-fronts .section-intro { margin-bottom: 30px; }
+  .program-fronts-scope { padding: 18px 18px; }
+}
