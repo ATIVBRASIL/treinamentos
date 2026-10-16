@@ -1167,3 +1167,60 @@ footer { padding: 36px 0 24px; }
 @media (max-width: 760px) {
   .legacy-capability h4 { min-height: 0; }
 }
+
+.deco {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  fill: none;
+}
+.hero { overflow: hidden; }
+.hero-copy,
+#frentes > .wrap,
+#quem-conduz > .wrap { position: relative; z-index: 1; }
+#frentes,
+#quem-conduz { position: relative; overflow: hidden; }
+.hero .deco-shield {
+  top: 18px;
+  right: -28px;
+  width: 168px;
+  height: auto;
+  color: #c6a46a;
+  opacity: 0.14;
+}
+#frentes .deco-hex {
+  top: 24px;
+  right: -32px;
+  width: 148px;
+  height: auto;
+  color: #8a7040;
+  opacity: 0.11;
+}
+#quem-conduz .deco-rings {
+  top: 36px;
+  right: -28px;
+  width: 140px;
+  height: auto;
+  color: #c6a46a;
+  opacity: 0.14;
+}
+
+@media (max-width: 760px) {
+  .hero .deco-shield {
+    top: -28px;
+    right: -46px;
+    width: 96px;
+    opacity: 0.14;
+  }
+  #frentes .deco-hex {
+    top: -18px;
+    right: -36px;
+    width: 88px;
+  }
+  #quem-conduz .deco-rings {
+    top: 16px;
+    right: -40px;
+    width: 92px;
+    opacity: 0.14;
+  }
+}
