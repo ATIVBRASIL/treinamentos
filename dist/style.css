@@ -409,53 +409,46 @@ footer { padding: 36px 0 24px; }
   .mobile-contact.hidden, .mobile-contact.hero-visible { display: none; }
 }
 
+/* V5.9 — o problema como reflexão sobre fundo claro; cards em três colunas. */
 .problem {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  padding: 124px 0 108px;
-  color: #f7f4ee;
-  background-color: #071416;
-  background-image: url("/assets/reuniao-operacional.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  padding: 110px 0 100px;
+  background: var(--paper);
+  color: var(--ink);
 }
-.problem::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background: linear-gradient(180deg, rgba(5, 18, 20, 0.9) 0%, rgba(7, 26, 28, 0.76) 42%, rgba(5, 16, 18, 0.9) 100%);
+.problem-copy { text-align: center; }
+.problem .eyebrow { justify-content: center; color: #806336; }
+.problem .eyebrow span { background: #a78146; }
+.problem h2 {
+  max-width: 52rem;
+  margin: 0 auto 24px;
+  color: var(--ink);
+  text-wrap: balance;
 }
-.problem-copy {
-  position: relative;
-  z-index: 1;
+.problem .section-intro {
+  max-width: 48rem;
+  margin: 0 auto;
+  color: var(--muted-ink);
 }
-.problem .eyebrow { color: var(--gold-soft); }
-.problem .eyebrow span { background: var(--gold); }
-.problem h2,
-.problem .section-intro,
-.problem .problem-bridge { max-width: 44rem; }
-.problem h2 { color: #f7f4ee; }
-.problem .section-intro { margin-bottom: 28px; color: #e7eee6; }
 .problem .problem-bridge {
-  margin: 0 0 8px;
-  padding: 2px 0 2px 18px;
-  border-left: 2px solid var(--gold);
+  max-width: 44rem;
+  margin: 30px auto 0;
+  padding: 20px 0 0;
+  border: 0;
+  border-top: 2px solid #a78146;
   background: transparent;
-  color: #f3efe6;
+  color: var(--ink);
   font-size: 18px;
+  font-weight: 600;
   line-height: 1.6;
 }
 .problem .problem-grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0 8px;
-  margin-top: 52px;
-  padding: 6px 28px 10px;
-  border-top: 1px solid rgba(198, 164, 106, 0.62);
-  background: rgba(5, 16, 18, 0.42);
+  margin-top: 56px;
+  padding: 8px 24px 4px;
+  border-top: 1px solid #ccbb9f;
+  background: transparent;
+  text-align: left;
 }
 .problem .problem-grid article {
   padding: 22px 20px 16px 0;
@@ -464,11 +457,12 @@ footer { padding: 36px 0 24px; }
 }
 .problem .problem-grid article + article {
   padding-left: 28px;
-  box-shadow: inset 1px 0 0 rgba(198, 164, 106, 0.38);
+  box-shadow: inset 1px 0 0 #d0c2aa;
 }
-.problem .number { color: var(--gold-soft); }
-.problem .problem-grid h3 { color: #f7f4ee; }
-.problem .problem-grid p { color: #e8efe6; }
+.problem .number { color: #86663b; }
+.problem .problem-grid h3 { color: var(--ink); }
+.problem .problem-grid p { color: #3e4d43; }
+
 .scene-caption {
   position: absolute;
   right: 28px;
@@ -568,24 +562,32 @@ footer { padding: 36px 0 24px; }
 }
 .leadership-story .guardian-statement strong { color: var(--gold-soft); font-weight: 700; }
 @media (max-width: 760px) {
-  .problem { padding: 76px 0 72px; background-position: center; }
-  .problem .problem-bridge { margin: 0 0 4px; padding: 2px 0 2px 16px; font-size: 16px; }
+  .problem { padding: 76px 0 72px; }
+  .problem .problem-bridge { margin: 26px auto 0; padding: 18px 0 0; font-size: 16px; }
   .problem .problem-grid { padding: 4px 16px 8px; }
-  .problem .scene-caption { right: 16px; bottom: 14px; }
-  .leadership-story { padding: 26px 20px 20px; margin-top: 32px; }
+  .solution .scene-caption { right: 16px; bottom: 12px; }
+  .leadership-story { padding: 26px 20px 20px; }
+  .doctrine-depth .leadership-story { margin-top: 0; }
   .leadership-story h3 { font-size: 25px; }
 }
 
-/* V5.7 — apresentação concisa da solução, distinta da fotografia de O problema. */
+/* V5.9 — a imagem ilustrativa passa a ser o fundo integral de A SOLUÇÃO. */
 .solution {
   position: relative;
+  isolation: isolate;
+  overflow: hidden;
   padding: 104px 0 92px;
   color: #f7f4ee;
-  background:
-    radial-gradient(ellipse 560px 460px at 92% 12%, rgba(198, 164, 106, 0.16), transparent 70%),
-    radial-gradient(ellipse 720px 520px at 0% 100%, rgba(198, 164, 106, 0.07), transparent 68%),
-    linear-gradient(180deg, #0d1914 0%, #101c16 58%, #0b1410 100%);
+  background-color: #071416;
+  background-image:
+    linear-gradient(90deg, rgba(5, 18, 20, 0.94) 0%, rgba(7, 26, 28, 0.86) 48%, rgba(5, 16, 18, 0.72) 100%),
+    url("/assets/reuniao-operacional.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+.solution > .wrap { position: relative; z-index: 1; }
+.solution .scene-caption { z-index: 2; }
 .solution .eyebrow { margin-bottom: 22px; }
 .solution h2 {
   max-width: 22em;
@@ -640,11 +642,24 @@ footer { padding: 36px 0 24px; }
   color: var(--gold);
   flex: none;
 }
+/* V5.9 — aprofundamento claro com card multiplicador escuro autônomo. */
 .doctrine-depth {
-  background:
-    linear-gradient(180deg, #0b120e 0%, #121b15 120px);
+  background: var(--paper-2);
+  color: var(--ink);
+  border-bottom: 1px solid #d8cfc1;
 }
-.doctrine-depth .dimensions { margin-top: 0; }
+.doctrine-depth .leadership-story {
+  margin: 0 auto;
+  background: linear-gradient(135deg, #1d291f 0%, #111c16 100%);
+  color: #f7f4ee;
+}
+.doctrine-depth .leadership-story h3 { color: #f7f4ee; }
+.doctrine-depth .leadership-story .eyebrow { color: var(--gold-soft); }
+.doctrine-depth .statement-line {
+  max-width: 980px;
+  margin: 34px auto 0;
+  color: var(--ink);
+}
 
 @media (max-width: 760px) {
   .solution { padding: 72px 0 64px; }
