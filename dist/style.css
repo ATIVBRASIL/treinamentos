@@ -965,3 +965,194 @@ footer { padding: 36px 0 24px; }
   .method-conclusion-scope { text-align: left; }
   .method-illustration { margin-top: 28px; }
 }
+
+
+/* V5.12 — legado do Programa: Caderno e POPs sempre presentes; competências e identidade como efeitos pretendidos. */
+.legacy-section { background: var(--paper); }
+.legacy-section .legacy-intro {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: clamp(40px, 6vw, 92px);
+  align-items: end;
+  padding-bottom: 42px;
+}
+.legacy-section .legacy-intro h2 {
+  max-width: 18em;
+  margin-bottom: 0;
+  color: var(--ink);
+  font-size: clamp(32px, 3.05vw, 44px);
+  line-height: 1.16;
+  text-wrap: balance;
+}
+.legacy-section .legacy-intro > p {
+  max-width: 32rem;
+  margin: 0 0 3px;
+  color: var(--muted-ink);
+  font-size: 17px;
+  line-height: 1.72;
+}
+.legacy-documents {
+  display: grid;
+  grid-template-columns: 0.94fr 1.06fr;
+  gap: clamp(40px, 5.5vw, 74px);
+  align-items: start;
+  padding-top: 40px;
+  border-top: 1px solid #d9d2c4;
+}
+.legacy-book .book-frame {
+  aspect-ratio: 1.12;
+  border-color: #d5c8ac;
+}
+.legacy-book .visual-caption {
+  margin-top: 18px;
+  border-left-color: #a78146;
+}
+.legacy-book .visual-caption span { color: var(--ink); }
+.legacy-book .visual-caption small { color: var(--muted-ink); }
+.legacy-overline {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 17px;
+  color: #8b6b38;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  line-height: 1.4;
+}
+.legacy-overline span {
+  width: 20px;
+  height: 1px;
+  background: #a78146;
+  flex: none;
+}
+.legacy-deliverable {
+  display: grid;
+  grid-template-columns: 34px minmax(0,1fr);
+  gap: 18px;
+  padding: 21px 0;
+  border-top: 1px solid #d8d1c4;
+}
+.legacy-deliverable-number {
+  color: #9c773c;
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 600;
+}
+.legacy-deliverable h3 {
+  margin: 0 0 9px;
+  color: var(--ink);
+  font-size: 23px;
+  line-height: 1.28;
+}
+.legacy-deliverable p {
+  margin: 0;
+  color: #46564d;
+  font-size: 15px;
+  line-height: 1.64;
+}
+.legacy-contract-note {
+  margin: 12px 0 0;
+  padding: 17px 19px;
+  border-left: 2px solid #a78146;
+  background: #e8e3d8;
+  color: #344338;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.legacy-beyond {
+  display: grid;
+  grid-template-columns: 0.65fr 1.35fr;
+  gap: clamp(28px, 4vw, 64px);
+  margin-top: 70px;
+  padding-top: 33px;
+  border-top: 1px solid #d8d1c4;
+}
+.legacy-beyond-intro h3 {
+  max-width: 19rem;
+  color: var(--ink);
+  font-size: clamp(23px, 2.5vw, 30px);
+  line-height: 1.25;
+}
+.legacy-beyond-intro > p:last-child {
+  max-width: 24rem;
+  color: var(--muted-ink);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.legacy-capabilities {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 16px;
+}
+.legacy-capability {
+  padding: 21px 23px 25px;
+  border: 1px solid #d5ccbd;
+  background: #eeeae1;
+}
+.legacy-capability-icon {
+  display: block;
+  margin-bottom: 16px;
+  color: #a17a3e;
+  font-size: 27px;
+  line-height: 1;
+}
+.legacy-capability h4 {
+  margin: 0 0 11px;
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  line-height: 1.36;
+}
+.legacy-capability p {
+  margin: 0;
+  color: #4b594f;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.legacy-outcome {
+  display: grid;
+  grid-template-columns: 0.34fr 0.66fr;
+  gap: 30px;
+  align-items: center;
+  margin-top: 26px;
+  padding: 27px 33px;
+  background: #14231a;
+  border-left: 3px solid var(--gold);
+}
+.legacy-outcome-kicker {
+  color: #d9bd88;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  line-height: 1.5;
+}
+.legacy-outcome p {
+  margin: 0;
+  color: #f2ede0;
+  font-family: var(--display);
+  font-size: clamp(19px, 2.2vw, 25px);
+  line-height: 1.4;
+  text-wrap: balance;
+}
+@media (max-width: 1100px) {
+  .legacy-section .legacy-intro { gap: 30px; }
+  .legacy-documents { gap: 30px; }
+  .legacy-beyond { grid-template-columns: 1fr; gap: 23px; }
+  .legacy-beyond-intro h3, .legacy-beyond-intro > p:last-child { max-width: 34rem; }
+}
+@media (max-width: 760px) {
+  .legacy-section .legacy-intro,
+  .legacy-documents,
+  .legacy-capabilities,
+  .legacy-outcome { grid-template-columns: 1fr; }
+  .legacy-section .legacy-intro { gap: 20px; padding-bottom: 28px; }
+  .legacy-section .legacy-intro h2 { font-size: clamp(29px, 8vw, 36px); }
+  .legacy-section .legacy-intro > p { font-size: 16px; }
+  .legacy-documents { padding-top: 28px; gap: 32px; }
+  .legacy-book .visual-caption small { font-size: 13px; }
+  .legacy-deliverable h3 { font-size: 21px; }
+  .legacy-beyond { margin-top: 52px; }
+  .legacy-outcome { gap: 10px; padding: 24px 22px; }
+}
