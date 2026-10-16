@@ -1224,3 +1224,153 @@ footer { padding: 36px 0 24px; }
     opacity: 0.14;
   }
 }
+
+/* =======================================================================
+ ATIV Treinamentos — OS-ATIV-ARQ-20261016-001
+ Direção A — Autoridade Institucional + precisão gráfica B
+ Base imutável: 3e01cb00f0af90e6790c1037e00f2d8e46e44160
+ Alteração exclusivamente CSS. Sem edição de copy, DOM, URLs, JS, assets.
+ ======================================================================= */
+:root {
+  --ativ-surface-dark: #0b120e;
+  --ativ-surface-raised: #17211b;
+  --ativ-surface-paper: #f4f1ea;
+  --ativ-text-on-dark: #f4f1ea;
+  --ativ-text-on-paper: #17211b;
+  --ativ-text-muted-paper: #516056;
+  --ativ-accent-gold: #c6a46a;
+  --ativ-accent-gold-soft: #e6d3a4;
+  --ativ-accent-on-paper: #745126;
+  --ativ-line-paper: #d5c9b7;
+  --ativ-layout-width: 1180px;
+  --ativ-focus-width: 3px;
+}
+@supports (text-wrap: balance) {
+  h1, h2, h3 { text-wrap: balance; }
+}
+.wrap { max-width: var(--ativ-layout-width); }
+.section { scroll-margin-top: calc(var(--header) + 16px); }
+.eyebrow { line-height: 1.55; }
+.band-paper .eyebrow,
+.band-paper .number,
+.band-paper .step-index,
+.band-paper .flow-index,
+.band-paper .legacy-overline,
+.band-paper .legacy-deliverable-number,
+.reading .eyebrow,
+.reading .number,
+.reading .step-index {
+  color: var(--ativ-accent-on-paper);
+}
+.band-paper .eyebrow span,
+.reading .eyebrow span { background-color: var(--ativ-accent-on-paper); }
+.band-paper em { color: #745126; }
+/* Header — manter identidade oficial e navegação existente. */
+header { border-bottom-color: rgba(198,164,106,.24); }
+.brand { min-width: 0; }
+#menu-toggle { min-height: 42px; }
+/* 01 Hero — hierarquia editorial centralizada. */
+#inicio.hero { isolation: isolate; }
+#inicio.hero h1 {
+  font-size: clamp(34px, 4.6vw, 68px);
+  line-height: 1.145;
+  letter-spacing: -.042em;
+  max-width: 17em;
+  margin-inline: auto;
+}
+#inicio.hero .intro { max-width: 44rem; line-height: 1.57; }
+#inicio.hero .actions { row-gap: 16px; }
+#inicio.hero .eyebrow { letter-spacing: .19em; }
+#inicio.hero .text-link { text-underline-offset: 4px; }
+/* 02 Problema — áreas editoriais legíveis. */
+#abordagem.problem .problem-grid article { min-width: 0; }
+#abordagem.problem .problem-grid h3 { letter-spacing: -.025em; }
+#abordagem.problem .problem-grid p { overflow-wrap: break-word; }
+#abordagem.problem .eyebrow { color: var(--ativ-accent-on-paper); }
+/* 03 Solução — preservar imagem documental e legibilidade. */
+#doutrina.solution .solution-copy,
+#doutrina.solution .solution-benefits li { min-width: 0; }
+#doutrina.solution .solution-copy p { text-wrap: pretty; }
+/* 04 Aprofundamento — leitura sem ornamentação artificial. */
+#aprofundamento .leadership-story { box-shadow: none; }
+#aprofundamento .leadership-story p { overflow-wrap: break-word; }
+/* 05 Frentes — cartões institucionais 2 x 2, com índices técnicos. */
+#frentes .front-grid { align-items: stretch; gap: clamp(14px, 1.7vw, 22px); }
+#frentes .front-grid article {
+  min-width: 0;
+  padding: clamp(24px, 2.4vw, 34px);
+  border: 1px solid var(--ativ-line-paper);
+  border-radius: 2px;
+  background: rgba(255,255,255,.18);
+  box-shadow: none;
+}
+#frentes .front-grid h3 { letter-spacing: -.025em; }
+#frentes .front-grid p { overflow-wrap: break-word; }
+#frentes .front-grid .number { color: var(--ativ-accent-on-paper); }
+/* 06 Método — desenho fiel ao ciclo ATIV; sem linguagem de dashboard. */
+#caminho .method-cycle-card {
+  min-width: 0;
+  border-color: rgba(198,164,106,.47);
+  background: #1a2a21;
+  box-shadow: none;
+}
+#caminho .method-cycle-card h3 { line-height: 1.3; }
+#caminho .method-cycle-card p { overflow-wrap: break-word; }
+/* 07 Entregas — produto documental e continuidade. */
+#entregas .legacy-overline,
+#entregas .legacy-deliverable-number { color: var(--ativ-accent-on-paper); }
+#entregas .legacy-overline span { background-color: var(--ativ-accent-on-paper); }
+#entregas .legacy-book .book-frame,
+#entregas .legacy-capability { box-shadow: none; }
+#entregas .legacy-deliverable h3 { line-height: 1.3; }
+/* 08 Quem conduz — credenciais atuais, foto oficial. */
+#quem-conduz .portrait { box-shadow: none; }
+#quem-conduz .instructor-name { line-height: 1.28; }
+/* 09 FAQ — affordance e contraste do indicador. */
+.faq summary::after { color: var(--ativ-accent-on-paper); }
+.faq details { scroll-margin-top: calc(var(--header) + 16px); }
+/* 10 Contato — seletor original, sem alterar destinos ou valores. */
+#contato .contact-action select { border-color: #879487; }
+#contato .contact-action .button { min-height: 52px; }
+/* Estados acessíveis contextualizados por superfície. */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+select:focus-visible {
+  outline: var(--ativ-focus-width) solid var(--ativ-accent-gold-soft);
+  outline-offset: 4px;
+}
+.band-paper a:focus-visible,
+.band-paper button:focus-visible,
+.band-paper summary:focus-visible,
+.band-paper select:focus-visible,
+.reading a:focus-visible,
+.reading summary:focus-visible,
+.reading button:focus-visible,
+.problem a:focus-visible {
+  outline-color: var(--ativ-accent-on-paper);
+}
+.button.gold:focus-visible,
+.mobile-contact:focus-visible { outline-color: #142016; outline-offset: -5px; }
+#contato .contact-action select:focus-visible { outline-color: var(--ativ-accent-gold-soft); }
+/* Responsividade: os mesmos breakpoints do baseline, sem edição de JS. */
+@media (max-width: 1100px) {
+  #caminho .method-cycle-card { width: 100%; max-width: none; }
+  #frentes .front-grid { grid-template-columns: minmax(0,1fr); }
+}
+@media (max-width: 760px) {
+  #inicio.hero h1 { font-size: clamp(34px, 9vw, 44px); line-height: 1.13; }
+  #inicio.hero .actions { align-items: stretch; }
+  #frentes .front-grid article { padding: 24px 20px; }
+  #caminho .method-cycle-card { padding: 20px; }
+  #entregas .legacy-deliverable { grid-template-columns: 28px minmax(0,1fr); gap: 12px; }
+  #contato .contact-action select { min-height: 48px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .button, .button:hover, .button:active {
+    transform: none;
+    transition: none;
+  }
+}
+/* FIM OS-ATIV-ARQ-20261016-001 */
