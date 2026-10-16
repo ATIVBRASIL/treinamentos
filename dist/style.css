@@ -682,7 +682,7 @@ footer { padding: 36px 0 24px; }
   text-wrap: balance;
 }
 .program-fronts .section-intro {
-  max-width: 52rem;
+  max-width: 46rem;
   margin: 0 0 42px;
 }
 .program-fronts .front-grid h3 {
@@ -691,9 +691,10 @@ footer { padding: 36px 0 24px; }
 }
 .program-fronts .front-grid p { line-height: 1.7; }
 .program-fronts-scope {
-  max-width: 58rem;
-  margin: 34px 0 0;
+  max-width: 43rem;
+  margin: 38px auto 0;
   padding: 22px 24px;
+  text-align: left;
   border-left: 2px solid #9a7642;
   background: var(--paper-2);
   color: var(--ink);
