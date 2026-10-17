@@ -969,205 +969,189 @@ footer { padding: 36px 0 24px; }
 }
 
 
-/* V5.12 — legado do Programa: Caderno e POPs sempre presentes; competências e identidade como efeitos pretendidos. */
+/* O QUE PERMANECE — patrimônio documental, capacidades e encerramento institucional. */
 .legacy-section { background: var(--paper); }
-.legacy-section .legacy-intro {
+.legacy-intro {
   display: grid;
-  grid-template-columns: 1.08fr 0.92fr;
-  gap: clamp(40px, 6vw, 92px);
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 0.9fr);
+  gap: clamp(32px, 4vw, 64px);
   align-items: end;
-  padding-bottom: 42px;
 }
+.legacy-intro-lead,
+.legacy-intro-copy,
+.legacy-book,
+.legacy-reference-copy { min-width: 0; }
 .legacy-section .legacy-intro h2 {
-  max-width: 18em;
-  margin-bottom: 0;
+  max-width: 16em;
+  margin: 0;
   color: var(--ink);
-  font-size: clamp(32px, 3.05vw, 44px);
+  font-size: clamp(32px, 3.05vw, 42px);
   line-height: 1.16;
   text-wrap: balance;
 }
-.legacy-section .legacy-intro > p {
-  max-width: 32rem;
-  margin: 0 0 3px;
+.legacy-mark {
+  color: var(--ativ-accent-on-paper, #745126);
+  font-weight: 600;
+}
+.legacy-intro-copy {
+  max-width: 28rem;
+  margin: 0 0 4px;
   color: var(--muted-ink);
   font-size: 17px;
-  line-height: 1.72;
+  line-height: 1.68;
 }
-.legacy-documents {
-  display: grid;
-  grid-template-columns: 0.94fr 1.06fr;
-  gap: clamp(40px, 5.5vw, 74px);
-  align-items: start;
-  padding-top: 40px;
-  border-top: 1px solid #d9d2c4;
-}
-.legacy-book .book-frame {
-  aspect-ratio: 1.12;
-  border-color: #d5c8ac;
-}
-.legacy-overline {
+.legacy-group-label {
   display: flex;
   align-items: center;
-  gap: 9px;
-  margin: 0 0 17px;
+  gap: 10px;
+  margin: 0 0 22px;
   color: #8b6b38;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.15em;
-  line-height: 1.4;
+  line-height: 1.45;
 }
-.legacy-overline span {
-  width: 20px;
+.legacy-group-label span {
+  width: 22px;
   height: 1px;
   background: #a78146;
   flex: none;
 }
-.legacy-deliverable {
+.legacy-references {
   display: grid;
-  grid-template-columns: 34px minmax(0,1fr);
+  grid-template-columns: minmax(0, 0.44fr) minmax(0, 0.56fr);
+  gap: clamp(32px, 4vw, 56px);
+  align-items: center;
+  margin-top: clamp(56px, 6vw, 72px);
+  padding-top: clamp(40px, 4vw, 52px);
+  border-top: 1px solid #d9d2c4;
+}
+.legacy-book-frame {
+  aspect-ratio: 3 / 2;
+  border-color: #d5c8ac;
+  background: #ebe6dc;
+}
+.legacy-book-frame img {
+  object-fit: cover;
+  object-position: center 42%;
+}
+.legacy-item {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
   gap: 18px;
-  padding: 21px 0;
+  padding: 22px 0;
   border-top: 1px solid #d8d1c4;
 }
-.legacy-deliverable-number {
+.legacy-item:first-of-type { border-top: 0; padding-top: 0; }
+.legacy-item-number {
   color: #9c773c;
   font-family: var(--display);
-  font-size: 20px;
+  font-size: 13px;
   font-weight: 600;
-}
-.legacy-deliverable h3 {
-  margin: 0 0 9px;
-  color: var(--ink);
-  font-size: 23px;
-  line-height: 1.28;
-}
-.legacy-deliverable p {
-  margin: 0;
-  color: #46564d;
-  font-size: 15px;
-  line-height: 1.64;
-}
-.legacy-beyond {
-  display: grid;
-  grid-template-columns: 0.65fr 1.35fr;
-  gap: clamp(28px, 4vw, 64px);
-  margin-top: 70px;
-  padding-top: 33px;
-  border-top: 1px solid #d8d1c4;
-}
-.legacy-beyond-intro h3 {
-  max-width: 19rem;
-  color: var(--ink);
-  font-size: clamp(23px, 2.5vw, 30px);
-  line-height: 1.25;
-}
-.legacy-beyond-intro > p:last-child {
-  max-width: 24rem;
-  color: var(--muted-ink);
-  font-size: 15px;
-  line-height: 1.6;
-}
-.legacy-capabilities {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap: 16px;
-}
-.legacy-capability {
-  padding: 21px 23px 25px;
-  border: 1px solid #d5ccbd;
-  background: #eeeae1;
-}
-.legacy-capability h4 {
-  margin: 0 0 11px;
-  color: var(--ink);
-  font-family: var(--display);
-  font-size: 18px;
-  letter-spacing: -0.02em;
-  line-height: 1.36;
-}
-.legacy-capability p {
-  margin: 0;
-  color: #4b594f;
-  font-size: 14px;
-  line-height: 1.6;
-}
-.legacy-outcome {
-  display: grid;
-  grid-template-columns: 0.34fr 0.66fr;
-  gap: 30px;
-  align-items: center;
-  margin-top: 26px;
-  padding: 27px 33px;
-  background: #14231a;
-  border-left: 3px solid var(--gold);
-}
-.legacy-outcome-kicker {
-  color: #d9bd88;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.13em;
-  line-height: 1.5;
-}
-.legacy-outcome p {
-  margin: 0;
-  color: #f2ede0;
-  font-family: var(--display);
-  font-size: clamp(19px, 2.2vw, 25px);
+  letter-spacing: 0.14em;
   line-height: 1.4;
+}
+.legacy-item h3,
+.legacy-capacity h3 {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-size: clamp(19px, 1.55vw, 22px);
+  line-height: 1.32;
   text-wrap: balance;
 }
-@media (max-width: 1100px) {
-  .legacy-section .legacy-intro { gap: 30px; }
-  .legacy-documents { gap: 30px; }
-  .legacy-beyond { grid-template-columns: 1fr; gap: 23px; }
-  .legacy-beyond-intro h3, .legacy-beyond-intro > p:last-child { max-width: 34rem; }
+.legacy-item p,
+.legacy-capacity p {
+  margin: 0;
+  color: var(--muted-ink);
+  font-size: 16px;
+  line-height: 1.62;
 }
-@media (max-width: 760px) {
-  .legacy-section .legacy-intro,
-  .legacy-documents,
-  .legacy-capabilities,
-  .legacy-outcome { grid-template-columns: 1fr; }
-  .legacy-section .legacy-intro { gap: 20px; padding-bottom: 28px; }
-  .legacy-section .legacy-intro h2 { font-size: clamp(29px, 8vw, 36px); }
-  .legacy-section .legacy-intro > p { font-size: 16px; }
-  .legacy-documents { padding-top: 28px; gap: 32px; }
-  .legacy-deliverable h3 { font-size: 21px; }
-  .legacy-beyond { margin-top: 52px; }
-  .legacy-outcome { gap: 10px; padding: 24px 22px; }
+.legacy-capacities {
+  margin-top: clamp(56px, 6.5vw, 76px);
+  padding-top: clamp(32px, 3.5vw, 40px);
+  border-top: 1px solid #d4cbbd;
 }
-
-
-/* V5.13 — O QUE PERMANECE: leitura direta e numeração contínua de 01 a 04. */
-.legacy-capability .legacy-deliverable-number {
+.legacy-capacity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 1.8vw, 20px);
+  align-items: stretch;
+}
+.legacy-capacity {
+  min-width: 0;
+  padding: clamp(28px, 3vw, 34px);
+  border: 1px solid #cfc4b0;
+  border-radius: 2px;
+}
+.legacy-capacity--sand {
+  background: #e8e2d6;
+  border-color: #cfc4b0;
+}
+.legacy-capacity--green {
+  background: #e2ebe4;
+  border-color: #c5d0c7;
+}
+.legacy-capacity .legacy-item-number {
   display: block;
-  margin-bottom: 13px;
-  font-size: 20px;
-  line-height: 1.25;
+  margin-bottom: 16px;
 }
-.legacy-capability h4 { min-height: 2.75em; }
+.legacy-closure {
+  margin-top: clamp(52px, 6vw, 72px);
+  padding: clamp(44px, 5vw, 56px) clamp(28px, 4vw, 44px);
+  border: 1px solid rgba(198, 164, 106, 0.38);
+  border-left: 3px solid rgba(198, 164, 106, 0.72);
+  background: linear-gradient(135deg, #1d291f 0%, #111c16 100%);
+  color: #f7f4ee;
+}
+.legacy-closure-title {
+  max-width: 36rem;
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(22px, 2.35vw, 28px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.28;
+  text-wrap: balance;
+}
+.legacy-closure-title strong {
+  color: var(--gold-soft);
+  font-weight: 700;
+}
+.legacy-closure-copy {
+  max-width: 40rem;
+  margin: 16px 0 0;
+  color: #d2dcd1;
+  font-size: 17px;
+  line-height: 1.62;
+}
 .legacy-scope-note {
-  max-width: 56rem;
+  max-width: 40rem;
   margin: 20px 0 0;
   color: var(--muted-ink);
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.6;
 }
-.legacy-outcome-copy { min-width: 0; }
-.legacy-outcome .legacy-outcome-title {
-  margin-bottom: 8px;
-  color: #f2ede0;
-  font-size: clamp(21px, 2.3vw, 27px);
-  line-height: 1.3;
-}
-.legacy-outcome .legacy-outcome-description {
-  color: #c7d0c5;
-  font-family: var(--font);
-  font-size: 14px;
-  line-height: 1.6;
-  text-wrap: initial;
+@media (max-width: 1024px) {
+  .legacy-intro,
+  .legacy-references { grid-template-columns: 1fr; align-items: start; }
+  .legacy-intro { gap: 18px; }
+  .legacy-intro-copy { max-width: 38rem; margin: 0; }
+  .legacy-section .legacy-intro h2 { max-width: 18em; }
+  .legacy-references { gap: 28px; }
+  .legacy-book { max-width: 32rem; }
 }
 @media (max-width: 760px) {
-  .legacy-capability h4 { min-height: 0; }
+  .legacy-section .legacy-intro h2 { font-size: clamp(27px, 7.4vw, 34px); line-height: 1.2; }
+  .legacy-intro-copy { font-size: 16px; }
+  .legacy-references { margin-top: 40px; padding-top: 32px; gap: 28px; }
+  .legacy-book { max-width: none; }
+  .legacy-item { grid-template-columns: 28px minmax(0, 1fr); gap: 14px; padding: 20px 0; }
+  .legacy-capacities { margin-top: 48px; }
+  .legacy-capacity-grid { grid-template-columns: 1fr; }
+  .legacy-capacity { padding: 24px 20px; }
+  .legacy-closure { padding: 32px 22px; }
+  .legacy-closure-copy { font-size: 16px; }
+  .legacy-scope-note { font-size: 14px; }
 }
 
 .deco {
@@ -1323,13 +1307,16 @@ header { border-bottom-color: rgba(198,164,106,.24); }
 }
 #caminho .method-cycle-card h3 { line-height: 1.3; }
 #caminho .method-cycle-card p { overflow-wrap: break-word; }
-/* 07 Entregas — produto documental e continuidade. */
-#entregas .legacy-overline,
-#entregas .legacy-deliverable-number { color: var(--ativ-accent-on-paper); }
-#entregas .legacy-overline span { background-color: var(--ativ-accent-on-paper); }
-#entregas .legacy-book .book-frame,
-#entregas .legacy-capability { box-shadow: none; }
-#entregas .legacy-deliverable h3 { line-height: 1.3; }
+/* 07 Entregas — patrimônio documental e continuidade institucional. */
+#entregas .legacy-group-label,
+#entregas .legacy-item-number { color: var(--ativ-accent-on-paper); }
+#entregas .legacy-group-label span { background-color: var(--ativ-accent-on-paper); }
+#entregas .legacy-book-frame,
+#entregas .legacy-capacity { box-shadow: none; }
+#entregas .legacy-item h3,
+#entregas .legacy-capacity h3,
+#entregas .legacy-closure,
+#entregas .legacy-scope-note { overflow-wrap: break-word; }
 /* 08 Quem conduz — credenciais atuais, foto oficial. */
 #quem-conduz .portrait { box-shadow: none; }
 #quem-conduz .instructor-name { line-height: 1.28; }
@@ -1369,7 +1356,6 @@ select:focus-visible {
   #inicio.hero .actions { align-items: stretch; }
   #frentes .front-grid article { padding: 24px 20px; }
   #caminho .method-cycle-card { padding: 20px; }
-  #entregas .legacy-deliverable { grid-template-columns: 28px minmax(0,1fr); gap: 12px; }
   #contato .contact-action select { min-height: 48px; }
 }
 @media (prefers-reduced-motion: reduce) {
