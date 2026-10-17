@@ -657,47 +657,65 @@ footer { padding: 36px 0 24px; }
   .button { transition: none; }
 }
 
-/* V5.10 — valor da experiência e frentes possíveis do Programa de Doutrina Operacional. */
+/* V5.10 — frentes do Programa de Doutrina Operacional (seção unificada). */
 .program-fronts h2 {
-  max-width: 58rem;
-  margin-bottom: 24px;
-  font-size: clamp(30px, 3.3vw, 44px);
-  line-height: 1.2;
+  max-width: 42rem;
+  margin-bottom: 22px;
+  font-size: clamp(30px, 3.1vw, 42px);
+  line-height: 1.18;
   text-wrap: balance;
 }
-.program-fronts .section-intro {
-  max-width: 46rem;
-  margin: 0 0 42px;
+.program-fronts .program-fronts-intro {
+  max-width: 36rem;
+  margin: 0 0 clamp(36px, 4.5vw, 48px);
+  font-size: 18px;
+  line-height: 1.68;
+}
+.program-fronts-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 1.8vw, 22px);
 }
 .program-fronts .front-grid h3 {
+  margin-bottom: 12px;
+  font-size: clamp(20px, 1.55vw, 22px);
   line-height: 1.32;
   text-wrap: balance;
 }
-.program-fronts .front-grid p { line-height: 1.7; }
-.program-fronts-scope {
-  max-width: 43rem;
-  margin: 38px auto 0;
-  padding: 22px 24px;
-  text-align: left;
-  border-left: 2px solid #9a7642;
-  background: var(--paper-2);
-  color: var(--ink);
-}
-.program-fronts-scope p { margin: 0; }
-.program-fronts-scope p + p {
-  margin-top: 10px;
+.program-fronts .front-grid p {
+  margin: 0;
   color: var(--muted-ink);
+  font-size: 17px;
+  line-height: 1.68;
 }
-.program-fronts-scope-title {
+.program-fronts-signature {
+  margin: clamp(44px, 5vw, 60px) 0 0;
+  padding: clamp(30px, 3.8vw, 42px) clamp(26px, 3.8vw, 44px);
+  border: 1px solid rgba(198, 164, 106, 0.42);
+  border-left: 3px solid rgba(198, 164, 106, 0.72);
+  background: linear-gradient(135deg, #1d291f 0%, #111c16 100%);
+  color: #f7f4ee;
+}
+.program-fronts-signature p {
+  max-width: 40rem;
+  margin: 0;
   font-family: var(--display);
-  font-size: 20px;
-  line-height: 1.35;
+  font-size: clamp(20px, 2.15vw, 26px);
   font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.38;
 }
+.program-fronts-signature strong {
+  color: var(--gold-soft);
+  font-weight: 700;
+}
+#frentes.program-fronts { padding-bottom: clamp(88px, 10vw, 112px); }
 @media (max-width: 760px) {
-  .program-fronts h2 { font-size: clamp(29px, 8vw, 36px); }
-  .program-fronts .section-intro { margin-bottom: 30px; }
-  .program-fronts-scope { padding: 18px 18px; }
+  .program-fronts h2 { font-size: clamp(28px, 7.6vw, 34px); line-height: 1.2; }
+  .program-fronts .program-fronts-intro { margin-bottom: 28px; }
+  .program-fronts-grid { grid-template-columns: minmax(0, 1fr); }
+  .program-fronts-signature { margin-top: 36px; padding: 26px 20px; }
+  .program-fronts-signature p { font-size: clamp(19px, 5.2vw, 22px); }
+  #frentes.program-fronts { padding-bottom: 72px; }
 }
 
 
@@ -1276,22 +1294,26 @@ header { border-bottom-color: rgba(198,164,106,.24); }
 #doutrina.solution .solution-bridge { min-width: 0; }
 #doutrina.solution .solution-copy p,
 #doutrina.solution .solution-bridge { overflow-wrap: break-word; }
-/* 04 Aprofundamento — leitura sem ornamentação artificial. */
-#aprofundamento .leadership-story { box-shadow: none; }
-#aprofundamento .leadership-story p { overflow-wrap: break-word; }
-/* 05 Frentes — cartões institucionais 2 x 2, com índices técnicos. */
-#frentes .front-grid { align-items: stretch; gap: clamp(14px, 1.7vw, 22px); }
-#frentes .front-grid article {
+/* 04 Frentes — cartões institucionais 2 x 2, assinatura e nota de escopo. */
+#frentes .program-fronts-grid { align-items: stretch; }
+#frentes .front-card {
   min-width: 0;
   padding: clamp(24px, 2.4vw, 34px);
-  border: 1px solid var(--ativ-line-paper);
   border-radius: 2px;
-  background: rgba(255,255,255,.18);
   box-shadow: none;
+}
+#frentes .front-card--base {
+  border: 1px solid var(--ativ-line-paper);
+  background: rgba(255, 255, 255, 0.22);
+}
+#frentes .front-card--tone {
+  border: 1px solid #cfc4b0;
+  background: #e3ddd0;
 }
 #frentes .front-grid h3 { letter-spacing: -.025em; }
 #frentes .front-grid p { overflow-wrap: break-word; }
 #frentes .front-grid .number { color: var(--ativ-accent-on-paper); }
+#frentes .program-fronts-signature { overflow-wrap: break-word; }
 /* 06 Método — desenho fiel ao ciclo ATIV; sem linguagem de dashboard. */
 #caminho .method-cycle-card {
   min-width: 0;
@@ -1341,7 +1363,6 @@ select:focus-visible {
 /* Responsividade: os mesmos breakpoints do baseline, sem edição de JS. */
 @media (max-width: 1100px) {
   #caminho .method-cycle-card { width: 100%; max-width: none; }
-  #frentes .front-grid { grid-template-columns: minmax(0,1fr); }
 }
 @media (max-width: 760px) {
   #inicio.hero h1 { font-size: clamp(34px, 9vw, 44px); line-height: 1.13; }
