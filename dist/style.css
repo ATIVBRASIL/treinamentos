@@ -588,59 +588,42 @@ footer { padding: 36px 0 24px; }
 }
 .solution > .wrap { position: relative; z-index: 1; }
 .solution .scene-caption { z-index: 2; }
-.solution .eyebrow { margin-bottom: 22px; }
+.solution .eyebrow { margin-bottom: 32px; }
 .solution h2 {
-  max-width: 22em;
+  max-width: 760px;
   margin-bottom: 0;
   color: #f7f4ee;
-  font-size: clamp(32px, 3.15vw, 46px);
-  line-height: 1.14;
+  font-size: clamp(32px, 3.05vw, 44px);
+  line-height: 1.16;
   text-wrap: balance;
 }
 .solution-mark {
-  background-image: linear-gradient(var(--gold), var(--gold));
-  background-repeat: no-repeat;
-  background-position: 0 94%;
-  background-size: 100% 0.07em;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
+  text-decoration: underline;
+  text-decoration-color: rgba(198, 164, 106, 0.9);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
 }
 .solution-copy {
-  max-width: 42rem;
-  margin-top: 26px;
+  max-width: 40rem;
+  margin-top: 32px;
 }
 .solution-copy p {
   margin: 0;
   color: #e4ebe3;
   font-size: 18px;
-  line-height: 1.65;
+  line-height: 1.7;
   text-wrap: pretty;
 }
 .solution-copy p + p { margin-top: 16px; }
-.solution-benefits {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px 32px;
-  margin: 36px 0 0;
+.solution-bridge {
+  max-width: 40rem;
+  margin: 32px 0 0;
   padding: 22px 0 0;
-  border-top: 1px solid rgba(198, 164, 106, 0.45);
-  list-style: none;
-}
-.solution-benefits li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
+  border-top: 1px solid rgba(198, 164, 106, 0.5);
   color: #f7f4ee;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
-  line-height: 1.4;
-}
-.solution-check {
-  width: 18px;
-  height: 18px;
-  margin-top: 2px;
-  color: var(--gold);
-  flex: none;
+  line-height: 1.45;
 }
 /* V5.9 — aprofundamento claro com card multiplicador escuro autônomo. */
 .doctrine-depth {
@@ -663,9 +646,10 @@ footer { padding: 36px 0 24px; }
 
 @media (max-width: 760px) {
   .solution { padding: 72px 0 64px; }
-  .solution h2 { max-width: none; font-size: clamp(28px, 8vw, 34px); }
-  .solution-copy { margin-top: 20px; }
-  .solution-benefits { grid-template-columns: 1fr; gap: 16px; margin-top: 28px; }
+  .solution .eyebrow { margin-bottom: 26px; }
+  .solution h2 { max-width: none; font-size: clamp(28px, 7.8vw, 32px); line-height: 1.18; }
+  .solution-copy { margin-top: 24px; }
+  .solution-bridge { margin-top: 26px; padding-top: 18px; font-size: 18px; line-height: 1.45; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1289,8 +1273,9 @@ header { border-bottom-color: rgba(198,164,106,.24); }
 #abordagem.problem .eyebrow { color: var(--ativ-accent-on-paper); }
 /* 03 Solução — preservar imagem documental e legibilidade. */
 #doutrina.solution .solution-copy,
-#doutrina.solution .solution-benefits li { min-width: 0; }
-#doutrina.solution .solution-copy p { text-wrap: pretty; }
+#doutrina.solution .solution-bridge { min-width: 0; }
+#doutrina.solution .solution-copy p,
+#doutrina.solution .solution-bridge { overflow-wrap: break-word; }
 /* 04 Aprofundamento — leitura sem ornamentação artificial. */
 #aprofundamento .leadership-story { box-shadow: none; }
 #aprofundamento .leadership-story p { overflow-wrap: break-word; }
