@@ -1317,9 +1317,188 @@ header { border-bottom-color: rgba(198,164,106,.24); }
 #entregas .legacy-capacity h3,
 #entregas .legacy-closure,
 #entregas .legacy-scope-note { overflow-wrap: break-word; }
-/* 08 Quem conduz — credenciais atuais, foto oficial. */
-#quem-conduz .portrait { box-shadow: none; }
-#quem-conduz .instructor-name { line-height: 1.28; }
+/* 08 Por que a ATIV — abordagem institucional e condução técnica. */
+.why-ativ { position: relative; }
+.why-ativ-institutional {
+  position: relative;
+  overflow: hidden;
+  padding: 104px 0 88px;
+  background: #101b15;
+  color: #f7f4ee;
+}
+.why-ativ-rings {
+  position: absolute;
+  top: 8px;
+  right: -36px;
+  width: 220px;
+  height: auto;
+  color: #c6a46a;
+  opacity: 0.12;
+  pointer-events: none;
+}
+.why-ativ-top {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 0.38fr) minmax(0, 0.62fr);
+  gap: clamp(28px, 3.5vw, 48px);
+  align-items: start;
+}
+.why-ativ .eyebrow { color: var(--gold); }
+.why-ativ .eyebrow span { background: var(--gold); }
+.why-ativ-lead h2 {
+  max-width: 12em;
+  margin: 0 0 22px;
+  color: #f7f4ee;
+  font-size: clamp(32px, 2.8vw, 40px);
+  line-height: 1.16;
+  text-wrap: balance;
+}
+.why-ativ-mark { color: var(--gold-soft); }
+.why-ativ-lead > p {
+  max-width: 28rem;
+  margin: 0;
+  color: #d2dcd1;
+  font-size: 16px;
+  line-height: 1.68;
+}
+.why-ativ-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.why-ativ-grid article {
+  min-width: 0;
+  padding: 22px 20px 20px;
+  border: 1px solid rgba(198, 164, 106, 0.32);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.02);
+}
+.why-ativ-number {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--gold);
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+.why-ativ-grid h3 {
+  margin: 0 0 8px;
+  color: #f7f4ee;
+  font-size: 18px;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+.why-ativ-grid p {
+  margin: 0;
+  color: #c5d0c4;
+  font-size: 15px;
+  line-height: 1.55;
+}
+.why-ativ-conduct {
+  padding: 56px 0 64px;
+  background: var(--paper);
+  color: var(--ink);
+}
+.why-ativ-bottom {
+  display: grid;
+  grid-template-columns: minmax(0, 0.27fr) minmax(0, 0.43fr) minmax(0, 0.3fr);
+  gap: clamp(24px, 3vw, 40px);
+  align-items: center;
+}
+.why-ativ-photo {
+  overflow: hidden;
+  border-radius: 8px;
+  background: #243028;
+}
+.why-ativ-photo img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center 18%;
+}
+.why-ativ-bio .eyebrow { color: var(--ativ-accent-on-paper); }
+.why-ativ-bio .eyebrow span { background: var(--ativ-accent-on-paper); }
+.why-ativ-bio h3 {
+  margin: 0 0 6px;
+  color: var(--ink);
+  font-size: clamp(30px, 2.6vw, 36px);
+  line-height: 1.15;
+}
+.why-ativ-credential {
+  margin: 0 0 16px;
+  color: #745126;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.why-ativ-bio p {
+  margin: 0 0 12px;
+  color: var(--muted-ink);
+  font-size: 16px;
+  line-height: 1.62;
+}
+.why-ativ-bio p:last-child { margin-bottom: 0; }
+.why-ativ-principle {
+  padding-left: clamp(18px, 2vw, 28px);
+  border-left: 1px solid #d5c9b7;
+}
+.why-ativ-quote {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(21px, 1.8vw, 25px);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.why-ativ-quote::before {
+  content: "“";
+  display: block;
+  margin-bottom: 8px;
+  color: var(--gold);
+  font-family: var(--serif);
+  font-size: 42px;
+  font-style: normal;
+  line-height: 0.8;
+}
+.why-ativ-principle-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 22px 0 0;
+  color: #8b6b38;
+  font-family: var(--font);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+.why-ativ-principle-label::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: #a78146;
+}
+@media (max-width: 1100px) {
+  .why-ativ-top,
+  .why-ativ-bottom { grid-template-columns: 1fr; }
+  .why-ativ-lead h2 { max-width: 16em; }
+  .why-ativ-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .why-ativ-photo { max-width: 280px; }
+  .why-ativ-principle { padding: 22px 0 0; border-left: 0; border-top: 1px solid #d5c9b7; }
+}
+@media (max-width: 760px) {
+  .why-ativ-institutional { padding: 72px 0 56px; }
+  .why-ativ-rings { width: 120px; opacity: 0.1; }
+  .why-ativ-lead h2 { font-size: clamp(28px, 7.6vw, 34px); }
+  .why-ativ-grid { grid-template-columns: 1fr; }
+  .why-ativ-conduct { padding: 40px 0 48px; }
+  .why-ativ-photo { max-width: none; }
+  .why-ativ-photo img { height: 320px; object-position: center 12%; }
+}
 /* 09 FAQ — affordance e contraste do indicador. */
 .faq summary::after { color: var(--ativ-accent-on-paper); }
 .faq details { scroll-margin-top: calc(var(--header) + 16px); }
