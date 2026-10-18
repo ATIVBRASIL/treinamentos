@@ -1502,6 +1502,26 @@ header { border-bottom-color: rgba(198,164,106,.24); }
 /* 09 FAQ — affordance e contraste do indicador. */
 .faq summary::after { color: var(--ativ-accent-on-paper); }
 .faq details { scroll-margin-top: calc(var(--header) + 16px); }
+.faq h2 { max-width: 18em; }
+.faq summary {
+  font-size: clamp(16px, 1.15vw, 19px);
+  font-weight: 500;
+  line-height: 1.4;
+}
+.faq details[open] summary { color: var(--ink); }
+.faq details p {
+  max-width: 760px;
+  color: #3e4d43;
+  font-size: 16px;
+  line-height: 1.68;
+}
+@media (max-width: 760px) {
+  .faq summary { font-size: 16px; padding-right: 32px; }
+  .faq details p { font-size: 15px; }
+}
+@media (hover: hover) {
+  .faq summary:hover { color: #243129; }
+}
 /* 10 Contato — seletor original, sem alterar destinos ou valores. */
 #contato .contact-action select { border-color: #879487; }
 #contato .contact-action .button { min-height: 52px; }
