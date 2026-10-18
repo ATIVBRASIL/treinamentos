@@ -334,10 +334,51 @@
   </section>
 
   <section class="section contact" id="contato">
-    <div class="wrap contact-grid">
+    <div class="wrap contact-open">
+      <p class="eyebrow"><span></span> O PRÓXIMO PASSO</p>
+      <h2>Sua empresa consegue transmitir seu padrão operacional quando as pessoas mudam?</h2>
+      <p>Responda a quatro perguntas sobre sua operação e identifique quais aspectos merecem atenção. Uma reflexão inicial, antes de decidir se deseja conversar com a ATIV.</p>
+      <p class="assessment-time">Quatro perguntas. Aproximadamente 2–3 minutos. Sem cadastro obrigatório.</p>
+      <div class="assessment-paths">
+        <button type="button" class="button gold" id="assessment-start">Fazer autodiagnóstico</button>
+        <a class="button" href="#contato-direto">Prefiro conversar diretamente</a>
+      </div>
+    </div>
+    <div class="wrap assessment" id="assessment" hidden>
+      <p class="eyebrow"><span></span> AUTODIAGNÓSTICO INICIAL ATIV</p>
+      <p class="assessment-progress" id="assessment-progress" aria-live="polite">1 de 4</p>
+      <div class="assessment-segments" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      <form id="assessment-form">
+        <fieldset>
+          <legend id="assessment-legend" tabindex="-1"></legend>
+          <div id="assessment-options"></div>
+        </fieldset>
+        <p class="assessment-hint" id="assessment-hint" hidden>Escolha uma alternativa para continuar.</p>
+        <div class="assessment-nav">
+          <button type="button" class="button" id="assessment-prev">Anterior</button>
+          <button type="button" class="button gold" id="assessment-next" disabled>Próxima pergunta</button>
+        </div>
+      </form>
+      <p class="assessment-privacy">As respostas permanecem neste navegador durante o preenchimento. Nada é enviado à ATIV automaticamente. Compartilhar pelo WhatsApp é opcional e a mensagem pode ser editada antes do envio.</p>
+    </div>
+    <div class="wrap assessment-result" id="assessment-result" hidden>
+      <p class="eyebrow"><span></span> SUA SÍNTESE PRELIMINAR</p>
+      <h3>O que suas respostas revelam sobre a transmissão do padrão operacional?</h3>
+      <p id="assessment-general"></p>
+      <ol id="assessment-observations"></ol>
+      <p class="assessment-focus-label">Pergunta para aprofundar</p>
+      <p id="assessment-focus"></p>
+      <p class="assessment-disclaimer">Esta síntese é uma reflexão preliminar baseada nas suas respostas, não uma auditoria, certificação ou substituição do LNT.</p>
+      <div class="assessment-result-actions">
+        <button type="button" class="button" id="assessment-copy">Copiar minha síntese</button>
+        <a class="button gold" id="assessment-share" href="https://wa.me/5519974010028" target="_blank" rel="noopener noreferrer">Conversar com a ATIV pelo WhatsApp</a>
+        <button type="button" class="button" id="assessment-reset">Refazer avaliação</button>
+      </div>
+      <p id="assessment-copy-status" role="status"></p>
+      <p class="assessment-privacy">As respostas permanecem neste navegador durante o preenchimento. Nada é enviado à ATIV automaticamente. Compartilhar pelo WhatsApp é opcional e a mensagem pode ser editada antes do envio.</p>
+    </div>
+    <div class="wrap contact-grid" id="contato-direto">
       <div>
-        <p class="eyebrow"><span></span> O PRÓXIMO PASSO</p>
-        <h2>Conte o desafio.<br><em>Vamos construir o caminho.</em></h2>
         <p>Conte o que hoje dificulta a consistência da sua operação. Na conversa inicial, compreenderemos o contexto e definiremos se é necessário um levantamento adicional antes de apresentar a proposta.</p>
         <p class="hero-flexibility">O escopo e a duração são definidos conforme as necessidades da sua empresa — de intervenções pontuais a programas continuados de desenvolvimento da Doutrina Operacional.</p>
       </div>
@@ -383,6 +424,7 @@
   <div class="wrap footer-bottom"><span>© 2026 ATIV Brasil.</span><span>Capacitação complementar e desenvolvimento organizacional.</span></div>
 </footer>
 <a class="mobile-contact" href="#contato">Conversar sobre minha operação</a>
+<script src="assessment.js" defer></script>
 <script src="script.js" defer></script>
 </body>
 </html>

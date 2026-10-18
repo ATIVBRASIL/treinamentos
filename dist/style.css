@@ -307,6 +307,35 @@ details p { margin: 14px 0 0; color: var(--muted-ink); font-size: 16px; }
 .resource-card strong { border-bottom: 1px solid #8a7040; font-weight: 600; }
 
 .contact { background: #18241c; }
+.contact-open { max-width: 46rem; }
+.contact-open h2 { max-width: 16em; font-size: clamp(32px, 3.2vw, 46px); line-height: 1.16; }
+.assessment-time { color: var(--gold-soft); font-size: 15px; }
+.assessment-paths { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+.assessment-paths .button { min-height: 52px; }
+.assessment, .assessment-result { margin-top: 48px; padding-top: 36px; border-top: 1px solid var(--line-dark); }
+.assessment-progress { margin: 0 0 12px; color: var(--gold-soft); letter-spacing: .08em; }
+.assessment-segments { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; max-width: 16rem; margin-bottom: 24px; }
+.assessment-segments span { height: 3px; background: rgba(198,164,106,.28); }
+.assessment-segments span.is-complete { background: var(--gold); }
+.assessment fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
+.assessment legend { margin-bottom: 18px; color: #f7f4ee; font-family: var(--display); font-size: clamp(22px, 2.2vw, 30px); line-height: 1.28; }
+#assessment-options { display: grid; gap: 10px; }
+#assessment-options label { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; border: 1px solid rgba(198,164,106,.35); color: #e7eee6; line-height: 1.5; }
+#assessment-options input { margin-top: 4px; min-width: 18px; min-height: 18px; }
+.assessment-nav { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.assessment-nav .button:disabled { opacity: .45; cursor: not-allowed; }
+.assessment-hint, .assessment-privacy, .assessment-disclaimer { color: var(--muted); font-size: 14px; line-height: 1.55; }
+.assessment-result h3 { max-width: 20em; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.25; }
+.assessment-result ol { display: grid; gap: 16px; margin: 24px 0; padding: 0; list-style: none; }
+.assessment-result li { display: grid; gap: 6px; }
+.assessment-result strong { color: #f7f4ee; font-weight: 600; }
+.assessment-focus-label { margin-bottom: 6px; color: var(--gold-soft); font-size: 12px; letter-spacing: .14em; }
+.assessment-result-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+#contato-direto { margin-top: 56px; }
+@media (max-width: 760px) {
+  .assessment-paths, .assessment-nav, .assessment-result-actions { align-items: stretch; }
+  .assessment-paths .button, .assessment-nav .button, .assessment-result-actions .button { width: 100%; }
+}
 .contact-grid { align-items: start; }
 .contact-action { display: flex; flex-direction: column; align-items: stretch; gap: 14px; }
 .contact-action label { font-size: 15px; }
