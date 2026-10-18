@@ -325,13 +325,13 @@ details p { margin: 14px 0 0; color: var(--muted-ink); font-size: 16px; }
 .assessment-nav { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
 .assessment-nav .button:disabled { opacity: .45; cursor: not-allowed; }
 .assessment-hint, .assessment-privacy, .assessment-disclaimer { color: var(--muted); font-size: 14px; line-height: 1.55; }
+.assessment-privacy a { color: var(--gold-soft); }
 .assessment-result h3 { max-width: 20em; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.25; }
 .assessment-result ol { display: grid; gap: 16px; margin: 24px 0; padding: 0; list-style: none; }
 .assessment-result li { display: grid; gap: 6px; }
 .assessment-result strong { color: #f7f4ee; font-weight: 600; }
 .assessment-focus-label { margin-bottom: 6px; color: var(--gold-soft); font-size: 12px; letter-spacing: .14em; }
 .assessment-result-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
-#contato-direto { margin-top: 56px; }
 @media (max-width: 760px) {
   .assessment-paths, .assessment-nav, .assessment-result-actions { align-items: stretch; }
   .assessment-paths .button, .assessment-nav .button, .assessment-result-actions .button { width: 100%; }
